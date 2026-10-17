@@ -491,7 +491,13 @@ FAQ를 선택하면 질문·답변·분류·버전과 함께 다음 지표를 �
 ---
 </details>
 
-## 5. AWS 구성
+## 5. 인프라 및 배포
+
+- Terraform으로 AWS 네트워크(VPC·Subnet)와 GPU 테스트용 EC2 인프라를 코드로 관리합니다.
+- Docker Compose로 Backend API, AI Worker, PostgreSQL, Redis, Nginx 등의 서비스를 구성합니다.
+- GitHub Actions로 프론트엔드·백엔드 CI를 구축하고, EC2 스테이징 환경에 백엔드를 배포합니다.
+- 배포 과정에서 LLM 서버의 준비 상태를 검증하고, 필요한 FAQ 임베딩 데이터를 자동으로 백필합니다.
+- Prometheus와 Exporter를 통해 애플리케이션·DB·Redis·컨테이너의 운영 지표를 수집합니다.
 
 ## 6. LLM
 
