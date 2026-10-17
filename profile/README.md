@@ -4,6 +4,14 @@
 
 사용자는 상품과 공지를 살펴보고, AI에게 질문하고, 필요한 매장을 찾을 수 있습니다. 운영자는 상담 결과를 분석해 FAQ와 서비스 정보를 개선합니다.
 
+## 전체 아키텍처
+<img width="2626" height="2656" alt="UBot_아키텍처" src="https://github.com/user-attachments/assets/c9601e24-f019-471a-bd74-5537a1d84601" />
+
+## ERD
+<img width="6475" height="4497" alt="UBot_ERD" src="https://github.com/user-attachments/assets/6c869be9-3be1-425f-afdd-1d1852adabea" />
+
+
+
 ## 1. 유저 페이지 서비스
 
 - 요금제·결합상품·부가서비스·로밍 상품을 검색하고 상세 정보를 확인합니다.
