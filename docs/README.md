@@ -45,3 +45,8 @@
 - Frontend: [README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [화면·연동 문서](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)
 - 실험 원본: [생성 모델](https://github.com/ureca-UBot/UBot-LLMTest) · [임베딩·검색](https://github.com/ureca-UBot/UBot-EmbeddingTest) · [벡터 저장소](https://github.com/ureca-UBot/UBot-VertorDBTest)
 - 서비스 검증: [부하·장애 복구·Discord 알림·통신지도·미응답](https://github.com/ureca-UBot/UBot-ServerTest)
+
+## 팀 기록
+
+- [참여 멤버와 구현 기여](governance/team-contributions.md): 각자 맡은 내용과 구현 근거 작성
+- [멘토링 질문과 답변](governance/mentoring.md): 1~3차 멘토링 기록

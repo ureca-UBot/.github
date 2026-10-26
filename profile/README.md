@@ -117,3 +117,23 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | [UBot-ServerTest](https://github.com/ureca-UBot/UBot-ServerTest) | 채팅 부하·장애 복구 도구와 결과, Discord 알림, 통신지도·미응답 화면 검증 |
 
 [기능별 설명과 FE·BE 연결](../docs/README.md) · [제품 시나리오](../docs/overview/product.md) · [직접 실행하기](../docs/getting-started/quickstart.md)
+
+<details>
+<summary><strong>팀원 및 담당 영역</strong></summary>
+
+| 팀원 | 담당 영역 |
+|---|---|
+| [@Catverdose](https://github.com/Catverdose) | 본인 작성 |
+| [@gart09](https://github.com/gart09) | 본인 작성 |
+| [@H0ng](https://github.com/H0ng) | 본인 작성 |
+| [@jeaminlim0000](https://github.com/jeaminlim0000) | 본인 작성 |
+| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | 본인 작성 |
+| [@kl35805](https://github.com/kl35805) | 본인 작성 |
+| [@sunji22](https://github.com/sunji22) | 본인 작성 |
+| [@YuMinha](https://github.com/YuMinha) | 본인 작성 |
+
+각자 담당 영역을 간단히 적고, 구체적인 구현 내용과 근거는 [참여 멤버와 구현 기여](../docs/governance/team-contributions.md)에 작성합니다.
+
+</details>
+
+[멘토링 질문과 답변 기록](../docs/governance/mentoring.md)
