@@ -46,10 +46,10 @@ Redis 조회 실패와 DB 조회 실패도 구분합니다. 모델 연결이 잠
 - **계산 결과의 재사용:** 검색 중 만든 벡터를 같은 조건의 후속 처리에서 활용해 중복 임베딩을 줄입니다.
 - **자원별 용량 조절:** API·답변 처리·모델 실행을 나눠 요청 접수량과 계산량에 따라 자원을 조절합니다. 실행 동시성만 높인다고 모델 처리량이 같은 비율로 늘지는 않습니다.
 
-최종 판단에는 인스턴스 가격뿐 아니라 실행 시간·트래픽·응답 완료 시간·오류를 함께 봅니다. Terraform에 정의한 자원이 모두 상시 실행 중이라는 뜻은 아니며, 자동 확장 가동 여부와 실제 비용은 배포 환경에서 확인해야 합니다.
+최종 판단에는 인스턴스 가격뿐 아니라 실행 시간·트래픽·응답 완료 시간·오류를 함께 봅니다. AWS의 GPU 자동 확장은 Spot ASG에 적용하며, 별도 On-Demand GPU와 AMI 빌더는 각각 생성 여부를 정합니다. [AWS 구성과 GPU 모드 전환](../architecture/overview.md#aws-구성과-gpu-모드-전환)에서 구분합니다.
 
 ## 상세 구현과 검증
 
-- Backend: [운영 기능과 검증](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/service-operations.md) · [배포](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md) · [장애별 런북](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/runbooks/README.md) · [Terraform](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/README.md)
+- Backend: [운영 기능과 검증](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/service-operations.md) · [배포](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md) · [장애별 런북](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/runbooks/README.md) · [AWS PoC Terraform](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc.md)
 - Frontend: [운영 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/operation/pages/OperationDashboardPage.tsx) · [FE 배포](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/AWS_DEPLOY.md)
 - 선택 근거: [작업 접수·처리 분리](../architecture/decisions/ADR-005-async-chat-processing.md) · [모델·서빙 실험](../proof/evidence-register.md)

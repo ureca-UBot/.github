@@ -41,7 +41,20 @@ DB가 최종 업무 상태와 작업 결과를 보존하고 Redis가 전달·캐
 
 AWS BE는 systemd 타이머로 배포 셸과 별개로 Worker 프로세스를 확인합니다. API 상태·배포 잠금·점검 중지 여부를 확인해 Worker를 기동한 뒤, Worker 내부 복구 루프가 저장 작업을 회수합니다.
 
-현재 실행 중인 AWS 자원이나 자동 확장 가동 여부는 환경에 따라 달라집니다. 저장소에는 [Terraform 구성](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/README.md)과 [배포 절차](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md)를 두고 있습니다.
+## AWS 구성과 GPU 모드 전환
+
+Terraform은 [스택별로 구분](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/stacks.md)합니다. `gpu-test`는 개별 GPU 실험 서버를 준비하고, [aws-poc](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc.md)는 FE·BE·State와 NLB·GPU ASG를 구성합니다.
+
+| 구성 | 동작과 조절 범위 | 구현 |
+|---|---|---|
+| BE EC2 | API와 Java Worker 실행. BE CD는 앱을 교체하며 GPU 대수는 Terraform·ASG에서 조절 | [배포 절차](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md) |
+| 내부 NLB | 채팅 8000·임베딩 8001을 각각 GPU 대상 그룹으로 전달 | [nlb.tf](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc/nlb.tf) |
+| Spot GPU ASG | Spot 인스턴스만 포함. ASG 내 평균 GPU 사용률 60%를 목표로 입력한 최소·최대 대수 사이에서 조절 | [gpu.tf](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc/gpu.tf) |
+| 선택형 On-Demand GPU | ASG 밖의 단일 EC2. 평소 채팅·임베딩을 처리하고 관리자 분석 때 14B 모델로 전환 | [gpu_on_demand.tf](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc/gpu_on_demand.tf) |
+
+On-Demand GPU의 [전환기](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/guard-review-runtime/switcher.py)는 두 대상 그룹에 다른 정상 GPU가 있는지 확인한 뒤 NLB에서 자신을 제외하고 관리자 분석 모드로 전환합니다. 채팅·임베딩이 다시 준비되면 재등록합니다. 분석 중 재등록되는 일을 막기 위해 이 GPU의 NLB 등록은 전환기가 관리합니다.
+
+[입력 예시](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc/terraform.tfvars.example)의 Spot 최소·최대 대수는 `0/0`이고, On-Demand GPU와 AMI 빌더의 [생성 기본값](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc/variables.tf)은 각각 `false`입니다. 실제 적용할 대수와 생성 여부는 환경별 입력 파일에서 정합니다.
 
 ## 실험과 구현의 연결
 
