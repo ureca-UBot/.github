@@ -121,18 +121,18 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 <details>
 <summary><strong>팀원 및 담당 영역</strong></summary>
 
-| 팀원 | 담당 영역 |
-|---|---|
-| [@Catverdose](https://github.com/Catverdose) | 본인 작성 |
-| [@gart09](https://github.com/gart09) | 본인 작성 |
-| [@H0ng](https://github.com/H0ng) | 본인 작성 |
-| [@jeaminlim0000](https://github.com/jeaminlim0000) | 본인 작성 |
-| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | 본인 작성 |
-| [@kl35805](https://github.com/kl35805) | 본인 작성 |
-| [@sunji22](https://github.com/sunji22) | 본인 작성 |
-| [@YuMinha](https://github.com/YuMinha) | 본인 작성 |
+| GitHub | 담당 영역 | 주요 구현·개선 |
+|---|---|---|
+| [@Catverdose](https://github.com/Catverdose) | | |
+| [@gart09](https://github.com/gart09) | | |
+| [@H0ng](https://github.com/H0ng) | | |
+| [@jeaminlim0000](https://github.com/jeaminlim0000) | | |
+| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | | |
+| [@kl35805](https://github.com/kl35805) | | |
+| [@sunji22](https://github.com/sunji22) | | |
+| [@YuMinha](https://github.com/YuMinha) | | |
 
-각자 담당 영역을 간단히 적고, 구체적인 구현 내용과 근거는 [참여 멤버와 구현 기여](../docs/governance/team-contributions.md)에 작성합니다.
+각자 담당 영역과 주요 구현·개선을 간단히 적고, 자세한 설명과 근거는 [참여 멤버와 구현 기여](../docs/governance/team-contributions.md)에 작성합니다.
 
 </details>
 
