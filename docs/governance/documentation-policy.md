@@ -10,7 +10,7 @@
 
 ## 문서 위치와 수정 범위
 
-- 기술 결정의 본문과 색인은 `docs/architecture/decisions/`에서 관리합니다. `docs/decisions/ADR-*.md`와 `docs/engineering-decisions.md`는 기존 링크를 위한 이동 안내로만 유지합니다.
+- 기술 결정의 본문과 색인은 [docs/architecture/decisions/](../architecture/decisions/README.md) 한 곳에서 관리합니다.
 - 다른 주제도 [기능별 목차](../README.md)가 연결하는 본문 한 곳을 수정합니다. 소개·색인에는 요약과 링크를 두고 같은 상세 설명을 복사하지 않습니다.
 - AWS 구성은 BE의 [Terraform 스택 구분](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/stacks.md)과 해당 스택의 코드·입력값을 기준으로 확인합니다. `gpu-test`의 범위를 `aws-poc` 전체에 적용하지 않습니다.
 - 참고 양식은 필요한 문서를 작성할 때 사용합니다. 양식마다 별도 문서를 만들거나 기존 문서를 일괄 재작성할 필요는 없습니다.
