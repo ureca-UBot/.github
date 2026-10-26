@@ -27,12 +27,12 @@ UBot의 기술 선택과 제품 주장을 뒷받침하는 실험·검증 기록�
 
 | 판단 대상 | 원본 근거 | 조직의 해석 | 연결된 결정·구현 |
 |---|---|---|---|
-| 생성 모델 | [UBot-LLMTest `cd017ac0`](https://github.com/ureca-UBot/UBot-LLMTest/tree/cd017ac0fd5a99a9c453d1575950abea176beda3) | Qwen3-4B Instruct 계열을 품질과 실행 비용을 함께 볼 후속 후보로 선택 | [ADR-004](../architecture/decisions/ADR-004-llm-selection.md) · [BE 모델 런타임](https://github.com/ureca-UBot/UBot-BE/blob/develop/infra/llm/README.md) |
-| 임베딩 모델 | [UBot-EmbeddingTest `eaf8113`](https://github.com/ureca-UBot/UBot-EmbeddingTest/tree/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29) | 소규모 비교에서 BGE-M3가 가장 높은 후보 검색 지표를 보여 후속 검색 실험에 사용 | [ADR-002](../architecture/decisions/ADR-002-embedding-model.md) · [BE 검색 문서](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/faq-embedding.md) |
-| 리랭커 | [정정 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md) | 확대·정정 데이터에서는 BGE-M3 단독 Top-1이 비교한 리랭커 조합보다 높아 현재 FAQ 경로에서 제외 | [ADR-003](../architecture/decisions/ADR-003-reranker-strategy.md) · [BE RAG](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/rag-pipeline.md) |
-| 임베딩 서빙 엔진 | [분리된 서빙 결과 `ca61493`](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/ca614933c052fd413968d5735a3a5d31ebe37d92/serving-benchmark/README.md) | 짧은 구성 요소 진단에서 vLLM이 첫 서빙 후보였으나 운영 채택과 장시간 포화는 별도 검증 대상 | [BE 모델 설정](https://github.com/ureca-UBot/UBot-BE/blob/develop/infra/llm/settings.md) |
+| 생성 모델 | [UBot-LLMTest `cd017ac0`](https://github.com/ureca-UBot/UBot-LLMTest/tree/cd017ac0fd5a99a9c453d1575950abea176beda3) | Qwen3-4B Instruct 계열을 품질과 실행 비용을 함께 볼 후속 후보로 선택 | [ADR-004](../architecture/decisions/ADR-004-llm-selection.md) · [BE 모델 런타임](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) |
+| 임베딩 모델 | [UBot-EmbeddingTest `eaf8113`](https://github.com/ureca-UBot/UBot-EmbeddingTest/tree/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29) | 소규모 비교에서 BGE-M3가 가장 높은 후보 검색 지표를 보여 후속 검색 실험에 사용 | [ADR-002](../architecture/decisions/ADR-002-embedding-model.md) · [BE 검색 문서](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md) |
+| 리랭커 | [정정 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md) | 확대·정정 데이터에서는 BGE-M3 단독 Top-1이 비교한 리랭커 조합보다 높아 현재 FAQ 경로에서 제외 | [ADR-003](../architecture/decisions/ADR-003-reranker-strategy.md) · [BE RAG](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md) |
+| 임베딩 서빙 엔진 | [분리된 서빙 결과 `ca61493`](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/ca614933c052fd413968d5735a3a5d31ebe37d92/serving-benchmark/README.md) | 짧은 구성 요소 진단에서 vLLM이 첫 서빙 후보였으나 운영 채택과 장시간 포화는 별도 검증 대상 | [BE 모델 설정](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) |
 | 벡터 저장소 | [UBot-VertorDBTest `9fcbff3`](https://github.com/ureca-UBot/UBot-VertorDBTest/tree/9fcbff349648067fc4c96d56d82857f1bcccfdfd) | 가장 빠른 후보가 아니라 FAQ 원문과 벡터를 함께 관리하는 운영 단순성을 우선해 pgvector를 선택 | [ADR-001](../architecture/decisions/ADR-001-vector-database.md) · [선택 문서](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md) |
-| 비동기 작업 복구 | [BE 신뢰성 모델](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reliability/reliability-model.md) | 질문 접수와 답변 처리를 분리하고 PostgreSQL의 상태를 기준으로 중단 작업을 회수 | [ADR-005](../architecture/decisions/ADR-005-async-chat-processing.md) · [BE 아키텍처](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/architecture/overview.md) |
+| 비동기 작업 복구 | [BE 신뢰성 모델](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/reliability-model.md) | 질문 접수와 답변 처리를 분리하고 PostgreSQL의 상태를 기준으로 중단 작업을 회수 | [ADR-005](../architecture/decisions/ADR-005-async-chat-processing.md) · [BE 아키텍처](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/architecture.md) |
 | 화면 구조와 회귀 | [UBot-FE `32c542c`](https://github.com/ureca-UBot/UBot-FE/tree/32c542c152b1f6a95402e84ac092b036eaa78c5b) | 리팩터링 당시 빌드·논리 검사·화면 비교 기록이며 현재 전체 UI와 실서버 종단간 보장은 아님 | [FE 리팩터링 기록](https://github.com/ureca-UBot/UBot-FE/blob/32c542c152b1f6a95402e84ac092b036eaa78c5b/docs/FE_REFACTOR.md) |
 
 ## 주요 관측 결과
@@ -63,7 +63,7 @@ Q8과 Q4의 정답률 차이는 통계적으로 유의하지 않았고 Q8은 순
 
 [fairness-v2](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/fairness-v2-results-20260913.md)는 합성 한국어 벡터 10,000개, BGE-M3 1,024차원 cosine, Top-10, 동시성 10 조건으로 여러 저장소를 비교했습니다. 비슷한 Recall 구간에서 Qdrant가 pgvector보다 빠른 결과도 있었습니다. pgvector는 속도 1위가 아니라 기존 PostgreSQL 안에서 원문·벡터·재색인을 함께 운영할 수 있다는 이유로 선택했습니다.
 
-현재 BE의 별도 HNSW 측정은 합성 1,024차원 벡터와 Top-3 조건에서 1만 벡터의 p50이 exact보다 4.64~6.19배 빨랐다고 기록합니다. 1천 벡터에서는 순차 검색보다 느렸고, 실제 FAQ 질문의 recall 재검증은 남아 있습니다. 자세한 조건은 [BE HNSW 보고서](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/FAQ_HNSW_검색_테스트_보고서.md)를 따릅니다.
+현재 BE의 별도 HNSW 측정은 합성 1,024차원 벡터와 Top-3 조건에서 1만 벡터의 p50이 exact보다 4.64~6.19배 빨랐다고 기록합니다. 1천 벡터에서는 순차 검색보다 느렸고, 실제 FAQ 질문의 recall 재검증은 남아 있습니다. 자세한 조건은 [BE HNSW 보고서](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/FAQ_HNSW_검색_테스트_보고서.md)를 따릅니다.
 
 ### 프론트엔드 회귀 기록
 
@@ -75,8 +75,8 @@ Q8과 Q4의 정답률 차이는 통계적으로 유의하지 않았고 Q8은 순
 
 연구 실험은 후보를 비교하고 방향을 정합니다. 현재 구현이 그 결정을 올바르게 반영했는지는 Production Repository가 검증합니다.
 
-- Backend의 현재 기능·통합 테스트: [UBot-BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/testing.md)
-- 검색·가드·파이프라인의 시점별 보고서: [UBot-BE Docs](https://github.com/ureca-UBot/UBot-BE/tree/develop/docs)
+- Backend의 현재 기능·통합 테스트: [UBot-BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/support-policy.md)
+- 검색·가드·파이프라인의 시점별 보고서: [UBot-BE Docs](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs)
 - Frontend의 현재 빌드·브라우저 검사: [UBot-FE](https://github.com/ureca-UBot/UBot-FE)
 
 부하·장애 주입 결과는 실행 시점의 코드 SHA, 모델, 하드웨어, 동시성, 장애 시각과 원시 결과가 함께 남아야 조직 근거로 등록합니다. 로컬 산출물만 있거나 실행 조건을 다시 확인할 수 없는 수치는 현재 제품 보장으로 올리지 않습니다.

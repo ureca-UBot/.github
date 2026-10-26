@@ -14,11 +14,11 @@ last_reviewed: 2026-10-26
 
 | Producer | Consumer | Contract | Runtime authority | Source of truth | Joint owner |
 |---|---|---|---|---|---|
-| UBot-BE | UBot-FE | HTTP 요청·응답, 인증 오류, 비동기 작업 상태 | 실제 HTTP 응답과 작업 조회 결과 | [BE API Reference](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reference/api.md) | BE + FE |
-| UBot-FE | UBot-BE | 로그인·비회원 세션, 대화 식별자와 사용자 동작 | Backend가 검증한 사용자·대화 소유권 | [Frontend Integration](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/frontend-integration.md) | FE + BE |
-| UBot-BE API | UBot-BE Worker | 작업 식별자, 상태 전이, 전달·중복·재시도 의미 | PostgreSQL 작업·시도 상태 | [Reliability Model](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reliability/reliability-model.md) | BE |
-| UBot-BE | Model runtime | 채팅·임베딩 요청, 구조화 출력과 실패 의미 | 모델 HTTP 응답과 Backend 검증 결과 | [LLM Module](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/llm-module.md) | BE |
-| UBot-BE | PostgreSQL | 영속 상태, 마이그레이션과 데이터 제약 | 적용된 Flyway schema와 DB 상태 | [Database Reference](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reference/database.md) | BE |
+| UBot-BE | UBot-FE | HTTP 요청·응답, 인증 오류, 비동기 작업 상태 | 실제 HTTP 응답과 작업 조회 결과 | [BE API Reference](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/frontend-integration.md) | BE + FE |
+| UBot-FE | UBot-BE | 로그인·비회원 세션, 대화 식별자와 사용자 동작 | Backend가 검증한 사용자·대화 소유권 | [Frontend Integration](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/frontend-integration.md) | FE + BE |
+| UBot-BE API | UBot-BE Worker | 작업 식별자, 상태 전이, 전달·중복·재시도 의미 | PostgreSQL 작업·시도 상태 | [Reliability Model](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/reliability-model.md) | BE |
+| UBot-BE | Model runtime | 채팅·임베딩 요청, 구조화 출력과 실패 의미 | 모델 HTTP 응답과 Backend 검증 결과 | [LLM Module](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/llm-module.md) | BE |
+| UBot-BE | PostgreSQL | 영속 상태, 마이그레이션과 데이터 제약 | 적용된 Flyway schema와 DB 상태 | [Database Reference](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/db-access.md) | BE |
 
 ## Required Contract Properties
 

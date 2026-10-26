@@ -33,7 +33,7 @@ FAQ 검색과 관련 벡터 처리의 Embedding 모델로 BGE-M3를 사용합니
 
 ## Production Implementation
 
-[UBot-BE Model Runtime](https://github.com/ureca-UBot/UBot-BE/blob/develop/infra/llm/settings.md) · [Embedding Profile](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/faq-embedding.md)
+[UBot-BE Model Runtime](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) · [Embedding Profile](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md)
 
 ## Revisit Triggers
 

@@ -1,57 +1,43 @@
-# UBot Documentation Portal
+# UBot 기능별 문서
 
-UBot의 제품 문서와 각 구성요소 저장소의 구현 문서를 연결하는 시작점입니다. 제품 의미와 저장소 사이의 관계는 여기서, 실행 가능한 상세 계약은 실제 코드를 소유한 저장소에서 관리합니다.
+[제품 소개](../profile/README.md) · [서비스 이용](https://u-bot.cloud) · [시나리오로 살펴보기](overview/product.md)
 
-## 제품 이해
+고객이 화면에서 시작한 행동이 서버 처리와 어떤 결과로 이어지는지 기능별로 설명합니다. 각 문서에서 관련 FE·BE 구현과 검증 기록까지 찾아갈 수 있습니다.
 
-| 질문 | 문서 |
+## 기능으로 찾아보기
+
+| 기능 | 확인할 흐름 |
 |---|---|
-| UBot은 누구의 어떤 문제를 해결하는가? | [Product Overview](overview/product.md) |
-| 질문이 답변·상담·지식 개선으로 어떻게 이어지는가? | [Chat and RAG Flow](architecture/chat-flow.md) |
-| FE·BE·모델·데이터 저장소는 어떻게 연결되는가? | [System Architecture](architecture/overview.md) |
-| 어떤 저장소가 무엇을 책임지는가? | [Component Map](architecture/components.md) · [Generated Registry](../generated/components.md) · [Canonical Data](../data/product.yaml) |
-| 저장소 사이에서 무엇을 계약으로 보는가? | [Cross-repo Contracts](architecture/contracts.md) |
+| [상품과 내 이용 정보](features/products-and-subscriptions.md) | 상품 탐색 → 가입·변경 → 회선 선택 → 이용 정보 확인 |
+| [매장 찾기와 방문 예약](features/stores-and-reservations.md) | 지도·지역 검색 → 길찾기 → 시간 선택 → 예약·취소·알림 |
+| [근거 기반 AI 상담](architecture/chat-flow.md) | FAQ 준비 → 질문 입력 → 임베딩·검색 → 업무 자료·도구 조회 → 답변 검사·표시 |
+| [상담사 연결](features/counselor-handoff.md) | 요청 → 저장 이력 인계 → 배정 → 메시지 보호 → 종료·재상담 |
+| [회원과 대화 기록](features/accounts-and-conversations.md) | 비회원 질문 → 로그인·대화 승계 → 저장 기록 다시 보기 |
+| [공지·문의·알림](features/customer-support.md) | 지역 안내 → 문의 접수·답변 → 이용 알림·읽음 처리 |
+| [FAQ와 지식 개선](features/knowledge-improvement.md) | FAQ 관리·색인, 미응답 그룹화·전환·재검증, 인기·지역 문의 분석 |
+| [질문·답변과 상담 보호](features/ai-safety.md) | 입력·출력·상담 검사 → 정책 후보 검증 → 관리자 승인 |
+| [배포와 서비스 운영](features/service-operations.md) | CI/CD → 상태·지표 확인 → 장애 알림 → 복구·결과 확인, 비용 판단 |
 
-## 결정, 호환성, 근거
+## 시나리오를 따라 읽기
 
-| 질문 | 문서 |
+- **고객의 질문과 행동:** [회원과 대화](features/accounts-and-conversations.md) → [AI 상담](architecture/chat-flow.md) → [상품·이용 정보](features/products-and-subscriptions.md) 또는 [매장 방문](features/stores-and-reservations.md) → [상담사 연결](features/counselor-handoff.md)
+- **관리자의 개선:** [미응답·FAQ·문의 분석](features/knowledge-improvement.md) → [안전 정책 검토](features/ai-safety.md) → [새 지식으로 답변](architecture/chat-flow.md)
+- **배포 후 운영:** [배포·관측·장애 대응](features/service-operations.md) → [시스템 구성](architecture/overview.md) → [실험과 검증 근거](proof/evidence-register.md)
+
+## 설계와 검증을 더 알아보기
+
+| 찾는 내용 | 문서 |
 |---|---|
-| 주요 기술을 왜 선택했는가? | [Engineering Decisions](architecture/decisions/README.md) |
-| 실험 결과를 어디까지 인용할 수 있는가? | [Evidence Register](proof/evidence-register.md) · [Claims Registry](proof/claims.yaml) |
-| 어떤 제품 조합을 지원한다고 말할 수 있는가? | [Compatibility Matrix](compatibility/product-matrix.md) · [Support Policy](compatibility/support-policy.md) |
-| 현재 제품 릴리스 상태는 무엇인가? | [Generated Release Summary](../generated/release-summary.md) · [Product Version Manifest](releases/product-versions.yaml) |
+| FE·BE·모델·데이터 저장소의 관계 | [시스템 구성](architecture/overview.md) |
+| 제품과 실험 저장소의 역할 | [저장소 지도](architecture/components.md) |
+| FE·BE 연동에서 지켜야 할 약속 | [연동 계약](architecture/contracts.md) |
+| 주요 기술 선택의 이유 | [기술 결정](architecture/decisions/README.md) |
+| 모델·검색·서빙·화면 검증 결과 | [실험과 검증 근거](proof/evidence-register.md) |
+| 제품을 직접 실행하는 순서 | [실행 안내](getting-started/quickstart.md) |
+| 제품에서 사용하는 용어 | [용어집](reference/glossary.md) |
 
-## 운영과 관리
+## 구현 문서
 
-| 질문 | 문서 |
-|---|---|
-| 처음 어디서 실행해야 하는가? | [Product Quickstart](getting-started/quickstart.md) |
-| 문서의 기준 위치와 담당은 어디인가? | [Documentation Ownership](governance/documentation-ownership.md) |
-| 문서를 어떻게 작성하고 갱신하는가? | [Documentation Policy](governance/documentation-policy.md) |
-| 공통 용어는 무엇을 뜻하는가? | [Glossary](reference/glossary.md) |
-| 참여자가 자신의 구현 기여를 어디에 기록하는가? | [Team Contributions](governance/team-contributions.md) |
-
-생성 문서(`generated/`)는 직접 수정하지 않습니다. 구성요소·릴리스·claim 원본을 바꾼 뒤 `python scripts/docs_tool.py generate`로 갱신하며, `validate --mode template`은 구조와 링크를, `validate --mode publish`는 공개 준비 조건을 검사합니다.
-
-## 구성요소 문서
-
-- Backend: [UBot-BE README](https://github.com/ureca-UBot/UBot-BE/blob/develop/README.md) · [Maintainer Guide](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/README.md)
-- Frontend: [UBot-FE README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [Frontend Docs](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)
-- LLM 실험: [UBot-LLMTest](https://github.com/ureca-UBot/UBot-LLMTest)
-- Embedding·Retrieval 실험: [UBot-EmbeddingTest](https://github.com/ureca-UBot/UBot-EmbeddingTest)
-- Vector DB 벤치마크: [UBot-VertorDBTest](https://github.com/ureca-UBot/UBot-VertorDBTest)
-
-## Architecture Decision Records
-
-- [ADR-001: PostgreSQL + pgvector](architecture/decisions/ADR-001-vector-database.md)
-- [ADR-002: BGE-M3](architecture/decisions/ADR-002-embedding-model.md)
-- [ADR-003: 현재 FAQ 검색에서 Reranker 제외](architecture/decisions/ADR-003-reranker-strategy.md)
-- [ADR-004: Qwen3-4B Instruct 계열](architecture/decisions/ADR-004-llm-selection.md)
-- [ADR-005: 질문 접수와 답변 처리 분리](architecture/decisions/ADR-005-async-chat-processing.md)
-
-## Templates
-
-- [ADR](../docs-templates/ADR_TEMPLATE.md)
-- [Benchmark](../docs-templates/BENCHMARK_TEMPLATE.md)
-- [Runbook](../docs-templates/RUNBOOK_TEMPLATE.md)
-- [Troubleshooting](../docs-templates/TROUBLESHOOTING_TEMPLATE.md)
+- Backend: [기능별 상세 문서](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/README.md) · [실행 안내](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/quickstart.md)
+- Frontend: [README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [화면·연동 문서](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)
+- 실험 원본: [생성 모델](https://github.com/ureca-UBot/UBot-LLMTest) · [임베딩·검색](https://github.com/ureca-UBot/UBot-EmbeddingTest) · [벡터 저장소](https://github.com/ureca-UBot/UBot-VertorDBTest)

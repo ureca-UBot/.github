@@ -19,7 +19,7 @@ UBot은 운영 제품 저장소와 기술 검증 저장소를 분리합니다. �
 
 | Repository | Type | Lifecycle | Responsibility | Documentation |
 |---|---|---|---|---|
-| [UBot-BE](https://github.com/ureca-UBot/UBot-BE) | Production | Active | 백엔드, AI 오케스트레이션, 데이터와 운영 | [README](https://github.com/ureca-UBot/UBot-BE/blob/develop/README.md) · [Docs](https://github.com/ureca-UBot/UBot-BE/tree/develop/docs) |
+| [UBot-BE](https://github.com/ureca-UBot/UBot-BE) | Production | Active | 백엔드, AI 오케스트레이션, 데이터와 운영 | [README](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/README.md) · [Docs](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs) |
 | [UBot-FE](https://github.com/ureca-UBot/UBot-FE) | Production | Active | 웹 애플리케이션과 브라우저 경험 | [README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [Docs](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs) |
 | [UBot-LLMTest](https://github.com/ureca-UBot/UBot-LLMTest) | Research | Research | LLM 품질, 프롬프트와 서빙 평가 | [Repository](https://github.com/ureca-UBot/UBot-LLMTest) |
 | [UBot-EmbeddingTest](https://github.com/ureca-UBot/UBot-EmbeddingTest) | Research | Research | 임베딩, 검색과 리랭커 평가 | [Repository](https://github.com/ureca-UBot/UBot-EmbeddingTest) |
@@ -53,7 +53,7 @@ Lifecycle은 `Active`, `Research`, `Maintenance`, `Reference`, `Archived`만 사
 
 ### Detailed Documentation
 
-[UBot-BE README](https://github.com/ureca-UBot/UBot-BE/blob/develop/README.md) · [Technical Documentation](https://github.com/ureca-UBot/UBot-BE/tree/develop/docs)
+[UBot-BE README](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/README.md) · [Technical Documentation](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs)
 
 ## UBot-FE
 

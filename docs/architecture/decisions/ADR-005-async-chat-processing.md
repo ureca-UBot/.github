@@ -37,7 +37,7 @@ last_reviewed: '2026-10-26'
 
 ## Production Implementation
 
-[UBot-BE Architecture](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/architecture/overview.md) · [Reliability Model](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reliability/reliability-model.md) · [UBot-FE](https://github.com/ureca-UBot/UBot-FE)
+[UBot-BE Architecture](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/architecture.md) · [Reliability Model](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/reliability-model.md) · [UBot-FE](https://github.com/ureca-UBot/UBot-FE)
 
 ## Revisit Triggers
 

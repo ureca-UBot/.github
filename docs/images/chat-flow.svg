@@ -1,143 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
-  <title id="title">UBot 질문에서 상담과 지식 개선까지</title>
-  <desc id="desc">관리자의 FAQ 임베딩 준비와 사용자의 Frontend 질문이 Backend의 벡터 검색, 업무 자료 조회, 답변 생성과 검사, 결과 저장, 화면 카드와 상담사 인계로 이어지는 흐름</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08111f"/>
-      <stop offset="1" stop-color="#111d32"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#020617" flood-opacity="0.38"/>
-    </filter>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#90a8ca"/>
-    </marker>
-    <style>
-      .title { fill:#f8fafc; font:700 30px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .subtitle { fill:#a8bad4; font:500 17px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .lane { fill:#90a8ca; font:700 15px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; letter-spacing:.4px; }
-      .card-title { fill:#f8fafc; font:700 18px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .card-body { fill:#cfdbeb; font:500 14px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .small { fill:#9fb2cd; font:500 13px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .line { stroke:#90a8ca; stroke-width:3; fill:none; marker-end:url(#arrow); }
-      .dash { stroke:#7188ad; stroke-width:2.5; fill:none; stroke-dasharray:8 7; marker-end:url(#arrow); }
-      .card { stroke-width:1.5; filter:url(#shadow); }
-    </style>
-  </defs>
-
-  <rect width="1200" height="920" rx="26" fill="url(#bg)"/>
-  <text x="54" y="58" class="title">질문에서 상담과 지식 개선까지</text>
-  <text x="54" y="88" class="subtitle">FAQ 준비부터 답변·상담·지식 개선까지 하나의 대화 흐름으로 이어집니다.</text>
-
-  <rect x="42" y="116" width="1116" height="164" rx="22" fill="#101d30" stroke="#30435f"/>
-  <text x="62" y="143" class="lane">FAQ 검색 준비</text>
-
-  <rect x="70" y="166" width="210" height="82" rx="17" fill="#263b66" stroke="#5f79bf" class="card"/>
-  <text x="175" y="196" text-anchor="middle" class="card-title">관리자 지식 관리</text>
-  <text x="175" y="220" text-anchor="middle" class="card-body">FAQ · 질문 표현 · 의도</text>
-  <text x="175" y="240" text-anchor="middle" class="small">등록 · 수정 · 버전 이력</text>
-
-  <rect x="352" y="166" width="210" height="82" rx="17" fill="#124c4b" stroke="#2f9e9a" class="card"/>
-  <text x="457" y="196" text-anchor="middle" class="card-title">현재 FAQ 버전</text>
-  <text x="457" y="220" text-anchor="middle" class="card-body">활성 질문 표현만 선택</text>
-  <text x="457" y="240" text-anchor="middle" class="small">삭제 · 오래된 버전 제외</text>
-
-  <rect x="634" y="166" width="210" height="82" rx="17" fill="#6b361d" stroke="#da7b3e" class="card"/>
-  <text x="739" y="196" text-anchor="middle" class="card-title">Embedding Runtime</text>
-  <text x="739" y="220" text-anchor="middle" class="card-body">질문 표현 → 벡터</text>
-  <text x="739" y="240" text-anchor="middle" class="small">현재 Profile 기준</text>
-
-  <rect x="916" y="166" width="210" height="82" rx="17" fill="#16415a" stroke="#3d8bb8" class="card"/>
-  <text x="1021" y="196" text-anchor="middle" class="card-title">PostgreSQL / pgvector</text>
-  <text x="1021" y="220" text-anchor="middle" class="card-body">FAQ 벡터 · HNSW</text>
-  <text x="1021" y="240" text-anchor="middle" class="small">버전 · Profile 함께 저장</text>
-
-  <path d="M 280 207 H 350" class="line"/>
-  <path d="M 562 207 H 632" class="line"/>
-  <path d="M 844 207 H 914" class="line"/>
-
-  <rect x="42" y="306" width="1116" height="386" rx="22" fill="#101d30" stroke="#30435f"/>
-  <text x="62" y="334" class="lane">실시간 질문 처리</text>
-
-  <rect x="62" y="366" width="190" height="106" rx="18" fill="#12345a" stroke="#3282c8" class="card"/>
-  <text x="157" y="397" text-anchor="middle" class="card-title">UBot-FE</text>
-  <text x="157" y="422" text-anchor="middle" class="card-body">질문 · 대화 · 위치 권한</text>
-  <text x="157" y="444" text-anchor="middle" class="card-body">진행 단계와 중단 요청</text>
-  <text x="157" y="463" text-anchor="middle" class="small">통합 채팅 · 플로팅 채팅</text>
-
-  <rect x="300" y="366" width="190" height="106" rx="18" fill="#28356e" stroke="#6574d9" class="card"/>
-  <text x="395" y="397" text-anchor="middle" class="card-title">질문 접수</text>
-  <text x="395" y="422" text-anchor="middle" class="card-body">인증 · 소유권 · 입력 검사</text>
-  <text x="395" y="444" text-anchor="middle" class="card-body">대화 · 질문 · 작업 저장</text>
-  <text x="395" y="463" text-anchor="middle" class="small">추적 식별자 반환</text>
-
-  <rect x="538" y="354" width="214" height="130" rx="18" fill="#4c286d" stroke="#a66ad2" class="card"/>
-  <text x="645" y="386" text-anchor="middle" class="card-title">질문 이해와 검색</text>
-  <text x="645" y="411" text-anchor="middle" class="card-body">질문 정리 · 필요 시 분리</text>
-  <text x="645" y="433" text-anchor="middle" class="card-body">질문 Embedding</text>
-  <text x="645" y="455" text-anchor="middle" class="card-body">HNSW FAQ 검색</text>
-  <text x="645" y="476" text-anchor="middle" class="small">현재 버전 · Profile만 사용</text>
-
-  <rect x="800" y="354" width="214" height="130" rx="18" fill="#325339" stroke="#69a477" class="card"/>
-  <text x="907" y="386" text-anchor="middle" class="card-title">근거와 업무 자료</text>
-  <text x="907" y="411" text-anchor="middle" class="card-body">FAQ 문장 선별</text>
-  <text x="907" y="433" text-anchor="middle" class="card-body">회원 · 상품 · 매장 조회</text>
-  <text x="907" y="455" text-anchor="middle" class="card-body">허용된 조회 도구만 연결</text>
-  <text x="907" y="476" text-anchor="middle" class="small">권한과 소유권은 서버가 검사</text>
-
-  <rect x="538" y="534" width="214" height="112" rx="18" fill="#6b361d" stroke="#da7b3e" class="card"/>
-  <text x="645" y="566" text-anchor="middle" class="card-title">답변 모델</text>
-  <text x="645" y="592" text-anchor="middle" class="card-body">선별한 근거와 자료 사용</text>
-  <text x="645" y="616" text-anchor="middle" class="card-body">답변 상태 · 근거 반환</text>
-
-  <rect x="800" y="534" width="214" height="112" rx="18" fill="#5a2947" stroke="#bd668e" class="card"/>
-  <text x="907" y="566" text-anchor="middle" class="card-title">출력 검사와 저장</text>
-  <text x="907" y="592" text-anchor="middle" class="card-body">구조 · 근거 · 수치 · 위험 검사</text>
-  <text x="907" y="616" text-anchor="middle" class="card-body">답변 · 카드 · FAQ 사용 기록</text>
-
-  <rect x="1046" y="366" width="92" height="280" rx="18" fill="#17364f" stroke="#3d8bb8" class="card"/>
-  <text x="1092" y="401" text-anchor="middle" class="card-title">화면</text>
-  <text x="1092" y="430" text-anchor="middle" class="card-body">답변</text>
-  <text x="1092" y="454" text-anchor="middle" class="card-body">상품</text>
-  <text x="1092" y="478" text-anchor="middle" class="card-body">이용 정보</text>
-  <text x="1092" y="502" text-anchor="middle" class="card-body">매장 · 지도</text>
-  <text x="1092" y="526" text-anchor="middle" class="card-body">평가</text>
-  <text x="1092" y="550" text-anchor="middle" class="card-body">다시 검색</text>
-  <text x="1092" y="574" text-anchor="middle" class="card-body">오류 안내</text>
-  <text x="1092" y="612" text-anchor="middle" class="small">작업 상태를</text>
-  <text x="1092" y="631" text-anchor="middle" class="small">계속 조회</text>
-
-  <path d="M 252 419 H 298" class="line"/>
-  <path d="M 490 419 H 536" class="line"/>
-  <path d="M 752 419 H 798" class="line"/>
-  <path d="M 907 484 V 510 H 645 V 532" class="line"/>
-  <path d="M 752 590 H 798" class="line"/>
-  <path d="M 1014 590 H 1044" class="line"/>
-  <path d="M 1092 366 V 320 H 157 V 364" class="dash"/>
-  <text x="627" y="318" text-anchor="middle" class="small">진행 상태 조회 · 완료 결과 반영</text>
-  <path d="M 645 354 V 280 H 1021 V 250" class="dash"/>
-  <text x="805" y="296" text-anchor="middle" class="small">준비된 FAQ 벡터 검색</text>
-
-  <rect x="42" y="718" width="1116" height="150" rx="22" fill="#101d30" stroke="#30435f"/>
-  <text x="62" y="746" class="lane">대화 이후의 연결</text>
-
-  <rect x="70" y="772" width="240" height="66" rx="17" fill="#17364f" stroke="#3d8bb8" class="card"/>
-  <text x="190" y="799" text-anchor="middle" class="card-title">대화 기록</text>
-  <text x="190" y="823" text-anchor="middle" class="card-body">AI 문답 · FAQ 선택 · 상담 기록</text>
-
-  <rect x="374" y="772" width="240" height="66" rx="17" fill="#325339" stroke="#69a477" class="card"/>
-  <text x="494" y="799" text-anchor="middle" class="card-title">다음 행동</text>
-  <text x="494" y="823" text-anchor="middle" class="card-body">의도별 재검색 · 상품 · 매장</text>
-
-  <rect x="678" y="772" width="240" height="66" rx="17" fill="#5a2947" stroke="#bd668e" class="card"/>
-  <text x="798" y="799" text-anchor="middle" class="card-title">상담사 인계</text>
-  <text x="798" y="823" text-anchor="middle" class="card-body">서버 저장 이력으로 상담 연결</text>
-
-  <rect x="982" y="772" width="144" height="66" rx="17" fill="#263b66" stroke="#5f79bf" class="card"/>
-  <text x="1054" y="799" text-anchor="middle" class="card-title">지식 개선</text>
-  <text x="1054" y="823" text-anchor="middle" class="card-body">미응답 → FAQ</text>
-
-  <path d="M 310 805 H 372" class="line"/>
-  <path d="M 614 805 H 676" class="line"/>
-  <path d="M 918 805 H 980" class="line"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+<title id="title">질문과 FAQ 검색, 답변 처리 흐름</title>
+<desc id="desc">관리자 FAQ 준비와 실시간 질문 처리, 공식 FAQ 직접 반환 분기</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#A8A8BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="1200" height="1200" rx="28" fill="#FFFFFF"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif">
+<text x="40" y="52" font-size="18" fill="#D91370" font-weight="750" text-anchor="start">UBot</text>
+<text x="40" y="105" font-size="40" fill="#20202A" font-weight="750" text-anchor="start">질문이 근거 있는 답변이 되기까지</text>
+<path d="M40 132 L1160 132" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="40" y="164" width="180" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="130" y="189" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">관리자의 지식 준비</text>
+<rect x="40" y="220" width="310" height="135" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="262" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">FAQ 등록·수정</text>
+<text x="62" y="298" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">질문 표현과 공식 답변</text>
+<path d="M195 361 L195 392" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="400" width="310" height="135" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="442" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">질문 표현 임베딩</text>
+<text x="62" y="478" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">현재 버전·프로필 사용</text>
+<path d="M195 541 L195 572" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="580" width="310" height="135" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="622" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">검색 색인 준비</text>
+<text x="62" y="658" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">PostgreSQL · pgvector</text>
+<path d="M 350 645 H 380 V 525 H 410" fill="none" stroke="#A8A8BA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="420" y="185" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="213" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">01 · FE</text>
+<text x="444" y="249" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">질문 입력</text>
+<text x="444" y="281" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">대화 맥락과 필요한 위치를 전송</text>
+<path d="M790 306 L790 320" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="420" y="325" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="353" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">02 · BE</text>
+<text x="444" y="389" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">권한·입력 확인과 접수</text>
+<text x="444" y="421" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">대화 소유권을 확인하고 작업 저장</text>
+<path d="M790 446 L790 460" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="420" y="465" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="493" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">03 · BE</text>
+<text x="444" y="529" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">질문 정리·임베딩·FAQ 검색</text>
+<text x="444" y="561" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">현재 FAQ 버전과 같은 프로필로 검색</text>
+<path d="M790 586 L790 600" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="420" y="605" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="633" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">04 · BE</text>
+<text x="444" y="669" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">업무 자료·조회 도구 연결</text>
+<text x="444" y="701" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">본인 이용 정보·상품·매장 자료 확인</text>
+<path d="M790 726 L790 740" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="420" y="745" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="773" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">05 · BE</text>
+<text x="444" y="809" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">답변 생성과 안전 검사</text>
+<text x="444" y="841" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">근거·수치·위험 표현을 확인</text>
+<path d="M790 866 L790 880" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="420" y="885" width="740" height="116" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="444" y="913" font-size="17" fill="#D91370" font-weight="700" text-anchor="start">06 · BE → FE</text>
+<text x="444" y="949" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">결과 저장과 화면 표시</text>
+<text x="444" y="981" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">답변·카드 확인 후 다음 행동 선택</text>
+<rect x="40" y="1040" width="1120" height="130" rx="22" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="66" y="1083" font-size="26" fill="#6F55DD" font-weight="750" text-anchor="start">조건에 맞는 공식 FAQ는 바로 반환합니다</text>
+<text x="66" y="1120" font-size="23" fill="#20202A" font-weight="500" text-anchor="start">검색 조건 충족 → 등록 답변의 출력 코드 검사 → 결과 저장·화면 표시</text>
+<text x="66" y="1150" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">이 경로에서는 답변 생성·출력 AI 판정을 생략합니다.</text>
+</g>
 </svg>
