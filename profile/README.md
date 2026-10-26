@@ -1,6 +1,6 @@
 <picture>
-  <source media="(max-width: 767px)" srcset="../docs/images/project-hero-mobile.png">
-  <img src="../docs/images/project-hero.png" alt="UBot — 질문에서 해결까지, 통신 생활을 하나로. 공식 FAQ와 이용 정보 기반 AI 상담, 상품·예약·상담사 연결" width="100%">
+  <source media="(max-width: 767px)" srcset="../docs/images/project-hero-mobile.png?v=2">
+  <img src="../docs/images/project-hero.png?v=2" alt="UBot — 질문에서 해결까지, 통신 생활을 하나로. 공식 FAQ와 이용 정보 기반 AI 상담, 상품·예약·상담사 연결" width="100%">
 </picture>
 
 **상품 탐색·가입 관리부터 이용 정보 조회, 매장 예약, AI 상담과 상담사 연결까지 이어지는 통신 생활 서비스**
