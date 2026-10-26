@@ -14,6 +14,7 @@
 | 실험과 검증 결과를 어디까지 근거로 사용할 수 있는가? | [Evidence Register](evidence-register.md) |
 | 조직 문서를 어떻게 작성하고 갱신하는가? | [Documentation Policy](documentation-policy.md) |
 | 공통 용어는 무엇을 뜻하는가? | [Glossary](glossary.md) |
+| 참여 멤버가 직접 구현한 내용은 무엇인가? | [Team Contributions](team-contributions.md) |
 
 ## Decision Records
 
