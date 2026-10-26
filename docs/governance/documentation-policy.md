@@ -1,100 +1,19 @@
----
-title: 'Documentation Policy'
-type: governance
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
+# 문서 작성 원칙
 
-# Documentation Policy
+제품 소개와 기능 흐름은 조직 문서에서 설명하고, API·설정·실행·운영의 상세 내용은 해당 저장소 문서로 연결합니다.
 
-UBot 조직 문서는 전체 맥락과 연결을 담당하고, 상세 구현은 해당 Repository가 관리합니다.
+- 첫 화면에서는 전체 기능을 짧게 소개하고, 기능별 문서에서 흐름을 끝까지 설명합니다.
+- 코드 변경으로 설명이 달라지면 관련 문서와 링크도 함께 고칩니다.
+- 기술 선택과 성능 수치에는 실험 조건·적용 범위·원본 근거를 연결합니다.
+- 실행 명령에는 예상 결과나 확인 방법을 적습니다.
+- 이미지의 흐름과 문서 링크가 실제 구현에 맞는지 확인합니다.
 
-## 필수 원칙
+## 실험 결과를 인용할 때
 
-1. **상세 구현의 기준은 해당 Repository입니다.** API, 설정, 코드, DB, 실행·배포 절차는 그 구현을 가진 저장소에 둡니다.
-2. **같은 사실을 여러 곳에 복제하지 않습니다.** 조직 문서는 결론과 맥락을 요약하고 상세 문서로 연결합니다.
-3. **코드 변경으로 설명이 틀리면 같은 변경에서 문서를 고칩니다.** 조직 수준의 책임이나 결정이 달라질 때만 이 저장소도 갱신합니다.
-4. **성능·정확도·기술 선택에는 원본 Evidence를 연결합니다.** 조건과 한계를 빼고 숫자만 옮기지 않습니다.
-5. **실행 명령에는 Expected Result 또는 검증 방법을 함께 적습니다.** 명령만 나열해 성공 여부를 독자에게 맡기지 않습니다.
-6. **Product·Component·Repository·Artifact를 구분합니다.** 관계의 단일 원본은 `data/product.yaml`이고 생성된 표는 직접 수정하지 않습니다.
-7. **미검증은 미검증으로 기록합니다.** 실제 근거가 없으면 claim은 `DRAFT`, 검증과 propagation은 `NOT_EVALUATED`로 둡니다.
-8. **Merge와 완료를 구분합니다.** 제품 변경은 `Designed → Approved → Implemented → Integrated → Released → Propagated → Verified → Closed` 상태를 따릅니다.
+데이터셋과 평가 문항 수, 모델·프롬프트, 하드웨어·동시성·측정 시간을 함께 확인합니다. 서로 다른 실험의 최고 수치를 한 구성에서 동시에 달성한 결과처럼 합치지 않습니다.
 
-## 변경 분류
+기존 실험 결과는 당시 조건의 기록으로 보존하고, 현재 설정과 다른 부분은 설명을 덧붙입니다. 원본 결과는 [실험과 검증 근거](../proof/evidence-register.md)에서 찾아볼 수 있습니다.
 
-- **Repo-only:** 외부 동작·계약에 영향을 주지 않는 내부 리팩터링, 테스트, 빌드 변경
-- **Product-level:** API·동작·기본값·스키마·재시도·실패·호환성·migration·release·운영 동작 변경
+## 참고 양식
 
-Product-level 변경은 producer와 consumer의 영향, 관련 저장소 변경, 릴리스 순서, rollback과 실제 환경 반영 확인을 함께 기록합니다. PR merge만으로 제품 변경을 `Closed`로 보지 않습니다.
-
-## 예제 검증 등급
-
-- `V0`: 설명용, 실행 보장 없음
-- `V1`: compile 확인
-- `V2`: 실행 확인
-- `V3`: 출력 assertion 확인
-- `V4`: 계약 assertion 확인
-
-문서 검사 도구가 통과한 것과 실제 제품 예제가 검증된 것은 별개의 사실입니다.
-
-## 조직 문서에 두는 내용
-
-- 제품의 목적, 사용자와 핵심 흐름
-- FE·BE·AI·데이터 계층의 관계
-- Repository의 분류와 책임 경계
-- 주요 기술 결정과 Evidence·구현 문서의 연결
-- 조직 전체 실험·검증 근거의 색인과 해석 범위
-- 조직 공통 용어와 문서 양식
-
-## Repository로 보내는 내용
-
-- API 경로와 요청·응답 필드
-- 환경변수, 임계값, 제한 시간과 재시도 횟수
-- 클래스·서비스·테이블·열·제약
-- 세부 배포 명령과 운영 서버 설정
-- 원본 데이터셋, 실험 스크립트, 원시 결과와 상세 벤치마크 수치
-
-## 링크 원칙
-
-- Repository 진입 링크는 기본 브랜치를 사용해 최신 문서로 연결합니다.
-- ADR의 근거는 커밋 SHA가 들어간 고정 링크를 사용합니다.
-- 조직 차원의 실험 요약은 [Evidence Register](../proof/evidence-register.md)에 두고 원시 결과를 가진 저장소로 연결합니다.
-- Production 구현 링크는 해당 Repository의 현재 문서로 연결합니다.
-- 접근할 수 없거나 검증하지 못한 링크는 그 상태를 함께 적습니다.
-
-## 실험 수치 사용
-
-다음 항목을 함께 확인하지 못하면 제품 성능으로 인용하지 않습니다.
-
-- 데이터셋과 평가 분모
-- 모델 리비전·양자화·프롬프트
-- 하드웨어·실행 환경·동시성·측정 시간
-- 홀드아웃과 사람 검토 여부
-- 소스 커밋과 수정 중인 작업 트리 여부
-- 현재 Production 구성과 다른 점
-
-서로 다른 품질·검색·서빙 실험의 최고 수치를 한 구성에서 동시에 측정한 값처럼 합치지 않습니다.
-
-## 책임과 검토
-
-| 문서 | 작성·갱신 | 필요한 검토 |
-|---|---|---|
-| 조직 첫 화면·제품·Repository 지도 | 프로젝트 전체 | 제품 흐름과 Repository 책임을 아는 팀원 |
-| System Architecture | 관련 FE·BE·AI 담당 | 바뀐 책임을 가진 Repository 담당자 |
-| 기술 결정·ADR | 결정을 제안한 담당 | 근거와 Production 구현 담당자 |
-| Evidence Register | 실험·검증 담당 | 원본 결과와 Production 구현을 아는 담당자 |
-| Repository 문서 | 해당 Repository 담당 | 변경한 코드·운영 계약의 검토자 |
-| 표준 양식·용어집 | 조직 문서 관리 | 실제 사용 Repository의 의견 |
-
-## 변경 확인
-
-- [ ] 조직 문서에 구현 상세를 복제하지 않았는가?
-- [ ] Responsibility, Owns, Does not own이 서로 충돌하지 않는가?
-- [ ] 기술 선택에 커밋 고정 근거가 있는가?
-- [ ] Research 결과를 Production 보장값처럼 쓰지 않았는가?
-- [ ] 모든 상대 링크와 이미지 경로가 열리는가?
-- [ ] 새 명령에 예상 결과 또는 검증 방법이 있는가?
-
-표준 문서는 [ADR](../../docs-templates/ADR_TEMPLATE.md), [Benchmark](../../docs-templates/BENCHMARK_TEMPLATE.md), [Runbook](../../docs-templates/RUNBOOK_TEMPLATE.md), [Troubleshooting](../../docs-templates/TROUBLESHOOTING_TEMPLATE.md) 양식을 사용합니다.
+[ADR](../../docs-templates/ADR_TEMPLATE.md) · [Benchmark](../../docs-templates/BENCHMARK_TEMPLATE.md) · [Runbook](../../docs-templates/RUNBOOK_TEMPLATE.md) · [Troubleshooting](../../docs-templates/TROUBLESHOOTING_TEMPLATE.md)

@@ -1,12 +1,3 @@
----
-title: '[TODO: Task Name]'
-type: how-to
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: 독자가 완료할 수 있는 작업]
 
 ## 목표

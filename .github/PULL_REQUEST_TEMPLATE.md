@@ -1,51 +1,13 @@
-## Reader Outcome
+## 변경 내용
 
-[독자가 이 변경을 읽고 무엇을 판단하거나 실행할 수 있는가]
+- 변경한 문서와 독자가 확인할 내용을 적어 주세요.
 
-## Document Type
+## 관련 근거
 
-- [ ] Product / Use Case / Quickstart
-- [ ] Architecture / RFC / ADR
-- [ ] API / Reference / Compatibility
-- [ ] Migration / Runbook / Reliability
-- [ ] Troubleshooting / Incident / Known Issue
+- 구현, 실험 결과 또는 관련 이슈·PR 링크를 적어 주세요.
 
-## Source of Truth
+## 확인 사항
 
-- Authoritative repository and path: [link]
-- Exact commit/artifact revision: [SHA/digest]
-- Dynamic runtime authority if relevant: [endpoint/header/status]
-
-## Product Claim
-
-- [ ] No externally visible strong claim
-- [ ] Claim updated in `docs/proof/claims.yaml`
-- [ ] Applicable version/environment and evidence linked
-
-## Generated Content
-
-- [ ] No generated content change
-- [ ] Source repository updated first
-- [ ] `generated/MANIFEST.yaml` updated
-- [ ] Generated views are current (`python scripts/docs_tool.py generate --check`)
-
-## Reader Validation
-
-- [ ] Links and metadata valid
-- [ ] Steps include expected observable result
-- [ ] Known limitations and applicability stated
-- [ ] No private author instructions exposed
-
-## Ownership and Review
-
-- Product owner: [team]
-- Producer/consumer reviewers: [teams]
-- Release or SRE reviewer if needed: [team]
-
-## Publication Gate
-
-The final documentation publishing workflow must run:
-
-```bash
-python scripts/docs_tool.py validate --mode publish
-```
+- [ ] 문서의 설명과 그림을 실제 구현에 맞췄습니다.
+- [ ] 링크와 이미지 경로를 확인했습니다.
+- [ ] 실험 수치의 조건과 원본 근거를 유지했습니다.

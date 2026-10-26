@@ -1,12 +1,3 @@
----
-title: '채팅과 RAG 전체 흐름'
-type: architecture
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # 채팅과 RAG 전체 흐름
 
 UBot의 채팅은 관리자가 준비한 FAQ와 현재 대화, 서버가 조회한 업무 자료를 연결합니다. 서버가 답변을 검사·저장하면 화면이 진행 상태와 결과를 보여 줍니다.

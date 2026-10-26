@@ -1,12 +1,3 @@
----
-title: '참여 멤버와 구현 기여'
-type: governance
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # 참여 멤버와 구현 기여
 
 이 문서는 프로젝트에 참여한 멤버가 자신이 직접 구현한 내용과 근거를 기록하는 공간입니다. 커밋 수나 활동량으로 기여를 자동 추정하지 않으며, 다른 사람의 기여를 대신 작성하지 않습니다.

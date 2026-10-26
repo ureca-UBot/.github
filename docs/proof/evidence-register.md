@@ -1,12 +1,3 @@
----
-title: 'Evidence Register'
-type: evidence
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # Evidence Register
 
 UBot의 기술 선택과 제품 주장을 뒷받침하는 실험·검증 기록을 한곳에서 찾기 위한 문서입니다. 원시 데이터와 실행 코드는 각 저장소가 관리하고, 이 문서는 **무엇을 검증했는지**, **어떤 결정에 쓰였는지**, **어디까지 해석할 수 있는지**를 연결합니다.

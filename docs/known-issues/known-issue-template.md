@@ -1,12 +1,3 @@
----
-title: 'Known Issue: [TODO: Name]'
-type: known-issue
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Known Issue]
 
 - Status: [Investigating / Confirmed / Mitigated / Fix Rolling Out / Resolved]

@@ -1,12 +1,3 @@
----
-title: 'Postmortem: [TODO: Incident]'
-type: postmortem
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Incident]
 
 ## 영향과 탐지

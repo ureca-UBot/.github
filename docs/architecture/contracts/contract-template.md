@@ -1,12 +1,3 @@
----
-title: 'Contract: [TODO: Producer → Consumer]'
-type: cross-repo-contract
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Producer → Consumer Contract]
 
 ## 범위

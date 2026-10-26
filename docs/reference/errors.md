@@ -1,12 +1,3 @@
----
-title: Error Reference
-type: error-reference
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # 오류 코드
 
 이 문서는 “이 오류는 무엇을 의미하는가?”에 답합니다. 해결 단계는 [Troubleshooting](../troubleshooting/troubleshooting-template.md)에서 설명합니다.

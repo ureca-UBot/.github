@@ -1,12 +1,3 @@
----
-title: 'ADR-0000: [TODO: Decision]'
-type: adr
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # ADR-0000: [TODO: Decision]
 
 ## 상태

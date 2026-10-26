@@ -1,12 +1,3 @@
----
-title: '[TODO: METHOD PATH]'
-type: api-reference
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: METHOD PATH]
 
 [TODO: 호출자가 수행할 수 있는 동작을 한 문장으로 설명합니다.]

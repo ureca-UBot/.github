@@ -1,11 +1,3 @@
----
-title: "UBot Cross-repo Contracts"
-type: contract-index
-status: preview
-owner: "UBot maintainers"
-last_reviewed: 2026-10-26
----
-
 # Cross-repo Contracts
 
 이 문서는 구성요소 사이에서 함께 지켜야 하는 계약의 위치와 판정 기준을 정리합니다. 필드·상태·환경변수의 상세 정의는 코드를 생산하는 저장소가 기준입니다.

@@ -1,12 +1,3 @@
----
-title: 'ADR-005: 질문 접수와 답변 처리 분리'
-type: architecture-decision
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # ADR-005: 질문 접수와 답변 처리 분리
 
 - Status: Accepted

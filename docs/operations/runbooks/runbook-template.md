@@ -1,12 +1,3 @@
----
-title: 'Runbook: [TODO: Operation]'
-type: runbook
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Operation]
 
 ## 실행 조건과 목표

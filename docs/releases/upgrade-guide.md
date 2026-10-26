@@ -1,12 +1,3 @@
----
-title: Upgrade Guide
-type: upgrade-guide
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # 버전 업그레이드
 
 ## 적용 범위

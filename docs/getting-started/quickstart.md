@@ -1,12 +1,3 @@
----
-title: 'Product Quickstart'
-type: product-documentation
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # Product Quickstart
 
 UBot은 Frontend와 Backend가 함께 동작하는 제품입니다. 아직 고정된 제품 릴리스 묶음은 없으므로 임의의 두 revision을 섞어 `Supported` 조합으로 간주하지 않습니다.

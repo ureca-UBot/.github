@@ -1,12 +1,3 @@
----
-title: 'Troubleshooting: [TODO: Symptom]'
-type: troubleshooting
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Symptom]
 
 ## 정확한 오류 신호

@@ -1,12 +1,3 @@
----
-title: 'ADR-003: 현재 FAQ 검색에서 Reranker 제외'
-type: architecture-decision
-status: active
-owner: 'UBot maintainers'
-applicability: development-preview
-last_reviewed: '2026-10-26'
----
-
 # ADR-003: 현재 FAQ 검색에서 Reranker 제외
 
 - Status: Accepted

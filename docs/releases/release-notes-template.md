@@ -1,12 +1,3 @@
----
-title: 'Release Notes: [TODO: Version]'
-type: release-notes
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Product Release]
 
 ## 사용자에게 바뀐 것
@@ -34,7 +25,7 @@ last_reviewed: null
 
 ## 검증 상태
 
-[Release Profiles](../../generated/release-summary.md)
+변경한 기능의 테스트 결과, 실행 환경과 확인한 범위를 적고 관련 근거 문서로 연결합니다.
 
 ## 알려진 문제
 

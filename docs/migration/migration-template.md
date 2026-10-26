@@ -1,12 +1,3 @@
----
-title: 'Migration: [TODO: From → To]'
-type: migration
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # [TODO: Migration]
 
 ## 변경 이유와 영향 사용자

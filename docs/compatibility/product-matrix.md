@@ -1,11 +1,3 @@
----
-title: "UBot Product Compatibility Matrix"
-type: product-compatibility
-status: preview
-owner: "UBot maintainers"
-last_verified: 2026-10-26
----
-
 # Product Compatibility Matrix
 
 UBot은 아직 독립적인 제품 버전을 발행하지 않았습니다. 현재 문서는 개발 중인 `preview` 조합을 설명하며, 명시적으로 검증하지 않은 조합을 지원한다고 추정하지 않습니다.

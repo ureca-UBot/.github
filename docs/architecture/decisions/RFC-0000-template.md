@@ -1,12 +1,3 @@
----
-title: 'RFC-0000: [TODO: Product Change]'
-type: product-rfc
-status: draft
-owner: '[TODO: OWNER]'
-applicability: '[TODO: PRODUCT_PROFILE]'
-last_reviewed: null
----
-
 # RFC-0000: [TODO: Product Change]
 
 > [TODO: 어떤 사용자의 고통을 얼마나 줄이는지 한 문장]
