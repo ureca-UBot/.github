@@ -5,11 +5,11 @@ UBot의 채팅은 모델에 질문을 바로 보내는 구조가 아닙니다. �
 이 문서는 UBot-FE와 UBot-BE를 가로지르는 흐름을 설명합니다. API 경로, 요청 필드, 임계값과 재시도 횟수는 각 Repository 문서를 기준으로 확인합니다.
 
 <picture>
-  <source media="(max-width: 767px)" srcset="images/chat-flow-mobile.svg">
-  <img src="images/chat-flow.svg" alt="FAQ 임베딩 준비부터 Frontend 질문 접수, 벡터 검색, 업무 자료 조회, 답변 생성과 검사, 화면 표시와 상담사 인계까지 이어지는 흐름" width="100%">
+  <source media="(max-width: 767px)" srcset="images/chat-flow-mobile.png">
+  <img src="images/chat-flow.png" alt="FAQ 임베딩 준비부터 Frontend 질문 접수, 벡터 검색, 업무 자료 조회, 답변 생성과 검사, 화면 표시와 상담사 인계까지 이어지는 흐름" width="100%">
 </picture>
 
-[그림 크게 보기](images/chat-flow.svg) · [모바일 그림](images/chat-flow-mobile.svg)
+[그림 크게 보기](images/chat-flow.png) · [모바일 그림](images/chat-flow-mobile.png)
 
 ## 먼저 준비되는 FAQ 검색 인덱스
 
