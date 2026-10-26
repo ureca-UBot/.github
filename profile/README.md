@@ -7,10 +7,13 @@
 [서비스 이용하기](https://u-bot.cloud) · [시나리오로 살펴보기](../docs/overview/product.md) · [전체 기능 문서](../docs/README.md)
 
 <p align="center">
-  <img src="../docs/images/product-hero.png" alt="상품, 대화, 매장과 상담, FAQ를 함께 보여 주는 UBot 제품 소개 일러스트" width="720">
+  <picture>
+    <source media="(max-width: 767px)" srcset="../docs/images/product-guide-mobile.png">
+    <img src="../docs/images/product-guide.png" alt="고객 질문을 공식 FAQ와 이용 정보로 확인해 답변하고, 고객 요청 시 상담사에게 이전 내역을 전달합니다. 미응답은 관리자 FAQ 보완으로 이어집니다." width="100%">
+  </picture>
 </p>
 
-*상품·매장·상담을 연결하는 서비스의 모습을 표현한 일러스트입니다.*
+[질문에서 답변까지](../docs/architecture/chat-flow.md) · [상담사에게 연결하기](../docs/features/counselor-handoff.md) · [미응답으로 FAQ 개선하기](../docs/features/knowledge-improvement.md)
 
 ## UBot에서 할 수 있는 일
 

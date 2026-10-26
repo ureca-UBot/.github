@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="855" viewBox="0 0 1200 855" role="img" aria-labelledby="title desc">
+<title id="title">UBot은 질문을 답변과 상담으로 연결합니다</title>
+<desc id="desc">고객이 상품, 이용 정보, 매장을 질문하면 공식 FAQ와 권한을 확인한 자료를 조회해 답변과 카드를 제공합니다. 로그인한 고객이 요청하면 이전 대화를 상담사에게 전달하고 메시지를 검사합니다. 근거가 부족한 질문은 관리자의 FAQ 보완과 다음 검색으로 이어집니다.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M1 1L9 5L1 9" fill="none" stroke="#A4A4B6" stroke-width="1.5"/>
+</marker>
+</defs>
+<rect width="1200" height="855" fill="#FFF" rx="28"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR',sans-serif">
+<text x="40" y="49" font-size="20" fill="#D91370" font-weight="750">UBot</text>
+<text x="40" y="107" font-size="42" fill="#20202A" font-weight="750">통신 정보, 질문부터 상담까지</text>
+<text x="40" y="148" font-size="25" fill="#62626E" font-weight="500">상품·이용 정보·매장 안내를 한곳에서 확인합니다</text>
+<rect x="40" y="193" width="340" height="228" rx="24" fill="#FFF" stroke="#DEDEE8" stroke-width="1.5"/>
+<rect x="62" y="213" width="125" height="34" rx="24" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="77" y="237" font-size="18" fill="#D91370" font-weight="700">01 · 고객</text>
+<text x="62" y="294" font-size="31" fill="#20202A" font-weight="750">궁금한 내용을 질문</text>
+<text x="62" y="342" font-size="24" fill="#62626E" font-weight="500">“내 사용량 알려줘”</text>
+<text x="62" y="381" font-size="24" fill="#62626E" font-weight="500">“가까운 매장 찾아줘”</text>
+<path d="M388 306L422 306" fill="none" stroke="#A4A4B6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="430" y="193" width="340" height="228" rx="24" fill="#FFF" stroke="#DEDEE8" stroke-width="1.5"/>
+<rect x="452" y="213" width="125" height="34" rx="24" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="467" y="237" font-size="18" fill="#D91370" font-weight="700">02 · UBot</text>
+<text x="452" y="294" font-size="31" fill="#20202A" font-weight="750">공식 자료 확인</text>
+<text x="452" y="342" font-size="24" fill="#62626E" font-weight="500">공식 FAQ와 필요한 자료 조회</text>
+<text x="452" y="381" font-size="24" fill="#62626E" font-weight="500">상품 · 본인 이용 정보 · 매장</text>
+<path d="M778 306L812 306" fill="none" stroke="#A4A4B6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="820" y="193" width="340" height="228" rx="24" fill="#FFF" stroke="#DEDEE8" stroke-width="1.5"/>
+<rect x="842" y="213" width="125" height="34" rx="24" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="857" y="237" font-size="18" fill="#D91370" font-weight="700">03 · 결과</text>
+<text x="842" y="294" font-size="31" fill="#20202A" font-weight="750">답변·카드로 안내</text>
+<text x="842" y="342" font-size="24" fill="#62626E" font-weight="500">검사한 답변과 조회 결과 표시</text>
+<text x="842" y="381" font-size="24" fill="#62626E" font-weight="500">상품 확인 · 길찾기 · 예약으로</text>
+<path d="M990 432L990 480" fill="none" stroke="#A4A4B6" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1010" y="464" font-size="21" fill="#62626E" font-weight="500">고객이 요청하면</text>
+<rect x="40" y="492" width="1120" height="128" rx="24" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="64" y="540" font-size="30" fill="#D91370" font-weight="750">상담사 호출</text>
+<text x="64" y="583" font-size="25" fill="#62626E" font-weight="500">로그인한 고객</text>
+<text x="380" y="540" font-size="32" fill="#20202A" font-weight="750">같은 대화로 상담을 이어갑니다</text>
+<text x="380" y="585" font-size="24" fill="#62626E" font-weight="500">이전 내역을 함께 전달하고, 검사한 메시지만 주고받습니다</text>
+<rect x="40" y="665" width="1120" height="153" rx="24" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="64" y="706" font-size="25" fill="#6F55DD" font-weight="700">답변 근거가 부족한 질문은</text>
+<text x="64" y="771" font-size="29" fill="#20202A" font-weight="750">미응답 수집</text>
+<path d="M250 761L292 761" fill="none" stroke="#A4A4B6" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="320" y="771" font-size="29" fill="#20202A" font-weight="750">관리자 FAQ 보완</text>
+<path d="M583 761L625 761" fill="none" stroke="#A4A4B6" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="654" y="771" font-size="29" fill="#20202A" font-weight="750">다음 질문의 검색에 반영</text>
+</g>
+</svg>
