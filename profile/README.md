@@ -4,7 +4,7 @@
 
 고객은 여러 메뉴를 돌아다니지 않고 상품과 자신의 이용 정보를 확인하고, 가까운 매장을 찾아 방문을 예약하며, 궁금한 점을 대화로 해결할 수 있습니다. UBot이 해결하지 못한 질문은 사람 상담과 FAQ 개선으로 이어집니다.
 
-[UBot 사용하기](https://u-bot.cloud) · [제품과 기능 자세히 보기](../docs/product-overview.md) · [전체 문서](../docs/README.md)
+[UBot 사용하기](https://u-bot.cloud) · [제품과 기능 자세히 보기](../docs/overview/product.md) · [전체 문서](../docs/README.md)
 
 ## 질문 하나가 답변·상담·다음 지식으로 이어집니다
 
@@ -17,7 +17,7 @@ UBot의 핵심은 질문에 문장 하나를 돌려주는 데 있지 않습니�
   </picture>
 </p>
 
-[채팅과 RAG 전체 흐름 읽기](../docs/chat-flow.md) · [큰 그림](../docs/images/chat-flow.png) · [모바일 그림](../docs/images/chat-flow-mobile.png)
+[채팅과 RAG 전체 흐름 읽기](../docs/architecture/chat-flow.md) · [큰 그림](../docs/images/chat-flow.png) · [모바일 그림](../docs/images/chat-flow-mobile.png)
 
 1. **지식을 준비합니다.** 관리자가 FAQ·공식 답변·질문 표현·처리 의도를 관리하면, 현재 FAQ 버전의 질문 표현을 임베딩해 HNSW 검색 인덱스를 준비합니다.
 2. **Frontend가 질문을 이어 붙입니다.** 통합 채팅과 플로팅 채팅이 현재 대화에 질문을 추가하고, Backend가 돌려준 작업 상태를 따라 검색·자료 수집·답변 생성 과정을 보여 줍니다.
@@ -85,13 +85,13 @@ UBot의 핵심은 질문에 문장 하나를 돌려주는 데 있지 않습니�
 
 | 알고 싶은 내용 | 문서 |
 |---|---|
-| 제품이 해결하는 문제와 전체 기능 | [Product Overview](../docs/product-overview.md) |
-| Frontend부터 임베딩·검색·답변·상담까지 | [Chat and RAG Flow](../docs/chat-flow.md) |
-| FE·BE·모델·데이터 저장소의 관계 | [System Architecture](../docs/system-architecture.md) |
-| 어떤 Repository가 무엇을 책임지는가 | [Repository Map](../docs/repository-map.md) |
-| 주요 기술을 선택한 이유 | [Engineering Decisions](../docs/engineering-decisions.md) |
-| 실험 결과와 해석할 수 있는 범위 | [Evidence Register](../docs/evidence-register.md) |
-| 참여 멤버가 직접 기록한 구현 내용 | [Team Contributions](../docs/team-contributions.md) |
+| 제품이 해결하는 문제와 전체 기능 | [Product Overview](../docs/overview/product.md) |
+| Frontend부터 임베딩·검색·답변·상담까지 | [Chat and RAG Flow](../docs/architecture/chat-flow.md) |
+| FE·BE·모델·데이터 저장소의 관계 | [System Architecture](../docs/architecture/overview.md) |
+| 어떤 Repository가 무엇을 책임지는가 | [Component Map](../docs/architecture/components.md) |
+| 주요 기술을 선택한 이유 | [Engineering Decisions](../docs/architecture/decisions/README.md) |
+| 실험 결과와 해석할 수 있는 범위 | [Evidence Register](../docs/proof/evidence-register.md) |
+| 참여 멤버가 직접 기록한 구현 내용 | [Team Contributions](../docs/governance/team-contributions.md) |
 
 ## Repositories
 
