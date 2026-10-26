@@ -1,3 +1,12 @@
+---
+title: 'Product Support Policy'
+type: compatibility
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # Product Support Policy
 
 ## Support States

@@ -1,37 +1,5 @@
-product: "UBot"
-
-components:
-  - name: "backend"
-    display_name: "UBot Backend"
-    repository: "ureca-UBot/UBot-BE"
-    owner: "UBot Backend maintainers"
-    lifecycle: "preview"
-    responsibilities:
-      - "business APIs, authentication, and authorization"
-      - "conversation, counseling, FAQ, and job state"
-      - "RAG orchestration and model runtime integration"
-      - "PostgreSQL schema, Redis work delivery, and backend operations"
-    public_surfaces:
-      - "HTTP API"
-      - "database migrations"
-      - "runtime configuration"
-
-  - name: "frontend"
-    display_name: "UBot Frontend"
-    repository: "ureca-UBot/UBot-FE"
-    owner: "UBot Frontend maintainers"
-    lifecycle: "preview"
-    responsibilities:
-      - "customer, counselor, and administrator web experience"
-      - "browser-side routing and state"
-      - "backend API consumption and user-visible progress"
-    public_surfaces:
-      - "web application"
-
-evidence_sources:
-  - repository: "ureca-UBot/UBot-LLMTest"
-    role: "LLM quality and serving research"
-  - repository: "ureca-UBot/UBot-EmbeddingTest"
-    role: "embedding, retrieval, and reranker research"
-  - repository: "ureca-UBot/UBot-VertorDBTest"
-    role: "vector database benchmark"
+schema_version: 1
+# Deprecated compatibility pointer. Do not add component or version data here.
+deprecated: true
+canonical_registry: "data/product.yaml"
+migration_note: "Use generated/components.md for the readable view and data/product.yaml for edits."

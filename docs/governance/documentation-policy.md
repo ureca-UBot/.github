@@ -1,3 +1,12 @@
+---
+title: 'Documentation Policy'
+type: governance
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # Documentation Policy
 
 UBot 조직 문서는 전체 맥락과 연결을 담당하고, 상세 구현은 해당 Repository가 관리합니다.
@@ -9,6 +18,26 @@ UBot 조직 문서는 전체 맥락과 연결을 담당하고, 상세 구현은 
 3. **코드 변경으로 설명이 틀리면 같은 변경에서 문서를 고칩니다.** 조직 수준의 책임이나 결정이 달라질 때만 이 저장소도 갱신합니다.
 4. **성능·정확도·기술 선택에는 원본 Evidence를 연결합니다.** 조건과 한계를 빼고 숫자만 옮기지 않습니다.
 5. **실행 명령에는 Expected Result 또는 검증 방법을 함께 적습니다.** 명령만 나열해 성공 여부를 독자에게 맡기지 않습니다.
+6. **Product·Component·Repository·Artifact를 구분합니다.** 관계의 단일 원본은 `data/product.yaml`이고 생성된 표는 직접 수정하지 않습니다.
+7. **미검증은 미검증으로 기록합니다.** 실제 근거가 없으면 claim은 `DRAFT`, 검증과 propagation은 `NOT_EVALUATED`로 둡니다.
+8. **Merge와 완료를 구분합니다.** 제품 변경은 `Designed → Approved → Implemented → Integrated → Released → Propagated → Verified → Closed` 상태를 따릅니다.
+
+## 변경 분류
+
+- **Repo-only:** 외부 동작·계약에 영향을 주지 않는 내부 리팩터링, 테스트, 빌드 변경
+- **Product-level:** API·동작·기본값·스키마·재시도·실패·호환성·migration·release·운영 동작 변경
+
+Product-level 변경은 producer와 consumer의 영향, 관련 저장소 변경, 릴리스 순서, rollback과 실제 환경 반영 확인을 함께 기록합니다. PR merge만으로 제품 변경을 `Closed`로 보지 않습니다.
+
+## 예제 검증 등급
+
+- `V0`: 설명용, 실행 보장 없음
+- `V1`: compile 확인
+- `V2`: 실행 확인
+- `V3`: 출력 assertion 확인
+- `V4`: 계약 assertion 확인
+
+문서 검사 도구가 통과한 것과 실제 제품 예제가 검증된 것은 별개의 사실입니다.
 
 ## 조직 문서에 두는 내용
 

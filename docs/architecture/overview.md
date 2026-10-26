@@ -1,3 +1,12 @@
+---
+title: 'System Architecture'
+type: architecture
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # System Architecture
 
 조직 아키텍처는 Repository와 런타임 사이의 책임만 설명합니다. API 경로, 설정값, 제한 시간, 재시도와 데이터베이스 제약은 각 Repository 문서에서 확인합니다.

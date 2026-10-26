@@ -1,6 +1,17 @@
+---
+title: 'Repository Map'
+type: architecture
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # Repository Map
 
 > 마지막 확인: 2026-10-26
+
+Component·Repository·Artifact 식별자와 연결 관계는 [자동 생성 Component Registry](../../generated/components.md)가 기준입니다. 이 문서는 각 구성요소의 의미와 책임 경계를 설명하며 버전이나 배포 artifact 식별자를 중복 정의하지 않습니다.
 
 UBot은 운영 제품 저장소와 기술 검증 저장소를 분리합니다. 제품 동작의 기준은 UBot-BE와 UBot-FE이며, 모델·임베딩·Vector DB 실험은 각 연구 저장소가 결과와 한계를 관리합니다.
 

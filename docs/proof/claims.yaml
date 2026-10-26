@@ -1,26 +1,40 @@
-# External-facing quantitative claims must point to reproducible evidence.
+schema_version: 1
+# 연구 결과를 제품 릴리스의 보장값으로 승격하지 않습니다.
 claims:
-  - id: "LLM-QUALITY-001"
-    statement: "Qwen3-4B-Instruct Q4_K_M achieved 77.5% answer accuracy in the v5 fixed-context evaluation."
-    status: "provisional"
+  - id: LLM-QUALITY-001
+    statement: "Qwen3-4B-Instruct Q4_K_M은 v5 고정 문맥 연구 평가에서 답변 정확도 77.5%를 기록했습니다."
     owner: "UBot LLM research maintainers"
+    status: DRAFT
+    appears_in: []
     applicability:
-      product_release: "not-a-product-release"
+      product_profile: development-preview
+      workload: "검색을 제외한 독립 문항 1,300개와 LLM judge"
       environment: "Tesla T4, Ollama, temperature 0, sequential requests"
-      workload: "1,300 independent items; LLM judge; no retrieval"
     evidence:
-      type: "benchmark"
-      location: "https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/model_test_v5/try1/results/all_summary.md"
-    last_verified: "2026-10-26"
+      kind: benchmark
+      document: docs/proof/evidence-register.md
+      reproduction_command: null
+      raw_artifact: "https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/model_test_v5/try1/results/all_summary.md"
+      reference_oracle: null
+    last_verified: null
+    reverify_when:
+      - "모델·양자화·프롬프트 또는 평가 데이터 변경"
 
-  - id: "EMBEDDING-QUALITY-001"
-    statement: "BGE-M3 achieved 86.7% Top-1 in the 100-FAQ, 60-question comparison."
-    status: "provisional"
+  - id: EMBEDDING-QUALITY-001
+    statement: "BGE-M3는 FAQ 100개·합성 질문 60개의 연구 비교에서 Top-1 86.7%를 기록했습니다."
     owner: "UBot embedding research maintainers"
+    status: DRAFT
+    appears_in: []
     applicability:
-      product_release: "not-a-product-release"
-      workload: "100 FAQs and 60 synthetic questions"
+      product_profile: development-preview
+      workload: "FAQ 100개와 합성 질문 60개"
+      environment: "연구 저장소의 고정 snapshot 조건"
     evidence:
-      type: "benchmark"
-      location: "https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/model_benchmarks/docs/임베딩모델_벤치마크_최종비교.md"
-    last_verified: "2026-10-26"
+      kind: benchmark
+      document: docs/proof/evidence-register.md
+      reproduction_command: null
+      raw_artifact: "https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/model_benchmarks/docs/임베딩모델_벤치마크_최종비교.md"
+      reference_oracle: null
+    last_verified: null
+    reverify_when:
+      - "임베딩 모델·검색 구조·질문셋 변경"

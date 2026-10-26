@@ -1,3 +1,12 @@
+---
+title: 'ADR-001: PostgreSQL + pgvector를 Vector DB로 사용'
+type: architecture-decision
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # ADR-001: PostgreSQL + pgvector를 Vector DB로 사용
 
 - Status: Accepted

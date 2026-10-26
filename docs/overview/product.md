@@ -1,3 +1,12 @@
+---
+title: 'Product Overview'
+type: product-documentation
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # Product Overview
 
 UBot은 상품 탐색과 가입, 이용 정보 확인, 매장 방문, 고객 지원, AI 안내와 사람 상담이 서로 끊기는 문제를 하나의 서비스 흐름으로 연결합니다.

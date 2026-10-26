@@ -9,7 +9,7 @@ UBot의 제품 문서와 각 구성요소 저장소의 구현 문서를 연결�
 | UBot은 누구의 어떤 문제를 해결하는가? | [Product Overview](overview/product.md) |
 | 질문이 답변·상담·지식 개선으로 어떻게 이어지는가? | [Chat and RAG Flow](architecture/chat-flow.md) |
 | FE·BE·모델·데이터 저장소는 어떻게 연결되는가? | [System Architecture](architecture/overview.md) |
-| 어떤 저장소가 무엇을 책임지는가? | [Component Map](architecture/components.md) · [Machine-readable Catalog](../COMPONENT_CATALOG.yaml) |
+| 어떤 저장소가 무엇을 책임지는가? | [Component Map](architecture/components.md) · [Generated Registry](../generated/components.md) · [Canonical Data](../data/product.yaml) |
 | 저장소 사이에서 무엇을 계약으로 보는가? | [Cross-repo Contracts](architecture/contracts.md) |
 
 ## 결정, 호환성, 근거
@@ -19,7 +19,7 @@ UBot의 제품 문서와 각 구성요소 저장소의 구현 문서를 연결�
 | 주요 기술을 왜 선택했는가? | [Engineering Decisions](architecture/decisions/README.md) |
 | 실험 결과를 어디까지 인용할 수 있는가? | [Evidence Register](proof/evidence-register.md) · [Claims Registry](proof/claims.yaml) |
 | 어떤 제품 조합을 지원한다고 말할 수 있는가? | [Compatibility Matrix](compatibility/product-matrix.md) · [Support Policy](compatibility/support-policy.md) |
-| 현재 제품 릴리스 상태는 무엇인가? | [Product Version Manifest](releases/product-versions.yaml) |
+| 현재 제품 릴리스 상태는 무엇인가? | [Generated Release Summary](../generated/release-summary.md) · [Product Version Manifest](releases/product-versions.yaml) |
 
 ## 운영과 관리
 
@@ -30,6 +30,8 @@ UBot의 제품 문서와 각 구성요소 저장소의 구현 문서를 연결�
 | 문서를 어떻게 작성하고 갱신하는가? | [Documentation Policy](governance/documentation-policy.md) |
 | 공통 용어는 무엇을 뜻하는가? | [Glossary](reference/glossary.md) |
 | 참여자가 자신의 구현 기여를 어디에 기록하는가? | [Team Contributions](governance/team-contributions.md) |
+
+생성 문서(`generated/`)는 직접 수정하지 않습니다. 구성요소·릴리스·claim 원본을 바꾼 뒤 `python scripts/docs_tool.py generate`로 갱신하며, `validate --mode template`은 구조와 링크를, `validate --mode publish`는 공개 준비 조건을 검사합니다.
 
 ## 구성요소 문서
 

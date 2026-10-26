@@ -1,3 +1,12 @@
+---
+title: 'ADR-002: Embedding 모델로 BGE-M3 사용'
+type: architecture-decision
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # ADR-002: Embedding 모델로 BGE-M3 사용
 
 - Status: Accepted

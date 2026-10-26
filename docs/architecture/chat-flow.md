@@ -1,3 +1,12 @@
+---
+title: '채팅과 RAG 전체 흐름'
+type: architecture
+status: active
+owner: 'UBot maintainers'
+applicability: development-preview
+last_reviewed: '2026-10-26'
+---
+
 # 채팅과 RAG 전체 흐름
 
 UBot의 채팅은 모델에 질문을 바로 보내는 구조가 아닙니다. 관리자가 준비한 FAQ 검색 인덱스와 사용자의 현재 대화, 서버가 확인한 업무 자료를 연결하고, 답변을 검사·저장한 뒤 Frontend가 진행 상태와 결과를 보여 줍니다.
