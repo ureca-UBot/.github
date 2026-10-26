@@ -1,77 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1160" viewBox="0 0 720 1160" role="img" aria-labelledby="title desc">
-  <title id="title">모바일용 UBot 시스템 구성</title>
-  <desc id="desc">사용자 채널, 프론트엔드, 백엔드 API, 비동기 답변 처리, 데이터 계층과 AI 런타임, 운영 관측과 연구 근거의 수직 흐름</desc>
-  <defs>
-    <linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08111f"/>
-      <stop offset="1" stop-color="#111d32"/>
-    </linearGradient>
-    <filter id="shadowm" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#020617" flood-opacity="0.4"/>
-    </filter>
-    <marker id="arrowm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ca3c7"/>
-    </marker>
-    <style>
-      .title { fill:#f8fafc; font:700 30px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .subtitle { fill:#a8bad4; font:500 17px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .card-title { fill:#f8fafc; font:700 23px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .card-body { fill:#cfdbeb; font:500 18px 'Pretendard','Noto Sans KR','Segoe UI',sans-serif; }
-      .line { stroke:#8ca3c7; stroke-width:3; fill:none; marker-end:url(#arrowm); }
-      .dash { stroke:#7188ad; stroke-width:2.5; fill:none; stroke-dasharray:8 7; marker-end:url(#arrowm); }
-      .card { stroke-width:1.5; filter:url(#shadowm); }
-    </style>
-  </defs>
-
-  <rect width="720" height="1160" rx="26" fill="url(#bgm)"/>
-  <text x="42" y="54" class="title">UBot System Overview</text>
-  <text x="42" y="84" class="subtitle">운영 경로와 실험 근거를 분리합니다.</text>
-
-  <rect x="42" y="118" width="636" height="82" rx="18" fill="#17243a" stroke="#30435f" class="card"/>
-  <text x="360" y="151" text-anchor="middle" class="card-title">고객 · 상담사 · 관리자 · 운영자</text>
-  <text x="360" y="180" text-anchor="middle" class="card-body">질문, 상담, 지식 관리와 운영 대응</text>
-
-  <rect x="120" y="244" width="480" height="100" rx="20" fill="#12345a" stroke="#3282c8" class="card"/>
-  <text x="360" y="282" text-anchor="middle" class="card-title">UBot-FE</text>
-  <text x="360" y="316" text-anchor="middle" class="card-body">고객 · 상담사 · 관리자 웹 경험</text>
-
-  <rect x="120" y="390" width="480" height="118" rx="20" fill="#28356e" stroke="#6574d9" class="card"/>
-  <text x="360" y="430" text-anchor="middle" class="card-title">UBot-BE API</text>
-  <text x="360" y="463" text-anchor="middle" class="card-body">회원 · 상품 · 매장 · 예약 · 이용 정보</text>
-  <text x="360" y="490" text-anchor="middle" class="card-body">FAQ · 상담 · 문의 · 알림 · 관리자 업무</text>
-
-  <rect x="120" y="554" width="480" height="118" rx="20" fill="#4c286d" stroke="#a66ad2" class="card"/>
-  <text x="360" y="594" text-anchor="middle" class="card-title">비동기 답변 처리</text>
-  <text x="360" y="627" text-anchor="middle" class="card-body">FAQ 검색 · 업무 자료 · 모델 연결</text>
-  <text x="360" y="654" text-anchor="middle" class="card-body">안전 검사 · 답변 저장 · 작업 회수</text>
-
-  <path d="M 360 200 V 242" class="line"/>
-  <path d="M 360 344 V 388" class="line"/>
-  <path d="M 360 508 V 552" class="line"/>
-
-  <rect x="42" y="724" width="300" height="112" rx="20" fill="#124c4b" stroke="#2f9e9a" class="card"/>
-  <text x="192" y="765" text-anchor="middle" class="card-title">PostgreSQL / pgvector</text>
-  <text x="192" y="798" text-anchor="middle" class="card-body">제품·작업 원본</text>
-  <text x="192" y="822" text-anchor="middle" class="card-body">FAQ · Vector 검색</text>
-
-  <rect x="378" y="724" width="300" height="112" rx="20" fill="#16415a" stroke="#3d8bb8" class="card"/>
-  <text x="528" y="765" text-anchor="middle" class="card-title">Redis</text>
-  <text x="528" y="798" text-anchor="middle" class="card-body">작업 전달</text>
-  <text x="528" y="822" text-anchor="middle" class="card-body">보조 상태</text>
-
-  <rect x="120" y="880" width="480" height="96" rx="20" fill="#6b361d" stroke="#da7b3e" class="card"/>
-  <text x="360" y="919" text-anchor="middle" class="card-title">LLM / Embedding Runtime</text>
-  <text x="360" y="952" text-anchor="middle" class="card-body">모델 추론 자원</text>
-
-  <path d="M 360 672 V 695 H 192 V 722" class="line"/>
-  <path d="M 360 695 H 528 V 722" class="line"/>
-  <path d="M 360 672 V 878" class="line"/>
-
-  <rect x="120" y="848" width="480" height="34" rx="17" fill="#21334b" stroke="#587093"/>
-  <text x="360" y="871" text-anchor="middle" class="subtitle">상태 확인 · 지표 · 로그 · 알림 · 런북</text>
-
-  <rect x="42" y="1022" width="636" height="96" rx="20" fill="#18263c" stroke="#405574" class="card"/>
-  <text x="360" y="1059" text-anchor="middle" class="card-title">Research / Benchmark → Decision</text>
-  <text x="360" y="1092" text-anchor="middle" class="card-body">실험 근거를 검토해 운영 구현으로 연결</text>
-  <path d="M 600 1050 C 665 1000 670 650 602 615" class="dash"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1480" viewBox="0 0 640 1480" role="img" aria-labelledby="title desc">
+<title id="title">UBot 시스템 구성</title>
+<desc id="desc">서버와 연결하는 구성 요소 및 배포와 관측</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#A8A8BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="640" height="1480" rx="28" fill="#FFFFFF"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif">
+<text x="40" y="52" font-size="18" fill="#D91370" font-weight="750" text-anchor="start">UBot · 시스템</text>
+<text x="40" y="105" font-size="34" fill="#20202A" font-weight="750" text-anchor="start">UBot 시스템 구성</text>
+<path d="M40 132 L600 132" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="40" y="170" width="560" height="120" rx="22" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="320" y="218" font-size="32" fill="#D91370" font-weight="750" text-anchor="middle">웹 화면 · UBot-FE</text>
+<text x="320" y="262" font-size="27" fill="#20202A" font-weight="500" text-anchor="middle">고객 · 상담사 · 관리자</text>
+<path d="M320 299 L320 337" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="347" width="560" height="170" rx="22" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="320" y="393" font-size="32" fill="#6F55DD" font-weight="750" text-anchor="middle">서비스 서버 · UBot-BE</text>
+<text x="320" y="441" font-size="29" fill="#20202A" font-weight="500" text-anchor="middle">인증·업무·대화</text>
+<text x="320" y="484" font-size="29" fill="#20202A" font-weight="500" text-anchor="middle">검색·자료 조회·답변 검사</text>
+<text x="40" y="586" font-size="28" fill="#20202A" font-weight="750" text-anchor="start">서버가 연결하는 구성 요소</text>
+<rect x="40" y="618" width="560" height="139" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="64" y="659" font-size="30" fill="#20202A" font-weight="750" text-anchor="start">PostgreSQL</text>
+<text x="64" y="699" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">업무·대화·최종 결과</text>
+<text x="64" y="735" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">pgvector 검색</text>
+<rect x="40" y="781" width="560" height="139" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="64" y="822" font-size="30" fill="#20202A" font-weight="750" text-anchor="start">Redis</text>
+<text x="64" y="862" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">작업 전달 신호</text>
+<text x="64" y="898" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">빠른 조회 캐시</text>
+<rect x="40" y="944" width="560" height="139" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="64" y="985" font-size="30" fill="#20202A" font-weight="750" text-anchor="start">AI 모델</text>
+<text x="64" y="1025" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">질문 임베딩</text>
+<text x="64" y="1061" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">근거 기반 답변 생성</text>
+<rect x="40" y="1107" width="560" height="139" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="64" y="1148" font-size="30" fill="#20202A" font-weight="750" text-anchor="start">위치·길찾기</text>
+<text x="64" y="1188" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">장소·경로 조회</text>
+<text x="64" y="1224" font-size="27" fill="#63636F" font-weight="500" text-anchor="start">외부 지도 서비스</text>
+<rect x="40" y="1290" width="560" height="152" rx="22" fill="#EFF9F4" stroke="#EFF9F4" stroke-width="1.5"/>
+<text x="64" y="1333" font-size="30" fill="#147A5B" font-weight="750" text-anchor="start">배포·관측</text>
+<text x="64" y="1375" font-size="26" fill="#20202A" font-weight="500" text-anchor="start">CI/CD · 상태·지표·로그 · 알림</text>
+<text x="64" y="1416" font-size="26" fill="#20202A" font-weight="500" text-anchor="start">저장한 작업 결과로 복구를 확인</text>
+</g>
 </svg>

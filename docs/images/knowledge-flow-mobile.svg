@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1200" viewBox="0 0 640 1200" role="img" aria-labelledby="title desc">
+<title id="title">미응답에서 FAQ 개선까지</title>
+<desc id="desc">관리자 검토를 거쳐 FAQ를 개선하고 검색에 반영하는 흐름</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#A8A8BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="640" height="1200" rx="28" fill="#FFFFFF"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif">
+<text x="40" y="52" font-size="18" fill="#D91370" font-weight="750" text-anchor="start">UBot · 지식 개선</text>
+<text x="40" y="105" font-size="34" fill="#20202A" font-weight="750" text-anchor="start">미응답에서 다음 지식까지</text>
+<path d="M40 132 L600 132" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="40" y="170" width="560" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="60" y="188" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="100" y="213" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">01</text>
+<text x="62" y="258" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">미응답 수집</text>
+<text x="62" y="294" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">근거가 부족한 질문</text>
+<path d="M320 331 L320 346" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="352" width="560" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="60" y="370" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="100" y="395" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">02</text>
+<text x="62" y="440" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">유사 문의 묶기</text>
+<text x="62" y="476" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">중복·반복 확인</text>
+<path d="M320 513 L320 528" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="534" width="560" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="60" y="552" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="100" y="577" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">03</text>
+<text x="62" y="622" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">관리자 FAQ 보완</text>
+<text x="62" y="658" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">검토 후 등록·수정</text>
+<path d="M320 695 L320 710" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="716" width="560" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="60" y="734" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="100" y="759" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">04</text>
+<text x="62" y="804" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">임베딩·검색 반영</text>
+<text x="62" y="840" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">현재 버전·프로필</text>
+<path d="M320 877 L320 892" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="910" width="560" height="125" rx="22" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="64" y="958" font-size="30" fill="#6F55DD" font-weight="750" text-anchor="start">다음 질문은 갱신한 FAQ로 검색</text>
+<text x="64" y="1005" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">근거를 확인하고 답변합니다</text>
+<text x="40" y="1100" font-size="28" fill="#20202A" font-weight="700" text-anchor="start">재검증은 검색 개선을 확인합니다</text>
+<text x="40" y="1150" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">인기·지역 문의 추이도 검토를 돕습니다</text>
+</g>
+</svg>

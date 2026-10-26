@@ -1,8 +1,8 @@
 # 채팅과 RAG 전체 흐름
 
-UBot의 채팅은 모델에 질문을 바로 보내는 구조가 아닙니다. 관리자가 준비한 FAQ 검색 인덱스와 사용자의 현재 대화, 서버가 확인한 업무 자료를 연결하고, 답변을 검사·저장한 뒤 Frontend가 진행 상태와 결과를 보여 줍니다.
+UBot의 채팅은 관리자가 준비한 FAQ와 현재 대화, 서버가 조회한 업무 자료를 연결합니다. 서버가 답변을 검사·저장하면 화면이 진행 상태와 결과를 보여 줍니다.
 
-이 문서는 UBot-FE와 UBot-BE를 가로지르는 흐름을 설명합니다. API 경로, 요청 필드, 임계값과 재시도 횟수는 각 Repository 문서를 기준으로 확인합니다.
+[전체 기능](../README.md) · [지식 개선](../features/knowledge-improvement.md) · [질문·답변 보호](../features/ai-safety.md) · [상담사 연결](../features/counselor-handoff.md)
 
 <picture>
   <source media="(max-width: 767px)" srcset="../images/chat-flow-mobile.png">
@@ -24,12 +24,12 @@ UBot의 채팅은 모델에 질문을 바로 보내는 구조가 아닙니다. �
 
 이 준비 과정 덕분에 채팅 요청은 “현재 FAQ의 현재 질문 표현”만 검색합니다. 삭제된 FAQ, 오래된 FAQ 버전, 다른 모델 공간에서 만든 벡터는 현재 검색 결과에 섞이지 않습니다.
 
-상세 구현은 [FAQ·임베딩·백필](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/faq-embedding.md)과 [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/knowledge-management.md)에서 확인합니다.
+상세 구현은 [FAQ·임베딩·백필](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md)과 [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/unanswered-improvement.md)에서 확인합니다.
 
 ## 1. Frontend가 질문을 대화에 붙입니다
 
 1. 사용자가 통합 채팅이나 어느 화면에서든 열 수 있는 플로팅 채팅에 질문을 입력합니다.
-2. `ChatProvider`가 공백과 길이를 먼저 확인하고, 한 대화에서 동시에 여러 질문이 전송되지 않도록 현재 요청을 관리합니다.
+2. 채팅 화면이 공백과 길이를 먼저 확인하고, 한 대화에서 동시에 여러 질문이 전송되지 않도록 현재 요청을 관리합니다.
 3. 기존 대화가 있으면 그 대화 식별자를 함께 사용합니다. 비회원이 로그인하면 서버가 승계한 대화를 화면에서도 유지합니다.
 4. 매장 질문에 현재 위치가 필요하면 브라우저 위치 권한을 받은 뒤 같은 질문을 좌표와 함께 이어서 요청합니다.
 5. Frontend는 질문을 화면에 즉시 추가하고 답변을 기다리는 상태로 바꿉니다.
@@ -86,7 +86,7 @@ Frontend는 접수된 작업을 일정한 간격으로 조회합니다. 일시�
 
 하나의 FAQ에 여러 질문 표현이 있으면 가장 가까운 표현을 대표 점수로 사용하고 같은 FAQ가 결과에 중복되지 않게 합칩니다. 검색 점수가 기준에 미치지 못하면 모델이 일반 지식으로 빈칸을 채우게 하지 않고 근거 부족 상태로 끝냅니다.
 
-매우 높은 유사도와 충분한 후보 간 차이, 관리자의 직접 반환 허용 조건을 모두 만족하면 공식 FAQ 답변을 그대로 반환할 수 있습니다. 이 경우에도 입력 검사와 질문 임베딩·검색은 수행하며, 생성 모델만 생략합니다.
+매우 높은 유사도와 충분한 후보 간 차이, 관리자의 직접 반환 허용 조건을 모두 만족하면 공식 FAQ 답변을 그대로 반환할 수 있습니다. 이 경우에도 입력 검사와 질문 임베딩·검색, 출력 코드 검사는 수행합니다. 답변 생성과 출력 AI 판정을 생략합니다.
 
 ## 6. FAQ 의도에 맞는 실제 자료를 모읍니다
 
@@ -189,10 +189,10 @@ Backend는 선별한 FAQ 문장, 서버가 조회한 자료, 허용된 도구와
 ## 상세 구현 문서
 
 - Frontend 채팅 상태와 화면: [UBot-FE ChatProvider](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/context/ChatProvider.tsx) · [작업 조회](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/api/chatJobPolling.ts) · [결과 표시](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/components/ChatMessages.tsx)
-- Backend 전체 RAG: [RAG 파이프라인](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/rag-pipeline.md)
-- 질문 접수와 작업: [채팅](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/chat.md)
-- 대화와 FAQ 선택: [대화 기록](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/conversations.md)
-- 상담사 인계: [상담](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/counsel.md)
-- 미응답과 FAQ 보강: [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/knowledge-management.md) · [RAG 미응답 흐름](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/rag-pipeline.md#13-답하지-못한-부분을-지식-개선으로-보낸다)
-- 작업 복구와 운영 관측: [비동기 작업 신뢰성](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/worker-reliability.md) · [관측성](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/operations/observability.md)
-- 상품·회원·매장 자료: [상품 조회](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/product-query.md) · [상품과 가입](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/products-and-subscriptions.md) · [매장과 예약](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/stores-and-reservations.md)
+- Backend 전체 RAG: [RAG 파이프라인](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md)
+- 질문 접수와 작업: [채팅](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md)
+- 대화와 FAQ 선택: [대화 기록](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/accounts-and-conversations.md)
+- 상담사 인계: [상담](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/counsel.md)
+- 미응답과 FAQ 보강: [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/unanswered-improvement.md) · [RAG 미응답 흐름](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md)
+- 작업 복구와 운영 관측: [비동기 작업 신뢰성](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/worker-reliability.md) · [관측성](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/operations/observability.md)
+- 상품·회원·매장 자료: [상품 조회](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/products-and-subscriptions.md) · [상품과 가입](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/products-and-subscriptions.md) · [매장과 예약](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/stores-and-reservations.md)

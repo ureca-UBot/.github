@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1740" viewBox="0 0 640 1740" role="img" aria-labelledby="title desc">
+<title id="title">UBot의 세 가지 이용 흐름</title>
+<desc id="desc">고객 질문과 행동, 관리자 지식 개선, 운영자 배포와 복구</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#A8A8BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="640" height="1740" rx="28" fill="#FFFFFF"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif">
+<text x="40" y="52" font-size="18" fill="#D91370" font-weight="750" text-anchor="start">UBot</text>
+<text x="40" y="105" font-size="34" fill="#20202A" font-weight="750" text-anchor="start">세 가지 이용 흐름</text>
+<path d="M40 132 L600 132" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="40" y="170" width="110" height="36" rx="18" fill="#FFF0F7" stroke="#FFF0F7" stroke-width="1.5"/>
+<text x="95" y="195" font-size="18" fill="#D91370" font-weight="700" text-anchor="middle">고객</text>
+<text x="170" y="196" font-size="26" fill="#D91370" font-weight="650" text-anchor="start">필요한 행동으로</text>
+<rect x="40" y="228" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="270" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">질문·정보 탐색</text>
+<text x="62" y="306" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">상품과 궁금한 내용</text>
+<path d="M320 353 L320 369" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="374" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="416" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">조회·답변</text>
+<text x="62" y="452" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">공식 FAQ와 실제 자료</text>
+<path d="M320 499 L320 515" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="520" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="562" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">가입·예약·상담</text>
+<text x="62" y="598" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">고객이 다음 행동 선택</text>
+<rect x="40" y="695" width="110" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="95" y="720" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">관리자</text>
+<text x="170" y="721" font-size="26" fill="#6F55DD" font-weight="650" text-anchor="start">더 나은 지식으로</text>
+<rect x="40" y="753" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="795" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">미응답·문의 추이</text>
+<text x="62" y="831" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">반복되는 문의 확인</text>
+<path d="M320 878 L320 894" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="899" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="941" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">관리자 검토</text>
+<text x="62" y="977" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">내용과 원인을 살펴봄</text>
+<path d="M320 1024 L320 1040" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="1045" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="1087" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">FAQ 보완·검색 반영</text>
+<text x="62" y="1123" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">다음 질문에 새 지식 사용</text>
+<rect x="40" y="1220" width="110" height="36" rx="18" fill="#EFF9F4" stroke="#EFF9F4" stroke-width="1.5"/>
+<text x="95" y="1245" font-size="18" fill="#147A5B" font-weight="700" text-anchor="middle">운영자</text>
+<text x="170" y="1246" font-size="26" fill="#147A5B" font-weight="650" text-anchor="start">안정적인 서비스로</text>
+<rect x="40" y="1278" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="1320" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">검증·배포</text>
+<text x="62" y="1356" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">변경한 코드 확인</text>
+<path d="M320 1403 L320 1419" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="1424" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="1466" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">관측·알림</text>
+<text x="62" y="1502" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">상태·지표·로그 연결</text>
+<path d="M320 1549 L320 1565" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="40" y="1570" width="560" height="120" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<text x="62" y="1612" font-size="32" fill="#20202A" font-weight="750" text-anchor="start">진단·복구 확인</text>
+<text x="62" y="1648" font-size="26" fill="#63636F" font-weight="500" text-anchor="start">기존 요청의 결과 확인</text>
+</g>
+</svg>

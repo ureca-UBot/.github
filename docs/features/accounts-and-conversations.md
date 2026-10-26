@@ -1,0 +1,33 @@
+# 회원·비회원 이용과 대화 기록
+
+[전체 기능](../README.md) · [AI 상담](../architecture/chat-flow.md) · [상담사 연결](counselor-handoff.md)
+
+비회원으로 먼저 질문하고, 로그인한 뒤 같은 대화를 이어갈 수 있습니다. 회원은 저장된 대화 목록에서 AI 문답·FAQ 선택·상담 기록을 다시 확인합니다.
+
+## 대화를 이어가는 흐름
+
+| 사용자 행동 | FE가 하는 일 | BE가 하는 일 | 결과 |
+|---|---|---|---|
+| 비회원 질문 | 게스트 세션으로 질문 요청 | 세션·이용 한도와 대화 접근 권한 확인 | 허용 범위의 AI 답변 |
+| 로그인 | 인증 상태를 갱신하고 기존 대화 맥락 유지 | 이후 대화 요청에서 게스트 소유권을 확인해 회원에게 승계 | 로그인 계정에서 이어가는 대화 |
+| FAQ 선택 | 선택 항목을 서버에 저장 요청 | FAQ 원문을 조회해 당시 질문·답변 사본 저장 | 서버가 저장한 공식 문답 표시 |
+| 이전 대화 열기 | 대화 목록과 서버의 다음 조회 위치 사용 | 소유권을 확인해 저장 이력 반환 | 문답·FAQ 선택·허용된 상담 이력 |
+| 로그아웃·대화 전환 | 불필요한 조회를 멈추고 이전 응답의 화면 반영 차단 | 각 요청에서 인증·소유권 재확인 | 계정·대화가 섞이지 않는 화면 |
+
+## 서버 기록으로 다시 봅니다
+
+FAQ 선택은 회원이 누른 시점의 내용을 서버 대화에 보존합니다. 나중에 FAQ를 수정하거나 삭제해도 이미 저장한 사본으로 이전 맥락을 확인할 수 있습니다. 비회원의 FAQ 선택은 회원 기록과 같은 방식으로 저장하지 않습니다.
+
+상담이 포함된 대화는 AI 문답, FAQ 선택, 허용된 상담 메시지와 연결·종료 표시를 함께 조회합니다. 화면은 서버가 준 다음 조회 위치와 남은 항목 여부를 사용합니다. 상담 중에는 새 AI 질문이나 대화 전환을 제한하고, 종료한 뒤 같은 대화를 다시 사용할 수 있습니다.
+
+대화 삭제도 서버 조건을 따릅니다. 처리 중인 답변이나 상담 이력이 있으면 삭제를 거절할 수 있습니다.
+
+## 화면의 로그인과 서버의 권한
+
+고객·상담사·관리자는 역할에 맞는 화면을 사용합니다. 숨긴 버튼이나 화면 이동만으로 권한을 보장하지 않으며, 서버가 요청마다 역할·소유권을 확인합니다. 비회원은 상담사에게 연결할 수 없습니다.
+
+## 상세 구현과 검증
+
+- Backend: [인증·승계·FAQ 사본·대화 조회](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/accounts-and-conversations.md)
+- Frontend: [대화 상태와 FAQ 선택](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/context/ChatProvider.tsx) · [FAQ 저장 연동](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/api/faqSelectionApi.ts) · [상담 통합 이력](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/counsel/components/ConversationTimeline.tsx)
+- 이어지는 기능: [상담 인계와 재상담](counselor-handoff.md)

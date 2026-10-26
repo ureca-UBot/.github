@@ -24,8 +24,8 @@ UBot은 아직 독립적인 제품 버전을 발행하지 않았습니다. 현�
 | Surface | Contract | Current proof |
 |---|---|---|
 | Wire | [Cross-repo Contracts](../architecture/contracts.md) | 구성요소별 API·통합 테스트 |
-| Behavior | 사용자 흐름과 비동기 상태 전이 | [BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/testing.md) |
-| Persisted data | Flyway migration과 작업 상태 | [BE Database Reference](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reference/database.md) |
+| Behavior | 사용자 흐름과 비동기 상태 전이 | [BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/support-policy.md) |
+| Persisted data | Flyway migration과 작업 상태 | [BE Database Reference](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/db-access.md) |
 | Config | FE endpoint와 BE runtime/model 설정 | 각 저장소 설정 문서 |
 
 지원 상태의 의미와 승격 조건은 [Product Support Policy](support-policy.md)를 따릅니다.

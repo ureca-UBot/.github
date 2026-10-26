@@ -30,7 +30,7 @@ UBot의 Production FAQ 벡터 저장소로 PostgreSQL과 pgvector를 사용합�
 
 ## Production Implementation
 
-[UBot-BE Embedding and Search](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/faq-embedding.md)
+[UBot-BE Embedding and Search](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md)
 
 ## Revisit Triggers
 

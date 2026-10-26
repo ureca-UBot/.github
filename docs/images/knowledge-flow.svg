@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="685" viewBox="0 0 1200 685" role="img" aria-labelledby="title desc">
+<title id="title">미응답에서 FAQ 개선까지</title>
+<desc id="desc">미응답을 유사 문의로 묶고 관리자가 FAQ를 보완해 다음 검색에 반영</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#A8A8BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect width="1200" height="685" rx="28" fill="#FFFFFF"/>
+<g font-family="'SUITE','Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif">
+<text x="40" y="52" font-size="18" fill="#D91370" font-weight="750" text-anchor="start">UBot</text>
+<text x="40" y="105" font-size="40" fill="#20202A" font-weight="750" text-anchor="start">답하지 못한 질문이 다음 지식으로</text>
+<path d="M40 132 L1160 132" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="40" y="185" width="262" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="60" y="203" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="100" y="228" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">01</text>
+<text x="62" y="273" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">미응답 수집</text>
+<text x="62" y="309" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">근거가 부족한 질문</text>
+<path d="M306 263 L320 263" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="326" y="185" width="262" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="346" y="203" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="386" y="228" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">02</text>
+<text x="348" y="273" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">유사 문의 묶기</text>
+<text x="348" y="309" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">중복·반복 확인</text>
+<path d="M592 263 L606 263" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="612" y="185" width="262" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="632" y="203" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="672" y="228" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">03</text>
+<text x="634" y="273" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">관리자 FAQ 보완</text>
+<text x="634" y="309" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">검토 후 등록·수정</text>
+<path d="M878 263 L892 263" fill="none" stroke="#DFDFE8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="898" y="185" width="262" height="155" rx="22" fill="#FFF" stroke="#DFDFE8" stroke-width="1.5"/>
+<rect x="918" y="203" width="80" height="36" rx="18" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="958" y="228" font-size="18" fill="#6F55DD" font-weight="700" text-anchor="middle">04</text>
+<text x="920" y="273" font-size="26" fill="#20202A" font-weight="750" text-anchor="start">임베딩·검색 반영</text>
+<text x="920" y="309" font-size="21" fill="#63636F" font-weight="500" text-anchor="start">현재 버전·프로필</text>
+<path d="M 1029 345 V 395 H 602 V 432" fill="none" stroke="#A8A8BA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="230" y="443" width="740" height="100" rx="22" fill="#F3F0FF" stroke="#F3F0FF" stroke-width="1.5"/>
+<text x="600" y="485" font-size="27" fill="#6F55DD" font-weight="750" text-anchor="middle">다음 고객 질문은 갱신한 FAQ로 검색합니다</text>
+<text x="600" y="520" font-size="22" fill="#63636F" font-weight="500" text-anchor="middle">검색 근거가 충분한지 다시 확인한 뒤 답변합니다</text>
+<text x="40" y="606" font-size="23" fill="#20202A" font-weight="750" text-anchor="start">재검증</text>
+<text x="40" y="643" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">이전 미응답과 새 FAQ의 검색 대응 확인</text>
+<text x="660" y="606" font-size="23" fill="#20202A" font-weight="750" text-anchor="start">검토를 돕는 신호</text>
+<text x="660" y="643" font-size="22" fill="#63636F" font-weight="500" text-anchor="start">인기·급상승 FAQ와 지역 문의 추이</text>
+</g>
+</svg>
