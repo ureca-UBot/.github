@@ -33,10 +33,14 @@
 
 지역 문의 분석은 같은 지역의 의미가 비슷한 질문이 늘어나는지 살펴봅니다. 서버가 감지 당시 질문과 건수를 남기고 관리자에게 알립니다. 관리자는 상세를 읽고 대응 완료로 표시할 수 있습니다. 통신망 자체를 측정하거나 감지 즉시 장애 공지를 등록하는 기능은 아닙니다.
 
+대기 중인 알림은 연결된 질문 묶음의 현재 건수로 갱신할 수 있습니다. 이때 건수만 바꾸며 알림 상태·처리 시각·감지 당시 질문 사본은 유지합니다. 따라서 현재 묶음의 건수와 알림에 보존된 질문 사본 수는 다를 수 있습니다.
+
 FAQ 운영 화면에서는 사용 현황, 개선·제외 대상과 품질 검토 결과를 살펴볼 수 있습니다.
 
 ## 상세 구현과 검증
 
-- Backend: [FAQ와 색인](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md) · [미응답 개선](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/unanswered-improvement.md) · [인기·지역 문의](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/trends-and-telemap.md)
+- Backend: [FAQ와 색인](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/faq-management.md) · [미응답 개선](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/unanswered-improvement.md) · [인기·지역 문의](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/trends-and-telemap.md)
 - Frontend: [FAQ 관리 문서](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/ADMIN_FAQ_WORK_SUMMARY.md) · [미응답 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/pages/unanswered/UnansweredGroupListPage.tsx) · [지역 문의 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/pages/telemap/TelemapPage.tsx)
 - 선택 근거: [임베딩·검색·리랭커 실험](../proof/evidence-register.md#임베딩검색리랭커)
+- 통신지도 갱신: [알림 갱신 API](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/telemap/controller/TelemapAlertController.java) · [집계 범위](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/telemap/repository/SurgingAlertRepository.java)
+- 실제 화면·API·DB 대조: [통신지도 결과와 캡처](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/telemap/README.md) · [미응답 묶음 결과·품질 문제·캡처](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/unanswered-clustering/README.md)

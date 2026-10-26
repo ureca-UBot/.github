@@ -9,6 +9,7 @@
 | FAQ 준비와 질문·답변 처리 | 채팅과 RAG | [기본](chat-flow.png) · [모바일](chat-flow-mobile.png) · [SVG](chat-flow.svg) |
 | 미응답과 FAQ 개선 | 지식 개선 | [기본](knowledge-flow.png) · [모바일](knowledge-flow-mobile.png) · [SVG](knowledge-flow.svg) |
 | 화면·서버·데이터·모델 | 시스템 구성 | [기본](system-overview.png) · [모바일](system-overview-mobile.png) · [SVG](system-overview.svg) |
+| 기능별 데이터와 테이블 관계 | 데이터 구조 | [제공된 전체 ERD 원본](erd-full.png) · [범례와 설명](../architecture/data-model.md) |
 
 첫 화면의 그림은 고객의 서비스 이용, 관리자의 지식 개선, 운영자의 배포·관측·복구를 함께 설명합니다. 별도의 고객 상담 안내 그림에서는 질문에 답하는 과정과 고객 요청에 따른 상담사 연결, 미응답 개선 과정을 확인할 수 있습니다.
 

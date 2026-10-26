@@ -1,18 +1,21 @@
-# 공지·문의·알림으로 이어지는 고객 지원
+# FAQ·공지·문의·알림으로 이어지는 고객 지원
 
 [전체 기능](../README.md) · [매장과 예약](stores-and-reservations.md) · [지식 개선과 문의 추이](knowledge-improvement.md)
 
-고객은 지역 공지와 장애 안내를 확인하고, 필요한 문의를 남기고, 예약·납부·이용 알림을 확인합니다. 관리자는 공지 노출과 문의 처리 상태를 관리합니다.
+고객은 카테고리별 FAQ와 공식 답변, 지역 공지와 장애 안내를 확인하고 필요한 문의를 남깁니다. 예약·납부·이용 알림도 확인할 수 있습니다. 관리자는 FAQ·공지와 문의 처리 상태를 관리합니다.
 
 ## 안내를 확인하고 문의를 처리합니다
 
 | 사용자 행동 | FE가 하는 일 | BE가 하는 일 | 결과 |
 |---|---|---|---|
+| FAQ 찾아보기 | 카테고리·페이지별 목록과 선택한 질문의 답변 표시 | 공개 FAQ의 카테고리·질문 목록·상세 조회 | 로그인 없이 읽는 공식 안내 |
 | 공지 배너 확인 | 현재 노출할 배너를 받아 표시 | 노출 기간·지역 조건에 맞는 공지 조회 | 전체 또는 해당 지역 안내 |
 | 이전 공지 보기 | 유형·지역 조건으로 목록과 상세 요청 | 삭제되지 않은 공지 이력 조회 | 종료된 안내도 다시 확인 |
 | 일대일 문의 | 제목·내용 입력, 본인 문의 목록과 답변 표시 | 본인 문의 저장·조회, 상태에 맞는 수정·삭제 확인 | 문의와 처리 상태 |
 | 관리자 답변 | 문의를 선택해 답변 저장 요청 | 현재 상태를 확인하고 답변·처리 결과 저장 | 고객이 조회할 답변 |
 | 알림 확인 | 목록·미확인 수 표시, 읽음 요청 | 본인 알림 조회·읽음 상태 저장 | 같은 계정에서 관리하는 알림 상태 |
+
+고객센터 FAQ는 카테고리를 골라 페이지별로 탐색하고, 질문을 펼쳐 공식 답변을 읽습니다. 인기·급상승 순위와는 별도로 조회합니다. FAQ와 공지의 공개 조회는 로그인 없이 사용할 수 있으며, 만료된 로그인 토큰이 남아 있어도 해당 조회에서 JWT 검사를 생략합니다.
 
 ## 예약·이용 시점을 놓치지 않도록 돕습니다
 
@@ -28,6 +31,7 @@
 
 ## 상세 구현과 검증
 
-- Backend: [공지 노출·문의 상태·알림 규칙](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/customer-support.md)
+- Backend: [공지 노출·문의 상태·알림 규칙](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/customer-support.md)
+- 공개 FAQ: [서버 조회 API](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/faq/publicapi/PublicFaqController.java) · [고객센터 FAQ 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/components/CustomerFaqList.tsx)
 - Frontend: [공지 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/pages/NoticePage.tsx) · [문의 화면 연동](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/inquiry/hooks/useMyInquiries.ts) · [알림 조회와 읽음 처리](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/notification/hooks/useMyNotifications.ts)
 - 관리자: [문의 처리 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/pages/inquiry/InquiryListPage.tsx) · [공지 관리 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/pages/notice/NoticeListPage.tsx)

@@ -11,6 +11,7 @@ AI 안내 뒤 사람의 도움이 필요하면 로그인한 고객이 상담사�
 | 요청 | 고객이 기존 대화에서 상담사 호출 | 회원 권한·대화 소유권을 확인하고 상담 요청 저장 |
 | 이력 인계 | 상담사가 앞선 문답·FAQ 선택 확인 | 서버에 저장한 AI 문답·FAQ 사본·허용된 이전 상담 이력 구성 |
 | 배정 | 고객은 대기·연결 상태, 상담사는 배정 내역 확인 | 상담 가능 상태와 접속 정보를 확인해 배정 |
+| 고객 정보 확인 | 상담사가 배정된 고객의 이름·회선·가입 상품 확인 | 상담사 역할과 현재 참여 권한을 확인하고 이용 중인 정보 조회 |
 | 메시지 | 전송 상태와 검사 결과 표시 | 금지어·의미 검사 후 허용한 메시지만 상대방에게 전달 |
 | 종료 | 마지막 메시지까지 확인하고 AI 대화 다시 사용 | 종료 상태와 기록 확정 |
 | 재상담 | 같은 대화에서 다시 요청 | 그사이 추가한 AI 문답·FAQ 선택까지 저장 이력으로 다시 구성 |
@@ -20,6 +21,8 @@ AI 안내 뒤 사람의 도움이 필요하면 로그인한 고객이 상담사�
 고객 화면이 인계할 답변 본문을 만들어 보내지 않습니다. 서버가 대화 소유권을 확인하고 저장 기록으로 이력을 만듭니다. 회원이 선택한 FAQ도 선택 당시 사본을 저장하므로 새로고침·재로그인 뒤 다시 상담할 때 사용할 수 있습니다.
 
 상담사가 연결을 잃으면 서버 상태에 따라 다시 배정을 기다립니다. 화면은 권한을 잃은 재배정 상황과 상담이 실제로 종료된 상황을 구분합니다. 고객은 종료한 상담을 기존 채팅 목록에서 다시 읽을 수 있습니다.
+
+상담사 화면은 인계된 문답과 함께 고객의 현재 요금제·부가서비스·결합·로밍·홈상품을 보여 줍니다. 고객 정보는 조회 시점의 자료이며 인계 당시 대화 사본과 구분합니다. 현재 상담에 참여하는 상담사만 조회할 수 있고, 종료한 상담의 고객 정보 조회는 서버가 거절합니다.
 
 ## 상담사에게 전달하기 전에 검사합니다
 
@@ -31,6 +34,7 @@ AI 안내 뒤 사람의 도움이 필요하면 로그인한 고객이 상담사�
 
 ## 상세 구현과 검증
 
-- Backend: [인계·배정·메시지 검사·재상담](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/counselor-handoff.md) · [실행과 API](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/counsel.md)
+- Backend: [인계·배정·메시지 검사·재상담](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/counselor-handoff.md) · [실행과 API](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/counsel.md)
 - Frontend: [상담 화면과 연동·브라우저 검증](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/COUNSEL_WORK_SUMMARY.md)
+- 고객 정보: [조회 권한과 자료 범위](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/counsel/session/service/CounselCustomerService.java) · [상담사 고객 정보 패널](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/counsel/components/CounselCustomerPanel.tsx)
 - 관련 기능: [질문·답변 보호와 정책 검토](ai-safety.md)

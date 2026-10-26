@@ -2,7 +2,7 @@
 
 UBot의 기술 선택과 제품 주장을 뒷받침하는 실험·검증 기록을 한곳에서 찾기 위한 문서입니다. 원시 데이터와 실행 코드는 각 저장소가 관리하고, 이 문서는 **무엇을 검증했는지**, **어떤 결정에 쓰였는지**, **어디까지 해석할 수 있는지**를 연결합니다.
 
-> 마지막 확인: 2026-10-26
+> 마지막 확인: 2026-10-27
 
 ## 근거를 읽는 기준
 
@@ -18,13 +18,15 @@ UBot의 기술 선택과 제품 주장을 뒷받침하는 실험·검증 기록�
 
 | 판단 대상 | 원본 근거 | 조직의 해석 | 연결된 결정·구현 |
 |---|---|---|---|
-| 생성 모델 | [UBot-LLMTest `cd017ac0`](https://github.com/ureca-UBot/UBot-LLMTest/tree/cd017ac0fd5a99a9c453d1575950abea176beda3) | Qwen3-4B Instruct 계열을 품질과 실행 비용을 함께 볼 후속 후보로 선택 | [ADR-004](../architecture/decisions/ADR-004-llm-selection.md) · [BE 모델 런타임](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) |
-| 임베딩 모델 | [UBot-EmbeddingTest `eaf8113`](https://github.com/ureca-UBot/UBot-EmbeddingTest/tree/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29) | 소규모 비교에서 BGE-M3가 가장 높은 후보 검색 지표를 보여 후속 검색 실험에 사용 | [ADR-002](../architecture/decisions/ADR-002-embedding-model.md) · [BE 검색 문서](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md) |
-| 리랭커 | [정정 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md) | 확대·정정 데이터에서는 BGE-M3 단독 Top-1이 비교한 리랭커 조합보다 높아 현재 FAQ 경로에서 제외 | [ADR-003](../architecture/decisions/ADR-003-reranker-strategy.md) · [BE RAG](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md) |
-| 임베딩 서빙 엔진 | [분리된 서빙 결과 `ca61493`](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/ca614933c052fd413968d5735a3a5d31ebe37d92/serving-benchmark/README.md) | 짧은 구성 요소 진단에서 vLLM이 첫 서빙 후보였으나 운영 채택과 장시간 포화는 별도 검증 대상 | [BE 모델 설정](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) |
+| 생성 모델 | [UBot-LLMTest `cd017ac0`](https://github.com/ureca-UBot/UBot-LLMTest/tree/cd017ac0fd5a99a9c453d1575950abea176beda3) | Qwen3-4B Instruct 계열을 품질과 실행 비용을 함께 볼 후속 후보로 선택 | [ADR-004](../architecture/decisions/ADR-004-llm-selection.md) · [BE 모델 런타임](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/llm/README.md) |
+| 임베딩 모델 | [UBot-EmbeddingTest `eaf8113`](https://github.com/ureca-UBot/UBot-EmbeddingTest/tree/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29) | 소규모 비교에서 BGE-M3가 가장 높은 후보 검색 지표를 보여 후속 검색 실험에 사용 | [ADR-002](../architecture/decisions/ADR-002-embedding-model.md) · [BE 검색 문서](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/faq-management.md) |
+| 리랭커 | [정정 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md) | 확대·정정 데이터에서는 BGE-M3 단독 Top-1이 비교한 리랭커 조합보다 높아 현재 FAQ 경로에서 제외 | [ADR-003](../architecture/decisions/ADR-003-reranker-strategy.md) · [BE RAG](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md) |
+| 임베딩 서빙 엔진 | [분리된 서빙 결과 `ca61493`](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/ca614933c052fd413968d5735a3a5d31ebe37d92/serving-benchmark/README.md) | 짧은 구성 요소 진단에서 vLLM이 첫 서빙 후보였으나 운영 채택과 장시간 포화는 별도 검증 대상 | [BE 모델 설정](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/llm/README.md) |
 | 벡터 저장소 | [UBot-VertorDBTest `9fcbff3`](https://github.com/ureca-UBot/UBot-VertorDBTest/tree/9fcbff349648067fc4c96d56d82857f1bcccfdfd) | 가장 빠른 후보가 아니라 FAQ 원문과 벡터를 함께 관리하는 운영 단순성을 우선해 pgvector를 선택 | [ADR-001](../architecture/decisions/ADR-001-vector-database.md) · [선택 문서](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md) |
-| 비동기 작업 복구 | [BE 신뢰성 모델](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/reliability-model.md) | 질문 접수와 답변 처리를 분리하고 PostgreSQL의 상태를 기준으로 중단 작업을 회수 | [ADR-005](../architecture/decisions/ADR-005-async-chat-processing.md) · [BE 아키텍처](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/architecture.md) |
+| 비동기 작업 복구 | [BE 신뢰성 모델](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/reliability-model.md) | 질문 접수와 답변 처리를 분리하고 PostgreSQL의 상태를 기준으로 중단 작업을 회수 | [ADR-005](../architecture/decisions/ADR-005-async-chat-processing.md) · [BE 아키텍처](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/architecture.md) |
 | 화면 구조와 회귀 | [UBot-FE `32c542c`](https://github.com/ureca-UBot/UBot-FE/tree/32c542c152b1f6a95402e84ac092b036eaa78c5b) | 리팩터링 당시 빌드·논리 검사·화면 비교 기록이며 현재 전체 UI와 실서버 종단간 보장은 아님 | [FE 리팩터링 기록](https://github.com/ureca-UBot/UBot-FE/blob/32c542c152b1f6a95402e84ac092b036eaa78c5b/docs/FE_REFACTOR.md) |
+| AWS 채팅 부하·관리자 화면 | [UBot-ServerTest `0721766`](https://github.com/ureca-UBot/UBot-ServerTest/tree/07217660fa2aafcd671600905c62e3a2a8f0226a) | FE 진입 주소를 통한 6,000건 처리, 실제 통신지도·미응답 화면과 API·DB 대조 | [서비스 운영](../features/service-operations.md) · [지식 개선](../features/knowledge-improvement.md) |
+| Worker 프로세스 복구 | [BE `f782ec7c` 배포 회귀 검사](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/tools/deploy/tests/aws-be-recovery-test.sh) | 배포 강제 종료 뒤 외부 복구 루프의 Worker 기동을 검사하며 내부 작업 회수와 구분 | [배포 중단 후 복구](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md#배포-중단-후-worker-복구) |
 
 ## 주요 관측 결과
 
@@ -62,13 +64,34 @@ Q8과 Q4의 정답률 차이는 통계적으로 유의하지 않았고 Q8은 순
 
 이 수치는 해당 커밋의 고정 응답 비교입니다. 이후 변경, 실제 계정, 실제 Backend와 외부 SDK를 포함한 종단간 검증을 뜻하지 않습니다.
 
+### AWS 채팅 부하와 관리자 화면 검증
+
+[2026-10-26 최종 재시험](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/chat-e2e/results/20261026-aws/README.md)은 서로 다른 질문을 3,000건씩 두 번 `https://u-bot.cloud/api`로 보냈습니다. 요청은 FE Nginx·BE·Worker·GPU 모델·DB를 거쳤습니다. k6의 HTTP 시험이며 React 브라우저 3,000개를 조작한 결과는 아닙니다.
+
+| 최종 결과 | 건수 |
+|---|---:|
+| 접수 | 6,000 |
+| 답변 | 5,666 |
+| 정상 거절 | 330 |
+| 시스템 오류 | 4 (`LLM-005`) |
+| 연결 시간 초과·`CHAT-016`·`LLM-003` | 각각 0 |
+
+입력 거절·근거 부족·출력 차단/보류는 시스템 오류와 나누어 집계했습니다. 작업 ID 6,000개를 DB와 대조한 누락·소유자·상태·오류 코드·성공 답변 해시 불일치는 모두 0이었습니다. 성공 답변 상태가 질문별 사실 일치나 유용성을 모두 검증했다는 뜻은 아닙니다.
+
+실행 이미지는 `73bfaacb` 태그의 digest이며 Worker 64·DB 풀 30, 기존 GPU 1대와 Spot GPU 2대, Qwen3-4B Instruct W4A16·BGE-M3, 8,192토큰 구성이었습니다. HTTP 요청 제한은 300초, 접수 후 전체 기한은 1시간, 한 실행은 10분으로 실행했습니다. 현재 BE 기본값인 전체 10분·한 실행 3분과 다르며, 2차의 DB 접수부터 최종 완료 p95는 645.735초였습니다. 이후 코드·데이터 변경까지 이 결과로 검증한 것은 아닙니다.
+
+[통신지도](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/telemap/README.md)는 실제 AWS FE의 지도·지역 필터·급증 알림 상세를 관리자 API·DB와 대조했습니다. [미응답 클러스터링](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/unanswered-clustering/README.md)은 최종 실행의 미응답 하위 질문 1,165건·87개 묶음을 추적했고 중복·묶음 건수 불일치는 0이었습니다. 다만 상세 확인한 #42 묶음에는 주제가 섞였고 40건 중 원문이 빈 항목 8건이 있어 의미 정확도를 전체 통과로 판정하지 않았습니다. 두 문서에 화면 캡처와 조회 결과를 보관했습니다.
+
+[로컬 장애 복구 400건](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md)은 시험 도구가 Worker·의존 서비스를 재기동한 뒤 작업 회수와 최종 답변 저장을 확인한 결과입니다. [Discord 기록](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/discord-alerts/README.md)은 기존 PR #274의 실제 FIRING·RESOLVED 수신 캡처와 10월 26일 설정 생성기 재검증을 모았습니다. AWS의 새 알림 수신 시험으로 계산하지 않습니다.
+
 ## 제품 코드 검증과의 경계
 
 연구 실험은 후보를 비교하고 방향을 정합니다. 현재 구현이 그 결정을 올바르게 반영했는지는 Production Repository가 검증합니다.
 
-- Backend의 현재 기능·통합 테스트: [UBot-BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/support-policy.md)
-- 검색·가드·파이프라인의 시점별 보고서: [UBot-BE Docs](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs)
+- Backend의 현재 기능·통합 테스트: [UBot-BE Testing](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/support-policy.md)
+- 검색·가드·파이프라인의 시점별 보고서: [UBot-BE Docs](https://github.com/ureca-UBot/UBot-BE/tree/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs)
 - Frontend의 현재 빌드·브라우저 검사: [UBot-FE](https://github.com/ureca-UBot/UBot-FE)
+- 서비스 경로의 부하·장애·관리자 화면 검사: [UBot-ServerTest](https://github.com/ureca-UBot/UBot-ServerTest)
 
 부하·장애 주입 결과는 실행 시점의 코드 SHA, 모델, 하드웨어, 동시성, 장애 시각과 원시 결과가 함께 남아야 조직 근거로 등록합니다. 로컬 산출물만 있거나 실행 조건을 다시 확인할 수 없는 수치는 현재 제품 보장으로 올리지 않습니다.
 
@@ -83,6 +106,8 @@ Q8과 Q4의 정답률 차이는 통계적으로 유의하지 않았고 Q8은 순
 | L4에서 vLLM 9.97 RPS를 관측했다 | AWQ·P64/U64·30초 단일 탐색·p95 9.15초 |
 | 임베딩 단기 진단에서 vLLM이 Ollama보다 2.98~3.73배 높은 처리량을 보였다 | 2,560건의 구성 요소 측정이며 전체 RAG·장기 운영 미검증 |
 | FE 리팩터링 당시 48개 화면이 픽셀 동일했다 | 해당 커밋의 고정 응답 비교이며 한 화면과 이후 변경의 재검증 미완료 |
+| AWS 최종 6,000건을 모두 접수했다 | 3,000건씩 2회, 답변 5,666·정상 거절 330·시스템 오류 4, 당시 이미지·설정 기준 |
+| 통신지도·미응답 화면을 API·DB와 대조했다 | 실제 관리자 조회 검증, 미응답 묶음의 주제 혼합·빈 원문 문제는 별도 기록 |
 
 “UBot 전체 정확도”, “운영에서 항상 몇 배 빠름”, “사람 검증과 운영 SLO 완료”처럼 실험 범위를 제품 전체로 넓히는 표현은 사용하지 않습니다.
 

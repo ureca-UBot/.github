@@ -1,15 +1,16 @@
 # Repository Map
 
-> 마지막 확인: 2026-10-26
+> 마지막 확인: 2026-10-27
 
-UBot은 운영 제품 저장소와 기술 검증 저장소를 분리합니다. 제품 동작의 기준은 UBot-BE와 UBot-FE이며, 모델·임베딩·Vector DB 실험은 각 연구 저장소가 결과와 한계를 관리합니다.
+UBot은 운영 제품 저장소와 기술 검증 저장소를 분리합니다. 제품 동작의 기준은 UBot-BE와 UBot-FE이며, 모델·임베딩·Vector DB 실험은 각 연구 저장소가, 서비스 부하·장애·화면 검증은 UBot-ServerTest가 도구와 결과를 관리합니다.
 
 ## 한눈에 보기
 
 | Repository | Type | Lifecycle | Responsibility | Documentation |
 |---|---|---|---|---|
-| [UBot-BE](https://github.com/ureca-UBot/UBot-BE) | Production | Active | 백엔드, AI 오케스트레이션, 데이터와 운영 | [README](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/README.md) · [Docs](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs) |
+| [UBot-BE](https://github.com/ureca-UBot/UBot-BE) | Production | Active | 백엔드, AI 오케스트레이션, 데이터와 운영 | [README](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/README.md) · [Docs](https://github.com/ureca-UBot/UBot-BE/tree/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs) |
 | [UBot-FE](https://github.com/ureca-UBot/UBot-FE) | Production | Active | 웹 애플리케이션과 브라우저 경험 | [README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [Docs](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs) |
+| [UBot-ServerTest](https://github.com/ureca-UBot/UBot-ServerTest) | Verification | Active | 채팅 부하·장애 복구·알림·관리자 화면 검증 | [도구와 결과](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/README.md) |
 | [UBot-LLMTest](https://github.com/ureca-UBot/UBot-LLMTest) | Research | Research | LLM 품질, 프롬프트와 서빙 평가 | [Repository](https://github.com/ureca-UBot/UBot-LLMTest) |
 | [UBot-EmbeddingTest](https://github.com/ureca-UBot/UBot-EmbeddingTest) | Research | Research | 임베딩, 검색과 리랭커 평가 | [Repository](https://github.com/ureca-UBot/UBot-EmbeddingTest) |
 | [UBot-VertorDBTest](https://github.com/ureca-UBot/UBot-VertorDBTest) | Benchmark | Reference | 벡터 데이터베이스와 인덱스 비교 | [Decision](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/main/docs/07-results/decision.md) · [Docs](https://github.com/ureca-UBot/UBot-VertorDBTest/tree/main/docs) |
@@ -42,7 +43,7 @@ Lifecycle은 `Active`, `Research`, `Maintenance`, `Reference`, `Archived`만 사
 
 ### Detailed Documentation
 
-[UBot-BE README](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/README.md) · [Technical Documentation](https://github.com/ureca-UBot/UBot-BE/tree/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs)
+[UBot-BE README](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/README.md) · [Technical Documentation](https://github.com/ureca-UBot/UBot-BE/tree/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs)
 
 ## UBot-FE
 
@@ -69,6 +70,15 @@ Lifecycle은 `Active`, `Research`, `Maintenance`, `Reference`, `Archived`만 사
 ### Detailed Documentation
 
 [UBot-FE README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [Frontend Documentation](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)
+
+## UBot-ServerTest
+
+실제 서비스 경로의 채팅 부하, 로컬 장애 복구, 알림 수신과 관리자 화면 검증에 사용한 도구·데이터·결과를 보관합니다. 실행 시점의 이미지와 설정을 함께 남겨 이후 제품 코드와 구분합니다.
+
+- [채팅 E2E](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/chat-e2e/README.md): AWS 6,000건 재시험과 이전 실행 비교
+- [장애 복구](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md): Worker·Redis·PostgreSQL·vLLM 중단과 결과 저장
+- [Discord 알림](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/discord-alerts/README.md): 기존 실제 수신 기록과 설정 생성기 재검증
+- [통신지도](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/telemap/README.md) · [미응답 묶음](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/unanswered-clustering/README.md): 실제 FE·API·DB 대조, 화면 캡처와 발견한 품질 문제
 
 ## UBot-LLMTest
 
