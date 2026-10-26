@@ -92,6 +92,23 @@ UBot의 핵심은 질문에 문장 하나를 돌려주는 데 있지 않습니�
 | 주요 기술을 선택한 이유 | [Engineering Decisions](../docs/engineering-decisions.md) |
 | 실험 결과와 해석할 수 있는 범위 | [Evidence Register](../docs/evidence-register.md) |
 
+## 참여 멤버
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Catverdose"><img src="https://github.com/Catverdose.png?size=96" width="72" alt="Catverdose"><br><sub><b>@Catverdose</b></sub></a></td>
+    <td align="center"><a href="https://github.com/gart09"><img src="https://github.com/gart09.png?size=96" width="72" alt="gart09"><br><sub><b>@gart09</b></sub></a></td>
+    <td align="center"><a href="https://github.com/H0ng"><img src="https://github.com/H0ng.png?size=96" width="72" alt="H0ng"><br><sub><b>@H0ng</b></sub></a></td>
+    <td align="center"><a href="https://github.com/jeaminlim0000"><img src="https://github.com/jeaminlim0000.png?size=96" width="72" alt="jeaminlim0000"><br><sub><b>@jeaminlim0000</b></sub></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Jo-hyeon-bin"><img src="https://github.com/Jo-hyeon-bin.png?size=96" width="72" alt="Jo-hyeon-bin"><br><sub><b>@Jo-hyeon-bin</b></sub></a></td>
+    <td align="center"><a href="https://github.com/kl35805"><img src="https://github.com/kl35805.png?size=96" width="72" alt="kl35805"><br><sub><b>@kl35805</b></sub></a></td>
+    <td align="center"><a href="https://github.com/sunji22"><img src="https://github.com/sunji22.png?size=96" width="72" alt="sunji22"><br><sub><b>@sunji22</b></sub></a></td>
+    <td align="center"><a href="https://github.com/YuMinha"><img src="https://github.com/YuMinha.png?size=96" width="72" alt="YuMinha"><br><sub><b>@YuMinha</b></sub></a></td>
+  </tr>
+</table>
+
 ## Repositories
 
 ### Production
