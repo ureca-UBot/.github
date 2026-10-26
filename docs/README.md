@@ -7,6 +7,7 @@
 | 질문 | 문서 |
 |---|---|
 | UBot은 무엇을 만들고 누구에게 어떤 결과를 주는가? | [Product Overview](product-overview.md) |
+| 질문이 FE에서 임베딩·검색·업무 자료·답변·상담으로 어떻게 이어지는가? | [Chat and RAG Flow](chat-flow.md) |
 | 전체 시스템과 데이터·AI 흐름은 어떻게 연결되는가? | [System Architecture](system-architecture.md) |
 | 어떤 Repository를 봐야 하는가? | [Repository Map](repository-map.md) |
 | 주요 기술을 왜 선택했는가? | [Engineering Decisions](engineering-decisions.md) |

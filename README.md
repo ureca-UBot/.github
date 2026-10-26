@@ -4,6 +4,7 @@
 
 - 조직 첫 화면: [profile/README.md](profile/README.md)
 - 문서 포털: [docs/README.md](docs/README.md)
+- 채팅과 RAG 전체 흐름: [docs/chat-flow.md](docs/chat-flow.md)
 - 저장소 지도: [docs/repository-map.md](docs/repository-map.md)
 - 기술 결정: [docs/engineering-decisions.md](docs/engineering-decisions.md)
 - 실험·검증 근거: [docs/evidence-register.md](docs/evidence-register.md)
