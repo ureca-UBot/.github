@@ -130,7 +130,7 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | [@kl35805](https://github.com/kl35805) | | |
 | [@sunji22](https://github.com/sunji22) | | |
 | [@YuMinha](https://github.com/YuMinha) | | |
-| [@Catverdose](https://github.com/Catverdose) | Backend·Frontend 연동<br>상담·비동기 처리<br>AI 실행 환경·인프라·검증 | 비회원 채팅·상품 API와 화면 연동<br>상담사 연결·메시지 보호·대화 이력 인계<br>비동기 Worker·HNSW 검색·모델 Provider 전환<br>FE 구조 개선, AWS·Terraform·CI/CD·모니터링·장애 복구<br>서빙 비교·부하 및 장애 시험·제품 문서화 |
+| [@Catverdose](https://github.com/Catverdose) | 상담·비동기 처리<br>AI 실행 환경·인프라·검증 | 비회원 채팅·상품 API와 화면 연동<br>상담사 연결·메시지 보호·대화 이력 인계<br>비동기 Worker·HNSW 검색·모델 Provider 전환<br>FE 구조 개선, AWS·Terraform·CI/CD·모니터링·장애 복구<br>서빙 비교·부하 및 장애 시험·제품 문서화 |
 
 각자 담당 영역과 주요 구현·개선을 간단히 적고, 자세한 설명과 근거는 [참여 멤버와 구현 기여](../docs/governance/team-contributions.md)에 작성합니다.
 
