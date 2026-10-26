@@ -33,7 +33,7 @@ UBot은 회원과 비회원의 대화, 상품·매장·예약·문의 상태, �
 | 고객 지원 | 공지·배너·문의, 예약·납부·가입·사용량 알림 | [고객 지원](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/customer-support.md) |
 | FAQ와 지식 개선 | FAQ·카테고리·버전·사용 이력, 미응답 묶음과 FAQ 전환, 인기·급상승 순위 | [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/knowledge-management.md) |
 | 지역별 문의 흐름 | 지역과 의미가 비슷한 질문의 급증 탐지, 관리자 알림과 처리 | [통신 지도](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/telemap.md) |
-| FAQ 기반 안내 | FAQ·업무 자료 검색, 필요한 서버 기능 호출, 근거 부족 시 답변 보류 | [채팅과 RAG 전체 흐름](chat-flow.md) · [BE RAG 파이프라인](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/rag-pipeline.md) |
+| FAQ 기반 안내 | FAQ·업무 자료 검색, 필요한 서버 기능 호출, 근거 부족 시 답변 보류 | [채팅과 RAG 전체 흐름](../architecture/chat-flow.md) · [BE RAG 파이프라인](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/rag-pipeline.md) |
 | 상담사 인계 | 서버에 저장된 AI 문답·FAQ 선택·허용된 상담 기록으로 같은 대화를 이어감 | [상담사 연결과 보호](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/counsel.md) |
 | 관리자 안전 정책 | 공통 금지어와 상담 위험 문장, AI 제안 후보, 회귀 검사와 승인 이력 | [가드 검토](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/guard-review.md) |
 | 서비스 운영 | 업무 상태와 처리 현황, 지표·로그·알림, 장애별 확인 절차 | [관측성](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/operations/observability.md) |
@@ -92,11 +92,11 @@ UBot은 회원과 비회원의 대화, 상품·매장·예약·문의 상태, �
 
 ## 더 알아보기
 
-- 시스템 구성: [System Architecture](system-architecture.md)
-- Frontend부터 임베딩·검색·답변·상담까지: [Chat and RAG Flow](chat-flow.md)
-- 저장소와 책임: [Repository Map](repository-map.md)
-- 기술 선택과 근거: [Engineering Decisions](engineering-decisions.md)
-- 실험과 검증 결과: [Evidence Register](evidence-register.md)
+- 시스템 구성: [System Architecture](../architecture/overview.md)
+- Frontend부터 임베딩·검색·답변·상담까지: [Chat and RAG Flow](../architecture/chat-flow.md)
+- 저장소와 책임: [Component Map](../architecture/components.md)
+- 기술 선택과 근거: [Engineering Decisions](../architecture/decisions/README.md)
+- 실험과 검증 결과: [Evidence Register](../proof/evidence-register.md)
 - 시나리오별 BE 동작: [UBot-BE Use Cases](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/overview/use-cases.md)
 - Backend 상세 기능: [UBot-BE Product Engineering Guide](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/README.md)
 - Frontend 화면과 검증: [UBot-FE Documentation](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)

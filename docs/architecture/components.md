@@ -13,7 +13,7 @@ UBot은 운영 제품 저장소와 기술 검증 저장소를 분리합니다. �
 | [UBot-LLMTest](https://github.com/ureca-UBot/UBot-LLMTest) | Research | Research | LLM 품질, 프롬프트와 서빙 평가 | [Repository](https://github.com/ureca-UBot/UBot-LLMTest) |
 | [UBot-EmbeddingTest](https://github.com/ureca-UBot/UBot-EmbeddingTest) | Research | Research | 임베딩, 검색과 리랭커 평가 | [Repository](https://github.com/ureca-UBot/UBot-EmbeddingTest) |
 | [UBot-VertorDBTest](https://github.com/ureca-UBot/UBot-VertorDBTest) | Benchmark | Reference | 벡터 데이터베이스와 인덱스 비교 | [Decision](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/main/docs/07-results/decision.md) · [Docs](https://github.com/ureca-UBot/UBot-VertorDBTest/tree/main/docs) |
-| [ureca-UBot/.github](https://github.com/ureca-UBot/.github) | Documentation | Active | 조직 진입점과 공통 문서 | [Documentation Portal](README.md) |
+| [ureca-UBot/.github](https://github.com/ureca-UBot/.github) | Documentation | Active | 조직 진입점과 제품 문서 | [Documentation Portal](../README.md) |
 | `UBot-FE-Mock` | Prototype | Reference | 초기 UI와 서비스 시나리오 참고 | 2026-10-26 기준 접근 불가 |
 
 Lifecycle은 `Active`, `Research`, `Maintenance`, `Reference`, `Archived`만 사용합니다. `Reference`는 현재 제품을 직접 배포하지 않지만 기술 판단이나 이력을 확인할 때 사용하는 저장소를 뜻합니다.
@@ -171,7 +171,7 @@ UBot 조직의 진입점과 제품·시스템·Repository·기술 결정 사이�
 
 ### Detailed Documentation
 
-[Organization Documentation](README.md)
+[Organization Documentation](../README.md)
 
 ## UBot-FE-Mock
 

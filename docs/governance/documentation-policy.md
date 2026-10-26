@@ -31,7 +31,7 @@ UBot 조직 문서는 전체 맥락과 연결을 담당하고, 상세 구현은 
 
 - Repository 진입 링크는 기본 브랜치를 사용해 최신 문서로 연결합니다.
 - ADR의 근거는 커밋 SHA가 들어간 고정 링크를 사용합니다.
-- 조직 차원의 실험 요약은 [Evidence Register](evidence-register.md)에 두고 원시 결과를 가진 저장소로 연결합니다.
+- 조직 차원의 실험 요약은 [Evidence Register](../proof/evidence-register.md)에 두고 원시 결과를 가진 저장소로 연결합니다.
 - Production 구현 링크는 해당 Repository의 현재 문서로 연결합니다.
 - 접근할 수 없거나 검증하지 못한 링크는 그 상태를 함께 적습니다.
 
@@ -68,4 +68,4 @@ UBot 조직 문서는 전체 맥락과 연결을 담당하고, 상세 구현은 
 - [ ] 모든 상대 링크와 이미지 경로가 열리는가?
 - [ ] 새 명령에 예상 결과 또는 검증 방법이 있는가?
 
-표준 문서는 [ADR](../docs-templates/ADR_TEMPLATE.md), [Benchmark](../docs-templates/BENCHMARK_TEMPLATE.md), [Runbook](../docs-templates/RUNBOOK_TEMPLATE.md), [Troubleshooting](../docs-templates/TROUBLESHOOTING_TEMPLATE.md) 양식을 사용합니다.
+표준 문서는 [ADR](../../docs-templates/ADR_TEMPLATE.md), [Benchmark](../../docs-templates/BENCHMARK_TEMPLATE.md), [Runbook](../../docs-templates/RUNBOOK_TEMPLATE.md), [Troubleshooting](../../docs-templates/TROUBLESHOOTING_TEMPLATE.md) 양식을 사용합니다.

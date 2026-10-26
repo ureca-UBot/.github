@@ -3,11 +3,11 @@
 조직 아키텍처는 Repository와 런타임 사이의 책임만 설명합니다. API 경로, 설정값, 제한 시간, 재시도와 데이터베이스 제약은 각 Repository 문서에서 확인합니다.
 
 <picture>
-  <source media="(max-width: 767px)" srcset="images/system-overview-mobile.svg">
-  <img src="images/system-overview.svg" alt="UBot의 사용자 채널, Frontend, Backend, 데이터 계층, AI 런타임, 운영 관측과 연구 저장소 관계" width="100%">
+  <source media="(max-width: 767px)" srcset="../images/system-overview-mobile.svg">
+  <img src="../images/system-overview.svg" alt="UBot의 사용자 채널, Frontend, Backend, 데이터 계층, AI 런타임, 운영 관측과 연구 저장소 관계" width="100%">
 </picture>
 
-[그림 크게 보기](images/system-overview.svg) · [모바일 그림](images/system-overview-mobile.svg)
+[그림 크게 보기](../images/system-overview.svg) · [모바일 그림](../images/system-overview-mobile.svg)
 
 ## Runtime Components
 
@@ -206,7 +206,7 @@ Research Repository는 Production 런타임의 직접 의존성이 아닙니다.
 실험 / 벤치마크 → 검증 근거 → 기술 결정 → UBot-BE 또는 UBot-FE 구현
 ```
 
-결정과 원본 근거는 [Engineering Decisions](engineering-decisions.md), Repository별 소유 범위는 [Repository Map](repository-map.md)에서 확인합니다.
+결정과 원본 근거는 [Engineering Decisions](decisions/README.md), Repository별 소유 범위는 [Component Map](components.md)에서 확인합니다.
 
 ### 운영과 복구
 
