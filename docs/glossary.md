@@ -13,7 +13,7 @@ UBot 문서에서 Repository를 가로질러 사용하는 용어를 정리합니
 | Reranker | 첫 검색 후보의 순서를 별도 모델로 다시 평가하는 단계. 현재 Production FAQ 검색에는 사용하지 않음 |
 | Vector DB | Embedding을 저장하고 근접 검색하는 계층. UBot Production은 PostgreSQL과 pgvector를 사용 |
 | LLM | 답변 생성, 질문 정리 또는 의미 판정에 사용하는 언어 모델 |
-| AI Worker | 접수된 질문을 비동기로 가져와 Retrieval·모델 호출·검사·결과 저장을 수행하는 Backend 실행 역할 |
+| 답변 처리 역할 | 접수된 질문을 비동기로 가져와 검색·모델 호출·검사·결과 저장을 수행하는 Backend 실행 역할 |
 | Job | 질문 접수와 실제 AI 실행을 연결하는 추적 가능한 작업 |
 | Evidence | 기술 주장이나 결정의 근거가 되는 dataset·실험 조건·원시 결과·검증 기록 |
 | Guard | 입력, 생성 답변 또는 상담 메시지가 정해진 정책을 지키는지 검사하는 계층 |

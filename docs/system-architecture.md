@@ -19,7 +19,9 @@
 
 **Owns**
 
-- 화면, 라우트, 컴포넌트와 클라이언트 상태
+- 회원·상품·매장·예약·공지·문의·알림 화면
+- 대화·상담사·관리자 화면과 사용자 흐름
+- 라우트, 컴포넌트와 클라이언트 상태
 - API 계약을 사용하는 요청과 오류 UX
 - 반응형 화면, 접근성, 브라우저 회귀 검사
 
@@ -37,14 +39,15 @@
 
 **Responsibility**
 
-인증과 권한을 확인하고 대화·상담·업무 API를 처리하며 AI 작업을 접수합니다.
+인증과 권한을 확인하고 회원·상품·매장·예약·고객 지원·FAQ·상담·관리자 업무를 처리합니다. 대화형 질문은 저장된 작업으로 접수합니다.
 
 **Owns**
 
-- 인증·소유권·업무 규칙
-- 대화, 상담 인계와 고객 행동의 서버 상태
-- 질문 작업 접수와 결과 조회
-- 관리자 기능과 운영 API
+- 회원·비회원 인증, 사용자 소유권과 프로필
+- 상품·가입·사용량·청구·약정 정보
+- 매장·길찾기·예약, 공지·문의·알림
+- FAQ·미응답·랭킹·통신 지도와 관리자 기능
+- 대화, 상담 인계와 질문 처리 상태
 
 **Does not own**
 
@@ -56,18 +59,18 @@
 
 [UBot-BE Architecture](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/architecture/overview.md) · [API Reference](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/reference/api.md)
 
-### AI Worker
+### 비동기 답변 처리
 
 **Responsibility**
 
-접수된 질문을 가져와 검색·자료 수집·모델 호출·가드 검사를 실행하고 결과를 확정합니다.
+UBot-BE의 별도 실행 역할이 접수된 질문을 가져와 검색·자료 수집·모델 호출·가드 검사를 수행하고 결과를 확정합니다.
 
 **Owns**
 
-- 작업 선점과 실행 상태 갱신
+- 접수된 작업의 선점과 실행 상태 갱신
 - Retrieval과 업무 자료 조합
 - LLM·Embedding 호출과 결과 검사
-- 중단 작업의 회수와 완료 기록
+- 중단된 답변 처리의 회수와 완료 기록
 
 **Does not own**
 
@@ -109,7 +112,7 @@ AI 작업 전달과 선택적 캐시·랭킹·분산 잠금·인증 보조 상�
 
 **Owns**
 
-- Worker가 소비하는 작업 Stream
+- 답변 처리 역할이 소비하는 작업 Stream
 - 짧은 수명의 보조 상태
 
 **Does not own**
@@ -119,7 +122,7 @@ AI 작업 전달과 선택적 캐시·랭킹·분산 잠금·인증 보조 상�
 
 **Detailed Documentation**
 
-[Redis Runtime](https://github.com/ureca-UBot/UBot-BE/blob/develop/infra/redis/README.md) · [Worker Recovery](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/worker-reliability.md)
+[Redis Runtime](https://github.com/ureca-UBot/UBot-BE/blob/develop/infra/redis/README.md) · [작업 복구](https://github.com/ureca-UBot/UBot-BE/blob/develop/docs/how-to/worker-reliability.md)
 
 ### LLM / Embedding Runtime
 
@@ -151,7 +154,7 @@ AI 작업 전달과 선택적 캐시·랭킹·분산 잠금·인증 보조 상�
 **Owns**
 
 - 상태 확인, 지표 수집과 알림 전달 흐름
-- API·Worker·대기열·DB·Redis·모델을 구분하는 운영 신호
+- API·답변 처리·대기열·DB·Redis·모델을 구분하는 운영 신호
 - 장애 유형별 런북 연결
 
 **Does not own**
@@ -170,7 +173,7 @@ AI 작업 전달과 선택적 캐시·랭킹·분산 잠금·인증 보조 상�
 
 ```text
 고객 → UBot-FE → UBot-BE API → 작업 상태 저장
-                              → AI Worker → FAQ 검색 / 업무 자료
+                              → 답변 처리 → FAQ 검색 / 업무 자료
                                           → LLM / 안전 검사
                               ← 결과 저장
 고객 ← UBot-FE ← 작업 결과 조회
@@ -206,7 +209,7 @@ Research Repository는 Production 런타임의 직접 의존성이 아닙니다.
 ### 운영과 복구
 
 ```text
-API / Worker / DB / Redis / 모델 신호
+API / 답변 처리 / DB / Redis / 모델 신호
   → 지표와 상태 수집
   → 알림 묶기와 전달
   → 구성 요소별 런북
@@ -217,7 +220,7 @@ API / Worker / DB / Redis / 모델 신호
 
 ## 배포와 용량 경계
 
-- 웹 API와 AI Worker는 같은 코드베이스의 서로 다른 실행 역할입니다. 요청 접수 용량과 AI 처리 용량을 따로 조절할 수 있습니다.
+- 웹 API와 답변 처리는 같은 코드베이스의 서로 다른 실행 역할입니다. 요청 접수 용량과 모델 처리 용량을 따로 조절할 수 있습니다.
 - 모델 런타임은 Backend 배포 단위와 분리할 수 있습니다. GPU 자원을 필요할 때 준비하거나 줄이는 운영 선택이 API 교체와 직접 묶이지 않습니다.
 - 이 구조는 비용 조절의 여지를 제공하지만 자동 확장, 무중단 전환 또는 비용 절감액 자체를 보장하지는 않습니다.
 - 배포 자동화와 인프라 정의는 UBot-BE가 관리하며, 실제 클라우드 자원의 현재 상태는 저장소 파일만으로 단정하지 않습니다.

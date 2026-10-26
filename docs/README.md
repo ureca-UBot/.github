@@ -22,7 +22,7 @@
 - [ADR-002: BGE-M3](decisions/ADR-002-embedding-model.md)
 - [ADR-003: 현재 FAQ 검색에서 Reranker 제외](decisions/ADR-003-reranker-strategy.md)
 - [ADR-004: Qwen3-4B Instruct 계열](decisions/ADR-004-llm-selection.md)
-- [ADR-005: 질문 접수 API와 AI Worker 분리](decisions/ADR-005-async-chat-processing.md)
+- [ADR-005: 질문 접수와 답변 처리 분리](decisions/ADR-005-async-chat-processing.md)
 
 ## Repository Documentation
 

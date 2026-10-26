@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="1160" viewBox="0 0 720 1160" role="img" aria-labelledby="title desc">
   <title id="title">모바일용 UBot 시스템 구성</title>
-  <desc id="desc">사용자 채널, 프론트엔드, 백엔드 API, AI Worker, 데이터 계층과 AI 런타임, 운영 관측과 연구 근거의 수직 흐름</desc>
+  <desc id="desc">사용자 채널, 프론트엔드, 백엔드 API, 비동기 답변 처리, 데이터 계층과 AI 런타임, 운영 관측과 연구 근거의 수직 흐름</desc>
   <defs>
     <linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#08111f"/>
@@ -37,13 +37,13 @@
 
   <rect x="120" y="390" width="480" height="118" rx="20" fill="#28356e" stroke="#6574d9" class="card"/>
   <text x="360" y="430" text-anchor="middle" class="card-title">UBot-BE API</text>
-  <text x="360" y="463" text-anchor="middle" class="card-body">인증 · 권한 · 업무 규칙</text>
-  <text x="360" y="490" text-anchor="middle" class="card-body">대화 · 상담 · 작업 접수와 조회</text>
+  <text x="360" y="463" text-anchor="middle" class="card-body">회원 · 상품 · 매장 · 예약 · 이용 정보</text>
+  <text x="360" y="490" text-anchor="middle" class="card-body">FAQ · 상담 · 문의 · 알림 · 관리자 업무</text>
 
   <rect x="120" y="554" width="480" height="118" rx="20" fill="#4c286d" stroke="#a66ad2" class="card"/>
-  <text x="360" y="594" text-anchor="middle" class="card-title">AI Worker</text>
-  <text x="360" y="627" text-anchor="middle" class="card-body">Retrieval · 모델 호출 · Guard</text>
-  <text x="360" y="654" text-anchor="middle" class="card-body">결과 확정 · 작업 복구</text>
+  <text x="360" y="594" text-anchor="middle" class="card-title">비동기 답변 처리</text>
+  <text x="360" y="627" text-anchor="middle" class="card-body">FAQ 검색 · 업무 자료 · 모델 연결</text>
+  <text x="360" y="654" text-anchor="middle" class="card-body">안전 검사 · 답변 저장 · 작업 회수</text>
 
   <path d="M 360 200 V 242" class="line"/>
   <path d="M 360 344 V 388" class="line"/>
