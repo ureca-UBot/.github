@@ -10,10 +10,12 @@
 
 UBot의 핵심은 질문에 문장 하나를 돌려주는 데 있지 않습니다. 관리자가 준비한 공식 지식을 검색하고, 필요한 업무 자료를 확인해 답하며, 해결하지 못한 질문과 사람 상담까지 다시 지식 개선으로 연결합니다.
 
-<picture>
-  <source media="(max-width: 767px)" srcset="../docs/images/chat-flow-mobile.png">
-  <img src="../docs/images/chat-flow.png" alt="FAQ 임베딩 준비에서 Frontend 질문, Backend 검색과 업무 자료 조회, 답변 검사, 화면 표시와 상담사 인계로 이어지는 UBot 핵심 흐름" width="100%">
-</picture>
+<p align="center">
+  <picture>
+    <source media="(max-width: 767px)" srcset="../docs/images/chat-flow-mobile.png">
+    <img src="../docs/images/chat-flow.png" alt="FAQ 임베딩 준비에서 Frontend 질문, Backend 검색과 업무 자료 조회, 답변 검사, 화면 표시와 상담사 인계로 이어지는 UBot 핵심 흐름" width="80%">
+  </picture>
+</p>
 
 [채팅과 RAG 전체 흐름 읽기](../docs/chat-flow.md) · [큰 그림](../docs/images/chat-flow.png) · [모바일 그림](../docs/images/chat-flow-mobile.png)
 
