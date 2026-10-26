@@ -1,0 +1,38 @@
+product:
+  name: "UBot"
+  release: null
+  lifecycle: "preview"
+  channel: "development"
+
+release_semantics:
+  current_development: "unversioned-preview"
+  latest_released: null
+  recommended: null
+  supported: []
+  maintained: []
+
+components:
+  backend:
+    repository: "ureca-UBot/UBot-BE"
+    version: null
+    commit: null
+    lifecycle: "preview"
+  frontend:
+    repository: "ureca-UBot/UBot-FE"
+    version: null
+    commit: null
+    lifecycle: "preview"
+
+verification:
+  verified_at: "2026-10-26"
+  product_e2e:
+    status: "not-recorded"
+  compatibility:
+    status: "partially-verified"
+    matrix: "../compatibility/product-matrix.md"
+
+documentation:
+  current_development: "unversioned-preview"
+  latest_released: null
+  versioned_docs_required: false
+  generated_manifest: "../../generated/MANIFEST.yaml"

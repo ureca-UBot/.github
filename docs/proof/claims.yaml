@@ -1,0 +1,26 @@
+# External-facing quantitative claims must point to reproducible evidence.
+claims:
+  - id: "LLM-QUALITY-001"
+    statement: "Qwen3-4B-Instruct Q4_K_M achieved 77.5% answer accuracy in the v5 fixed-context evaluation."
+    status: "provisional"
+    owner: "UBot LLM research maintainers"
+    applicability:
+      product_release: "not-a-product-release"
+      environment: "Tesla T4, Ollama, temperature 0, sequential requests"
+      workload: "1,300 independent items; LLM judge; no retrieval"
+    evidence:
+      type: "benchmark"
+      location: "https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/model_test_v5/try1/results/all_summary.md"
+    last_verified: "2026-10-26"
+
+  - id: "EMBEDDING-QUALITY-001"
+    statement: "BGE-M3 achieved 86.7% Top-1 in the 100-FAQ, 60-question comparison."
+    status: "provisional"
+    owner: "UBot embedding research maintainers"
+    applicability:
+      product_release: "not-a-product-release"
+      workload: "100 FAQs and 60 synthetic questions"
+    evidence:
+      type: "benchmark"
+      location: "https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/model_benchmarks/docs/임베딩모델_벤치마크_최종비교.md"
+    last_verified: "2026-10-26"
