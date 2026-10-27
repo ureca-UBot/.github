@@ -91,9 +91,9 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | 검증 대상 | 수행한 내용과 결과 | 근거 |
 |---|---|---|
 | **검색과 모델 선택** | 임베딩 모델·리랭커·벡터 저장소, 생성 모델·양자화·프롬프트를 비교했습니다. 검색 품질, 답변 품질과 운영 부담을 함께 보고 현재 구성을 정했습니다. | [실험 전체](../docs/proof/evidence-register.md) · [기술 결정](../docs/architecture/decisions/README.md) |
-| **검색 인덱스** | 1만 개의 합성 벡터를 사용한 BE 측정에서 HNSW 검색의 p50이 exact 검색보다 4.64~6.19배 빨랐습니다. 실제 FAQ 질문의 recall 평가는 별도입니다. | [HNSW 측정](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/FAQ_HNSW_검색_테스트_보고서.md) |
+| **검색 인덱스** | 1만 개의 합성 벡터를 사용한 BE 측정에서 HNSW 검색의 p50이 exact 검색보다 4.64~6.19배 빨랐습니다. 실제 FAQ 질문의 recall 평가는 별도입니다. | [HNSW 측정](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/FAQ_HNSW_검색_테스트_보고서.md) |
 | **임베딩 서빙** | 총 2,560건의 단기 비교에서 실패는 없었습니다. 동시성 32에서 vLLM의 요청 처리량은 질문 묶음별로 Ollama의 2.98~3.73배였습니다. | [조건과 해석 범위](../docs/proof/evidence-register.md#임베딩검색리랭커) |
-| **실제 LLM 장애 복구** | 로컬에서 처리 프로세스·Redis·PostgreSQL·vLLM을 각각 100건 처리 중 중단했습니다. 총 400건의 최종 답변을 저장했고 유실·중복 저장·최종 실패·작업 타임아웃은 0건이었습니다. | [4종 장애 결과](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/evidence/fault-recovery-20261023.md) |
+| **실제 LLM 장애 복구** | 로컬에서 처리 프로세스·Redis·PostgreSQL·vLLM을 각각 100건 처리 중 중단했습니다. 총 400건의 최종 답변을 저장했고 유실·중복 저장·최종 실패·작업 타임아웃은 0건이었습니다. | [4종 장애 결과와 실행 도구](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md) |
 | **AWS 채팅 부하** | FE Nginx 진입 주소로 3,000건씩 두 번 전송했습니다. 6,000건 모두 접수했고 답변 5,666건·정상 거절 330건·시스템 오류 4건이 나왔습니다. | [실행 조건과 결과](../docs/proof/evidence-register.md#aws-채팅-부하와-관리자-화면-검증) |
 | **운영 알림·관리자 화면** | 기존 Discord 장애·복구 알림 수신 기록을 보관하고, 실제 AWS FE의 통신지도와 미응답 묶음을 API·DB와 대조했습니다. 화면 캡처와 발견한 품질 문제도 남겼습니다. | [도구·결과·화면 캡처](https://github.com/ureca-UBot/UBot-ServerTest/tree/07217660fa2aafcd671600905c62e3a2a8f0226a) |
 | **화면 회귀** | FE 리팩터링 당시 데스크톱·모바일 49개 화면을 비교했습니다. 48개는 픽셀 차이가 없었고, 1개 화면의 관리자 날짜 영역에 차이가 있었습니다. | [검증 조건과 기록](../docs/proof/evidence-register.md#프론트엔드-회귀-기록) |
@@ -124,15 +124,13 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | GitHub | 담당 영역 | 주요 구현·개선 |
 |---|---|---|
 | [@gart09](https://github.com/gart09) | 팀장·FAQ 관리·모니터링·데이터 집계 및 표시 | JWT 로그인·회원가입, 고객 문의/관리자 답변 <br>FAQ CRUD·Intent 분류 및 유사 표현 관리 <br> FAQ 사용량·유사도·미처리 질문 기반의 관리자 모니터링 및 개선 대상 조회 <br>AI 기반 FAQ 중복/품질 검토 파이프라인 구현 <br>IP 기반 지역 판별, Redis 지역별 실시간 검색어 랭킹·스케줄러 구현|
-| [@H0ng](https://github.com/H0ng) | PostGIS 기반 위치 검색·지도 클러스터링 구현<br>FAQ 시맨틱 캐싱 구현<br>관리자 매장 관리 및 채팅 대화 삭제 기능 구현 | PostGIS 기반 매장 위치 검색·지도 클러스터링 API 구현<br>관리자 매장 관리·삭제 매장 복구, 목록 조회 N+1 개선<br>관리자 승인 FAQ 기반 시맨틱 캐시 구현<br>대화 소프트 삭제 및 삭제된 대화 접근 차단<br>사용자 UI 이관·FE CI 구성, 모바일 화면 개선|
+| [@H0ng](https://github.com/H0ng) | 매장·위치 검색<br>FAQ 시맨틱 캐시<br>관리자 매장 관리<br>대화 삭제·모바일 UI | PostGIS 기반 매장 위치 검색·지도 클러스터링 API 구현<br>관리자 매장 관리·삭제 매장 복구, 목록 조회 N+1 개선<br>관리자 승인 FAQ 기반 시맨틱 캐시 구현<br>대화 소프트 삭제 및 삭제된 대화 접근 차단<br>사용자 UI 이관·FE CI 구성, 모바일 화면 개선 |
 | [@jeaminlim0000](https://github.com/jeaminlim0000) | LLM 평가·채팅 연동·입출력 가드·관리자 AI 검토 | FAQ/RAG 평가 데이터 구성 및 LLM Judge 기반 모델 비교 평가<br>LLM 호출 모듈·프롬프트 연동, 채팅 API·답변 상태·재시도 처리<br>채팅 화면 연동, 답변 생성 중단·LLM 요청 취소 및 답변 피드백 연동<br>입력·출력 코드 검사와 AI 가드 연결<br>AI 금칙어 후보·위험 문장 분석, 오차단 검증·승인 및 관리자 화면 구현|
-| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | LLM 프롬프트 평가<br>질문분리 멀티턴<br>화면연동|LLM Judge 평가 기준 설계, 프롬프트 튜닝·양자화 모델 비교 평가<br>LLM 출력 JSON 스키마 고정·파싱, 형식 오류 시 재호출 처리<br>질문 분리·멀티턴 상담과 하위 질문별 근거 검증 구현<br>상품 카탈로그 확장·가입·해지·결합 API, 공개 FAQ·상담 고객 정보 API 구현매장 길찾기 API·지도 화면, 사용자·관리자 디자인 통합과 챗봇 상품 필터 |
-| [@kl35805](https://github.com/kl35805) | 임베딩<br>공지·장애<br>알림 | 임베딩 모델 5종 벤치마크 테스트 및 최종 선정(BGE-M3)<br>챗봇 임계값 테스트 및 최종 선정(0.79, 0.49)<br>Top-k 검색 구현공지/장애 CRUD 및 접속 IP에 따른 배너 제공<br>알림 스케줄러 구현|
-| [@sunji22](https://github.com/sunji22) | 일반 FAQ<br>매장 정보 조회<br>사용자 정보 조회<br>상품 정보 조회|FAQ 의도 분기 파이프라인과 의도별 답변 자료 수집 구현<br>사용자 가입 정보 조회 도구와 요금제·사용량·청구 카드 구현<br>요금제·부가서비스·결합·로밍 상품 조회 도구와 채팅 상품 카드 구현<br>매장 조회 도구 연결, 상품 조건 재조회·여러 달 요금 조회 보완<br>LLM 테스트 결과 분석·운영 모델 선별, 프롬프트 테스트 설계 |
+| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | LLM 프롬프트 평가<br>질문분리 멀티턴<br>화면연동 | LLM Judge 평가 기준 설계, 프롬프트 튜닝·양자화 모델 비교 평가<br>LLM 출력 JSON 스키마 고정·파싱, 형식 오류 시 재호출 처리<br>질문 분리·멀티턴 상담과 하위 질문별 근거 검증 구현<br>상품 카탈로그 확장·가입·해지·결합 API, 공개 FAQ·상담 고객 정보 API 구현<br>매장 길찾기 API·지도 화면, 사용자·관리자 디자인 통합과 챗봇 상품 필터 |
+| [@kl35805](https://github.com/kl35805) | 임베딩<br>공지·장애<br>알림 | 임베딩 모델 5종 벤치마크 테스트 및 최종 선정(BGE-M3)<br>챗봇 임계값 테스트 및 최종 선정(0.79, 0.49)<br>Top-k 검색 구현<br>공지/장애 CRUD 및 접속 IP에 따른 배너 제공<br>알림 스케줄러 구현|
+| [@sunji22](https://github.com/sunji22) | 일반 FAQ<br>매장 정보 조회<br>사용자 정보 조회<br>상품 정보 조회 | FAQ 의도 분기 파이프라인과 의도별 답변 자료 수집 구현<br>사용자 가입 정보 조회 도구와 요금제·사용량·청구 카드 구현<br>요금제·부가서비스·결합·로밍 상품 조회 도구와 채팅 상품 카드 구현<br>매장 조회 도구 연결, 상품 조건 재조회·여러 달 요금 조회 보완<br>LLM 테스트 결과 분석·운영 모델 선별, 프롬프트 테스트 설계 |
 | [@YuMinha](https://github.com/YuMinha) | DB 설계·마이그레이션<br>미응답 질문·FAQ 개선<br>보안 | DB 규칙·Flyway 마이그레이션·ERD 관리<br>미응답 질문 수집·유사 질문 묶음·관리자 검토 및 FAQ 전환<br>미응답 묶음 주제 이름·카테고리 추천, FAQ 등록 후 자동 재검증<br>Outbox 기반 미응답 비동기 저장<br>채팅 질문 개인정보 마스킹·BE/FE 보안 고도화<br>매장 방문 예약·알림, 대화방 목록·이어서 질문하기 |
 | [@Catverdose](https://github.com/Catverdose) | 상담·비동기 처리<br>AI 실행 환경·인프라·검증 | 비회원 채팅·상품 API와 화면 연동<br>상담사 연결·메시지 보호·대화 이력 인계<br>비동기 Worker·HNSW 검색·모델 Provider 전환<br> AWS·Terraform·CI/CD·모니터링·장애 복구<br>서빙 비교·부하 및 장애 시험·제품 문서화 |
-
-담당 영역과 주요 구현·개선은 각자 작성합니다.
 
 </details>
 
