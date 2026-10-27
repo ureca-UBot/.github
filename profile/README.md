@@ -124,11 +124,11 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | GitHub | 담당 영역 | 주요 구현·개선 |
 |---|---|---|
 | [@gart09](https://github.com/gart09) | 팀장·FAQ 관리·모니터링·데이터 집계 및 표시 | JWT 로그인·회원가입, 고객 문의/관리자 답변 <br>FAQ CRUD·Intent 분류 및 유사 표현 관리 <br> FAQ 사용량·유사도·미처리 질문 기반의 관리자 모니터링 및 개선 대상 조회 <br>AI 기반 FAQ 중복/품질 검토 파이프라인 구현 <br>IP 기반 지역 판별, Redis 지역별 실시간 검색어 랭킹·스케줄러 구현|
-| [@H0ng](https://github.com/H0ng) | PostGIS 기반 위치 검색·지도 클러스터링 구현<br>FAQ 시맨틱 캐싱 구현<br>관리자 매장 관리 및 채팅 대화 삭제 기능 구현 | |
+| [@H0ng](https://github.com/H0ng) | PostGIS 기반 위치 검색·지도 클러스터링 구현<br>FAQ 시맨틱 캐싱 구현<br>관리자 매장 관리 및 채팅 대화 삭제 기능 구현 | PostGIS 기반 매장 위치 검색·지도 클러스터링 API 구현<br>관리자 매장 관리·삭제 매장 복구, 목록 조회 N+1 개선<br>관리자 승인 FAQ 기반 시맨틱 캐시 구현<br>대화 소프트 삭제 및 삭제된 대화 접근 차단<br>사용자 UI 이관·FE CI 구성, 모바일 화면 개선|
 | [@jeaminlim0000](https://github.com/jeaminlim0000) | LLM 평가·채팅 연동·입출력 가드·관리자 AI 검토 | FAQ/RAG 평가 데이터 구성 및 LLM Judge 기반 모델 비교 평가<br>LLM 호출 모듈·프롬프트 연동, 채팅 API·답변 상태·재시도 처리<br>채팅 화면 연동, 답변 생성 중단·LLM 요청 취소 및 답변 피드백 연동<br>입력·출력 코드 검사와 AI 가드 연결<br>AI 금칙어 후보·위험 문장 분석, 오차단 검증·승인 및 관리자 화면 구현|
-| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | LMM 프롬프트 평가<br>질문분리 멀티턴<br>화면연동| |
+| [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | LLM 프롬프트 평가<br>질문분리 멀티턴<br>화면연동|LLM Judge 평가 기준 설계, 프롬프트 튜닝·양자화 모델 비교 평가<br>LLM 출력 JSON 스키마 고정·파싱, 형식 오류 시 재호출 처리<br>질문 분리·멀티턴 상담과 하위 질문별 근거 검증 구현<br>상품 카탈로그 확장·가입·해지·결합 API, 공개 FAQ·상담 고객 정보 API 구현매장 길찾기 API·지도 화면, 사용자·관리자 디자인 통합과 챗봇 상품 필터 |
 | [@kl35805](https://github.com/kl35805) | 임베딩<br>공지·장애<br>알림 | 임베딩 모델 5종 벤치마크 테스트 및 최종 선정(BGE-M3)<br>챗봇 임계값 테스트 및 최종 선정(0.79, 0.49)<br>Top-k 검색 구현공지/장애 CRUD 및 접속 IP에 따른 배너 제공<br>알림 스케줄러 구현|
-| [@sunji22](https://github.com/sunji22) | 일반 FAQ<br>매장 정보 조회<br>사용자 정보 조회<br>상품 정보 조회| |
+| [@sunji22](https://github.com/sunji22) | 일반 FAQ<br>매장 정보 조회<br>사용자 정보 조회<br>상품 정보 조회|FAQ 의도 분기 파이프라인과 의도별 답변 자료 수집 구현<br>사용자 가입 정보 조회 도구와 요금제·사용량·청구 카드 구현<br>요금제·부가서비스·결합·로밍 상품 조회 도구와 채팅 상품 카드 구현<br>매장 조회 도구 연결, 상품 조건 재조회·여러 달 요금 조회 보완<br>LLM 테스트 결과 분석·운영 모델 선별, 프롬프트 테스트 설계 |
 | [@YuMinha](https://github.com/YuMinha) | DB 설계·마이그레이션<br>미응답 질문·FAQ 개선<br>보안 | DB 규칙·Flyway 마이그레이션·ERD 관리<br>미응답 질문 수집·유사 질문 묶음·관리자 검토 및 FAQ 전환<br>미응답 묶음 주제 이름·카테고리 추천, FAQ 등록 후 자동 재검증<br>Outbox 기반 미응답 비동기 저장<br>채팅 질문 개인정보 마스킹·BE/FE 보안 고도화<br>매장 방문 예약·알림, 대화방 목록·이어서 질문하기 |
 | [@Catverdose](https://github.com/Catverdose) | 상담·비동기 처리<br>AI 실행 환경·인프라·검증 | 비회원 채팅·상품 API와 화면 연동<br>상담사 연결·메시지 보호·대화 이력 인계<br>비동기 Worker·HNSW 검색·모델 Provider 전환<br> AWS·Terraform·CI/CD·모니터링·장애 복구<br>서빙 비교·부하 및 장애 시험·제품 문서화 |
 
