@@ -127,7 +127,7 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | [@H0ng](https://github.com/H0ng) | | |
 | [@jeaminlim0000](https://github.com/jeaminlim0000) | | |
 | [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | | |
-| [@kl35805](https://github.com/kl35805) | | |
+| [@kl35805](https://github.com/kl35805) | 임베딩<br>공지·장애<br>알림 | 임베딩 모델 5종 벤치마크 테스트 및 최종 선정(BGE-M3)<br>챗봇 임계값 테스트 및 최종 선정(0.79, 0.49)<br>Top-k 검색 구현공지/장애 CRUD 및 접속 IP에 따른 배너 제공<br>알림 스케줄러 구현|
 | [@sunji22](https://github.com/sunji22) | | |
 | [@YuMinha](https://github.com/YuMinha) | DB 설계·마이그레이션<br>미응답 질문·FAQ 개선<br>보안 | DB 규칙·Flyway 마이그레이션·ERD 관리<br>미응답 질문 수집·유사 질문 묶음·관리자 검토 및 FAQ 전환<br>미응답 묶음 주제 이름·카테고리 추천, FAQ 등록 후 자동 재검증<br>Outbox 기반 미응답 비동기 저장<br>채팅 질문 개인정보 마스킹·BE/FE 보안 고도화<br>매장 방문 예약·알림, 대화방 목록·이어서 질문하기 |
 | [@Catverdose](https://github.com/Catverdose) | 상담·비동기 처리<br>AI 실행 환경·인프라·검증 | 비회원 채팅·상품 API와 화면 연동<br>상담사 연결·메시지 보호·대화 이력 인계<br>비동기 Worker·HNSW 검색·모델 Provider 전환<br> AWS·Terraform·CI/CD·모니터링·장애 복구<br>서빙 비교·부하 및 장애 시험·제품 문서화 |
