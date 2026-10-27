@@ -12,6 +12,16 @@ Reranker는 dense 검색 후보의 순서를 바꿔 품질을 높일 수 있지�
 
 현재 Production FAQ 검색은 dense 후보를 사용하고 별도 Reranker를 호출하지 않습니다.
 
+## Alternatives Considered
+
+FAQ 1,000개·235문항, 1단계 후보 10개(top_k=10)를 재정렬한 정정 결과입니다([비교 결과 9절](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md)).
+
+| 후보 | Top-1 | MRR | 채택하지 않은 이유 |
+|---|---:|---:|---|
+| BGE-M3 + BGE reranker v2-m3 | 91.9% | 0.954 | 개선과 악화가 각각 10건으로 같아 순위 개선 효과가 없음 |
+| BGE-M3 + Jina reranker v2 | 92.8% | 0.953 | 단독 검색보다 Top-1과 MRR이 낮음 |
+| **BGE-M3 단독 (선택)** | 94.5% | 0.963 | 추가 모델 호출 없이 가장 높은 결과 |
+
 ## Evidence
 
 [확대·정정 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/reranker/docs/임베딩_vs_reranker_비교결과_1000.md)에서는 BGE-M3 단독이 두 Reranker 조합보다 높은 Top-1을 기록했습니다. 이 결과는 해당 데이터셋과 후보 구성에 한정됩니다. 따라서 “Reranker는 항상 나쁘다”가 아니라 현재 Production 경로에 넣을 근거가 충분하지 않다는 결정입니다.

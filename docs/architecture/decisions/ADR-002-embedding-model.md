@@ -12,6 +12,18 @@
 
 FAQ 검색과 관련 벡터 처리의 Embedding 모델로 BGE-M3를 사용합니다.
 
+## Alternatives Considered
+
+FAQ 100개·합성 질문 60개로 비교한 결과입니다([최종 비교표](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/model_benchmarks/docs/임베딩모델_벤치마크_최종비교.md)).
+
+| 후보 | Top-1 | MRR | 초당 처리량 | 채택하지 않은 이유 |
+|---|---:|---:|---:|---|
+| Qwen3-Embedding-0.6B | 75.0% | 84.4% | 37건 | 검색 정확도가 가장 낮고 처리량도 낮음 |
+| multilingual-e5-large | 81.7% | 87.7% | 100건 | 처리량은 비슷하지만 정확도가 낮음 |
+| gte-multilingual-base | 76.7% | 83.2% | 155건 | 가장 빠르지만 정확도가 낮고 Ollama를 지원하지 않음 |
+| EmbeddingGemma-300M | 83.3% | 89.4% | 36건 | 정확도가 두 번째였지만 처리량이 BGE-M3의 약 3분의 1 |
+| **BGE-M3 (선택)** | 86.7% | 91.6% | 100건 | 정확도가 가장 높고 처리량도 상위권 |
+
 ## Evidence
 
 [초기 모델 비교](https://github.com/ureca-UBot/UBot-EmbeddingTest/blob/eaf81130d837a1dbebb0ad4272eebfe2a6d32d29/model_benchmarks/docs/임베딩모델_벤치마크_최종비교.md)는 제한된 FAQ와 합성 질문에서 다섯 모델의 Top-K와 MRR을 비교했습니다. BGE-M3가 가장 높아 후속 검색 실험의 기준 모델이 됐습니다.

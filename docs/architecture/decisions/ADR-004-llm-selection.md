@@ -12,6 +12,16 @@ FAQ 근거를 지키면서 한국어 답변을 만들고, 제한된 GPU에서 �
 
 UBot의 답변 생성 모델 계열로 Qwen3-4B Instruct를 사용합니다. 실행 engine과 양자화별 모델 이름·자원 설정은 UBot-BE가 관리합니다.
 
+## Alternatives Considered
+
+Tesla T4·Ollama·고정 Context 조건에서 모델마다 1,300문항을 평가한 결과입니다([양자화·모델 판단](https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/model_test_v5/try1/results/summary/quantization_decision.md)).
+
+| 후보 | 정답 | 정답·근거·상태 모두 충족 | 평균 / p95 | 채택하지 않은 이유 |
+|---|---:|---:|---:|---|
+| Qwen3-4B-Instruct Q8_0 | 78.8% | 71.9% | 3.49 / 5.98초 | Q4_K_M과 정답률 차이가 유의하지 않은데(p=0.22) 응답이 1.34배 느리고 가중치가 1.7배 큼 |
+| Gemma3-4B QAT | 67.0% | 42.0% | 원본 보고서 참조 | 정답률이 크게 낮음 |
+| **Qwen3-4B-Instruct Q4_K_M (선택 계열)** | 77.5% | 70.5% | 2.61 / 4.75초 | 품질과 실행 비용의 균형이 가장 좋음 |
+
 ## Evidence
 
 [model_test_v5](https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/model_test_v5/try1/results/all_summary.md)는 고정 Context와 Ollama 조건에서 Qwen3-4B Instruct 양자화 후보를 비교했습니다. [서빙 실험](https://github.com/ureca-UBot/UBot-LLMTest/blob/cd017ac0fd5a99a9c453d1575950abea176beda3/servingtest/docs/CONCLUSIONS.md)은 별도 GPU와 AWQ runtime을 비교했습니다.

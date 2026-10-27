@@ -20,7 +20,7 @@ UBot은 고객이 통신 상품을 찾고, 본인의 이용 내역을 확인하�
 | **매장 찾기와 방문 예약** | 주소·지역·현재 위치·지도 범위 검색, 이동 방식별 길찾기, 가능 시간 조회, 예약·취소·방문 상태 관리. [상세 동작](../docs/features/stores-and-reservations.md) |
 | **FAQ·공지·문의·알림** | 로그인 없이 카테고리별 FAQ 목록·공식 답변 조회, 지역·기간별 공지와 장애 배너, 일대일 문의·관리자 답변, 예약·납부·로밍·약정·사용량 알림과 읽음 처리. [상세 동작](../docs/features/customer-support.md) |
 | **회원·비회원과 대화 기록** | 로그인과 역할별 접근, 비회원 질문과 이용 한도, 로그인 후 대화 승계, 이전 문답·FAQ 선택·상담 이력 조회. [상세 동작](../docs/features/accounts-and-conversations.md) |
-| **근거 기반 AI 상담** | 여러 질문과 후속 질문 처리, FAQ 임베딩·검색, 상품·본인 정보·매장 조회 도구, 답변·결과 카드, 평가·의도별 재검색·취소. [전체 처리 흐름](../docs/architecture/chat-flow.md) |
+| **근거 기반 AI 상담** | 여러 질문과 후속 질문 처리, FAQ 임베딩·검색, 상품·본인 정보·매장 조회 도구, 답변·결과 카드, 답변 평가·의도별 재검색·취소. [전체 처리 흐름](../docs/architecture/chat-flow.md) |
 | **상담사 연결과 보호** | 같은 대화에서 요청·대기·배정·상담·종료·재상담. 이전 내역 인계와 배정된 고객의 이용 정보 조회, 금지어·의미 검사를 통과한 메시지 전달을 지원합니다. [상세 동작](../docs/features/counselor-handoff.md) |
 | **관리자 업무 화면** | 상품·매장·예약·공지·문의의 조회와 처리, FAQ·카테고리·질문 표현 관리, 수정 이력과 임베딩 백필. [상품](../docs/features/products-and-subscriptions.md) · [매장](../docs/features/stores-and-reservations.md) · [고객 지원](../docs/features/customer-support.md) · [FAQ](../docs/features/knowledge-improvement.md) |
 | **미응답과 FAQ 개선** | 근거가 부족한 질문 수집, 유사 질문 그룹화, 관리자 검토와 FAQ 전환, 재색인. FAQ 수정 후 기존 미응답을 다시 검색해 개선 여부를 확인합니다. [상세 동작](../docs/features/knowledge-improvement.md) |

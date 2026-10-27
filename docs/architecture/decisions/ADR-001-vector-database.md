@@ -12,6 +12,18 @@ FAQ 원문과 검색 벡터를 운영하면서 검색 품질·지연뿐 아니�
 
 UBot의 Production FAQ 벡터 저장소로 PostgreSQL과 pgvector를 사용합니다. 검색 인덱스의 현재 방식과 세부 설정은 UBot-BE가 관리합니다.
 
+## Alternatives Considered
+
+합성 10k 벡터·Top-10·동시성 10, Recall 약 0.96 구간의 측정값입니다([선정 결론](https://github.com/ureca-UBot/UBot-VectorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md)).
+
+| 후보 | p50 / p95 | peak RAM | 채택하지 않은 이유 |
+|---|---:|---:|---|
+| Qdrant | 2.56 / 3.94 ms | 0.10 GiB | 가장 빨랐지만 별도 서버를 두고 FAQ 원문과 벡터의 동기화·재색인 경로를 따로 운영해야 함 |
+| OpenSearch (Lucene HNSW) | 3.49 / 4.93 ms | 4.71 GiB | 속도 이점이 작고 JVM 힙을 포함한 메모리 부담이 큼 |
+| Milvus | 4.85 / 17.72 ms | 0.66 GiB | pgvector보다 느리고 본체·etcd·MinIO 구성이 필요함 |
+| Weaviate | 13.04 / 24.40 ms | 0.18 GiB | 비교 후보 중 가장 느림 |
+| **pgvector (선택)** | 3.35 / 7.34 ms | 0.21 GiB | 기존 PostgreSQL 안에서 원문·벡터·재색인을 함께 관리 |
+
 ## Evidence
 
 [Vector DB benchmark](https://github.com/ureca-UBot/UBot-VectorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md)는 여러 저장소를 같은 합성 데이터와 자원 범위에서 비교했습니다. 비슷한 Recall에서 Qdrant와 일부 OpenSearch 구성이 더 빨랐으므로 pgvector를 속도 우승자로 선택한 것은 아닙니다.

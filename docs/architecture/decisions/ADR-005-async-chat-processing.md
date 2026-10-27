@@ -12,6 +12,18 @@
 
 질문 접수와 상태 조회는 API가 담당하고, 검색·모델 호출·결과 확정은 별도 실행 역할이 비동기로 처리합니다. 작업 전달은 반복될 수 있지만 작업 상태와 최종 결과의 기준은 Backend 데이터 저장소에 둡니다. 현재 실행 소유자만 결과를 확정합니다.
 
+## Alternatives Considered
+
+| 후보 | 채택하지 않은 이유 |
+|---|---|
+| 같은 API 요청 안에서 답변까지 생성(동기 처리) | 모델 응답을 기다리는 동안 요청 연결을 점유하고, API와 모델 실행 용량을 따로 조절할 수 없으며, 프로세스가 멈추면 진행 중인 답변을 되살릴 기준이 없음 |
+| SSE로 생성 중인 답변을 바로 전송 | BE #82 리뷰에서 SSE 없이 완성된 답변을 상태 조회로 돌려주기로 함([코드 구조와 요청 흐름](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/architecture.md)). 답변은 출력 검사를 통과한 뒤에만 사용자에게 보여 주므로 생성 중인 문장을 그대로 흘려보내지 않음 |
+
+## Evidence
+
+- [로컬 장애 복구 400건](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md): Worker·Redis·PostgreSQL·vLLM을 각각 100건 처리 중에 중단한 뒤 400건 모두 최종 답변을 저장했고, 유실·중복 저장은 0건이었습니다.
+- [AWS 채팅 부하 6,000건](../../proof/evidence-register.md#aws-채팅-부하와-관리자-화면-검증): 6,000건을 모두 접수했고, 작업 ID를 DB와 대조한 누락·상태 불일치는 0건이었습니다.
+
 ## Rationale
 
 - API와 답변 처리 용량을 독립적으로 조절할 수 있습니다.

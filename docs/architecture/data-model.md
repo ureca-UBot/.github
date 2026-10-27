@@ -10,7 +10,7 @@ UBot은 회원·대화를 중심으로 상품과 가입 정보, FAQ 검색, 매�
 
 [원본 이미지 열기](../images/erd-full.png)
 
-제공된 ERD 원본을 그대로 보관했습니다. 넓은 그림에서는 기능별 영역과 연결을 먼저 보고, 작은 컬럼명은 원본을 확대해 확인할 수 있습니다. 현재 스키마의 세부 내용은 [BE 마이그레이션](https://github.com/ureca-UBot/UBot-BE/tree/develop/src/main/resources/db/migration)에서 확인합니다.
+넓은 그림에서는 기능별 영역과 연결을 먼저 보고, 작은 컬럼명은 원본을 확대해 확인할 수 있습니다. 현재 스키마의 세부 내용은 [BE 마이그레이션](https://github.com/ureca-UBot/UBot-BE/tree/develop/src/main/resources/db/migration)에서 확인합니다.
 
 ## 색상별로 읽기
 
