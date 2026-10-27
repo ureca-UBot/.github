@@ -125,7 +125,7 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 |---|---|---|
 | [@gart09](https://github.com/gart09) | 팀장·FAQ 관리·모니터링·데이터 집계 및 표시 | JWT 로그인·회원가입, 고객 문의/관리자 답변 <br>FAQ CRUD·Intent 분류 및 유사 표현 관리 <br> FAQ 사용량·유사도·미처리 질문 기반의 관리자 모니터링 및 개선 대상 조회 <br>AI 기반 FAQ 중복/품질 검토 파이프라인 구현 <br>IP 기반 지역 판별, Redis 지역별 실시간 검색어 랭킹·스케줄러 구현|
 | [@H0ng](https://github.com/H0ng) | | |
-| [@jeaminlim0000](https://github.com/jeaminlim0000) | | |
+| [@jeaminlim0000](https://github.com/jeaminlim0000) | LLM 평가·채팅 연동·입출력 가드·관리자 AI 검토 | FAQ/RAG 평가 데이터 구성 및 LLM Judge 기반 모델 비교 평가<br>LLM 호출 모듈·프롬프트 연동, 채팅 API·답변 상태·재시도 처리<br>채팅 화면 연동, 답변 생성 중단·LLM 요청 취소 및 답변 피드백 연동<br>입력·출력 코드 검사와 AI 가드 연결<br>AI 금칙어 후보·위험 문장 분석, 오차단 검증·승인 및 관리자 화면 구현|
 | [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | | |
 | [@kl35805](https://github.com/kl35805) | 임베딩<br>공지·장애<br>알림 | 임베딩 모델 5종 벤치마크 테스트 및 최종 선정(BGE-M3)<br>챗봇 임계값 테스트 및 최종 선정(0.79, 0.49)<br>Top-k 검색 구현공지/장애 CRUD 및 접속 IP에 따른 배너 제공<br>알림 스케줄러 구현|
 | [@sunji22](https://github.com/sunji22) | | |
