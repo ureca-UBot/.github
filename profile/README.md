@@ -123,7 +123,7 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 
 | GitHub | 담당 영역 | 주요 구현·개선 |
 |---|---|---|
-| [@gart09](https://github.com/gart09) | 팀장·FAQ 관리·모니터링·데이터 집계 및 표시 | JWT 로그인·회원가입, 고객 문의/관리자 답변 <br>FAQ CRUD·삭제 복구·Intent 분류 및 유사 표현 관리 <br> FAQ 사용량·유사도·미처리 질문 기반의 관리자 모니터링 및 개선 대상 조회 <br>AI 기반 중복/품질 검토, 재검토·제외 처리 파이프라인 구현 <br>IP 기반 지역 판별, Redis 지역별 실시간 검색어 랭킹·스케줄러 구현|
+| [@gart09](https://github.com/gart09) | 팀장·FAQ 관리·모니터링·데이터 집계 및 표시 | JWT 로그인·회원가입, 고객 문의/관리자 답변 <br>FAQ CRUD·Intent 분류 및 유사 표현 관리 <br> FAQ 사용량·유사도·미처리 질문 기반의 관리자 모니터링 및 개선 대상 조회 <br>AI 기반 FAQ 중복/품질 검토 파이프라인 구현 <br>IP 기반 지역 판별, Redis 지역별 실시간 검색어 랭킹·스케줄러 구현|
 | [@H0ng](https://github.com/H0ng) | | |
 | [@jeaminlim0000](https://github.com/jeaminlim0000) | | |
 | [@Jo-hyeon-bin](https://github.com/Jo-hyeon-bin) | | |
