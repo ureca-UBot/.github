@@ -48,5 +48,4 @@
 
 ## 팀 기록
 
-- [참여 멤버와 구현 기여](governance/team-contributions.md): 각자 맡은 내용과 구현 근거 작성
 - [멘토링 질문과 답변](governance/mentoring.md): 1~3차 멘토링 기록
