@@ -1,32 +1,14 @@
 # 오류 코드
 
-이 문서는 “이 오류는 무엇을 의미하는가?”에 답합니다. 해결 단계는 [Troubleshooting](../troubleshooting/troubleshooting-template.md)에서 설명합니다.
+[전체 기능](../README.md) · [저장소 간 연동 계약](../architecture/contracts.md)
 
-| Transport | Application Code | Meaning | Retry | Caller Action | Runbook |
-|---|---|---|---|---|---|
-| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [Runbook](../operations/runbooks/runbook-template.md) |
+오류 코드는 코드를 만드는 저장소가 관리합니다. 조직 문서에 같은 표를 복사하지 않고, 아래 기준 문서로 연결합니다.
 
-## [TODO: Error Code]
+| 알고 싶은 내용 | 기준 문서 |
+|---|---|
+| 오류 코드의 의미와 HTTP 상태 | [UBot-BE 오류 코드](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/reference/error-codes.md) |
+| 화면에서 오류 응답을 처리하는 방식 | [프론트엔드 연동 가이드](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/frontend-integration.md) |
+| 증상별 확인 순서 | [UBot-BE 문제 해결](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/troubleshooting.md) |
+| 장애별 대응 절차 | [UBot-BE 장애별 런북](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/runbooks/README.md) |
 
-### Exact Failure Signature
-
-```text
-[TODO: exact error/log]
-```
-
-### 발생 조건
-
-[TODO: 구체적인 trigger]
-
-### 재시도와 중단
-
-- Retryable: [TODO]
-- Stop condition: [TODO]
-
-### 사용자가 해야 할 일
-
-[TODO: action]
-
-### 원인 식별 및 담당 팀
-
-[TODO: metric/log/trace ID, owner, runbook anchor]
+AWS 채팅 부하 시험에서 집계한 `LLM-005` 등의 코드는 [실험과 검증 근거](../proof/evidence-register.md#aws-채팅-부하와-관리자-화면-검증)에서 당시 조건과 함께 확인할 수 있습니다.
