@@ -1,6 +1,6 @@
-# Product Support Policy
+# 제품 지원 정책
 
-## Support States
+## 지원 상태
 
 - `Verified` — 기록된 조합과 범위에서 실제 검증 완료
 - `Supported` — 검증됐고 호환성 문제를 지원 범위로 취급
@@ -9,11 +9,11 @@
 - `Unsupported` — 지원하지 않기로 명시
 - `Deprecated` — 신규 사용을 권장하지 않음
 
-## Current Lifecycle
+## 현재 단계
 
 UBot 제품의 현재 lifecycle은 **Preview**입니다. 새 기능과 수정이 가능하며, 호환성을 깨는 변경도 명시적인 계약·마이그레이션 문서와 함께 발생할 수 있습니다. 개별 구성요소가 실행된다는 사실만으로 제품 조합 전체가 지원되는 것은 아닙니다.
 
-## Verification Policy
+## 검증 기준
 
 제품 조합을 `Supported`로 표시하려면 위험도에 따라 다음 근거가 필요합니다.
 
@@ -23,8 +23,8 @@ UBot 제품의 현재 lifecycle은 **Preview**입니다. 새 기능과 수정이
 - 브라우저·런타임·모델 환경 검증
 - 데이터 마이그레이션과 rollback 검증
 
-빌드 성공, HTTP 200 또는 프로세스 종료 코드만으로 기능 성공을 확정하지 않습니다. 현재 지원 상태는 [Compatibility Matrix](product-matrix.md)를 기준으로 판단합니다.
+빌드 성공, HTTP 200 또는 프로세스 종료 코드만으로 기능 성공을 확정하지 않습니다. 현재 지원 상태는 [제품 호환성 표](product-matrix.md)를 기준으로 판단합니다.
 
-## Claim Expiry
+## 지원 주장의 유효 기간
 
 지원 주장은 release 또는 revision, 마지막 검증일, 실행 환경과 근거를 가져야 합니다. 구성요소의 major 변경, 계약 변경, 모델·런타임 교체 또는 검증 방식 변경이 생기면 다시 확인합니다.
