@@ -43,7 +43,7 @@
 
 - Backend: [기능별 상세 문서](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/README.md) · [실행 안내](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/quickstart.md)
 - Frontend: [README](https://github.com/ureca-UBot/UBot-FE/blob/develop/README.md) · [화면·연동 문서](https://github.com/ureca-UBot/UBot-FE/tree/develop/docs)
-- 실험 원본: [생성 모델](https://github.com/ureca-UBot/UBot-LLMTest) · [임베딩·검색](https://github.com/ureca-UBot/UBot-EmbeddingTest) · [벡터 저장소](https://github.com/ureca-UBot/UBot-VertorDBTest)
+- 실험 원본: [생성 모델](https://github.com/ureca-UBot/UBot-LLMTest) · [임베딩·검색](https://github.com/ureca-UBot/UBot-EmbeddingTest) · [벡터 저장소](https://github.com/ureca-UBot/UBot-VectorDBTest)
 - 서비스 검증: [부하·장애 복구·Discord 알림·통신지도·미응답](https://github.com/ureca-UBot/UBot-ServerTest)
 
 ## 팀 기록

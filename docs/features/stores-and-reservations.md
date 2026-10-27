@@ -28,6 +28,6 @@
 
 ## 상세 구현과 검증
 
-- Backend: [위치 검색·예약 조건·동시성 검증](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/stores-and-reservations.md)
-- Frontend: [매장 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/pages/StoreLocatorPage.tsx) · [예약 시간 선택과 요청](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/reservation/components/ReservationForm.tsx) · [내 예약](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/reservation/hooks/useMyReservations.ts)
+- Backend: [위치 검색·예약 조건·동시성 검증](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/stores-and-reservations.md)
+- Frontend: [매장 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/pages/StoreLocatorPage.tsx) · [예약 시간 선택과 요청](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/reservation/components/ReservationForm.tsx) · [내 예약](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/reservation/hooks/useMyReservations.ts)
 - 예약 이후: [공지·문의·알림](customer-support.md)

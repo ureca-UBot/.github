@@ -63,10 +63,10 @@ UBot은 회원·대화를 중심으로 상품과 가입 정보, FAQ 검색, 매�
 
 ## 코드에서 확인한 근거
 
-아래 연결은 2026-10-26에 확인한 BE `develop`의 `36346dcd` 기준입니다.
+아래 연결은 2026-10-27에 확인한 BE `develop`의 `f782ec7c` 기준입니다.
 
-- [회원·비회원 대화](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/resources/db/migration/V19__create_conversations_and_guest_chat_settings.sql)
-- [FAQ 선택 기록과 상담 데이터](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/resources/db/migration/V39__integrate_counsel_domain.sql)
-- [Outbox 작업 종류](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/java/com/ubot/outbox/OutboxEventType.java) · [후속 작업 처리](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/java/com/ubot/outbox/OutboxWorker.java)
-- [알림 생성](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/java/com/ubot/notification/service/NotificationService.java) · [리마인더](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/java/com/ubot/notification/reminder/NotificationReminderScheduler.java)
-- [공지](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/resources/db/migration/V27__create_notices_table.sql) · [일대일 문의](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/resources/db/migration/V38__create_customer_inquiries.sql) · [지역 문의 분석](https://github.com/ureca-UBot/UBot-BE/blob/36346dcd782e60459d697df41b291831399adbd2/src/main/resources/db/migration/V52__create_telemap_tables.sql)
+- [회원·비회원 대화](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/resources/db/migration/V19__create_conversations_and_guest_chat_settings.sql)
+- [FAQ 선택 기록과 상담 데이터](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/resources/db/migration/V39__integrate_counsel_domain.sql)
+- [Outbox 작업 종류](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/outbox/OutboxEventType.java) · [후속 작업 처리](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/outbox/OutboxWorker.java)
+- [알림 생성](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/notification/service/NotificationService.java) · [리마인더](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/notification/reminder/NotificationReminderScheduler.java)
+- [공지](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/resources/db/migration/V27__create_notices_table.sql) · [일대일 문의](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/resources/db/migration/V38__create_customer_inquiries.sql) · [지역 문의 분석](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/resources/db/migration/V52__create_telemap_tables.sql)

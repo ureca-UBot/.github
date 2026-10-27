@@ -182,7 +182,7 @@ Backend는 선별한 FAQ 문장, 서버가 조회한 자료, 허용된 도구와
 - **결과 조회 중단:** Frontend가 최종 상태를 확인하지 못했음을 별도로 표시하며 서버 작업 성공 여부를 추측하지 않음
 - **상담 메시지 검사 실패:** 상대방에게 전달하지 않고 판정 상태를 남김
 
-## Repository별 책임
+## 저장소별 책임
 
 | 영역 | 책임 |
 |---|---|
@@ -195,13 +195,12 @@ Backend는 선별한 FAQ 문장, 서버가 조회한 자료, 허용된 도구와
 
 ## 상세 구현 문서
 
-- Frontend 채팅 상태와 화면: [UBot-FE ChatProvider](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/context/ChatProvider.tsx) · [작업 조회](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/api/chatJobPolling.ts) · [결과 표시](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/components/ChatMessages.tsx)
-- Backend 전체 RAG: [RAG 파이프라인](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md)
-- 질문 접수와 작업: [채팅](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md)
+- Frontend 채팅 상태와 화면: [UBot-FE ChatProvider](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/context/ChatProvider.tsx) · [작업 조회](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/api/chatJobPolling.ts) · [결과 표시](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/components/ChatMessages.tsx)
+- 질문 접수·작업과 RAG 전체: [근거 기반 AI 상담](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md)
 - 대화와 FAQ 선택: [대화 기록](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/accounts-and-conversations.md)
 - 상담사 인계: [상담](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/counsel.md)
-- 미응답과 FAQ 보강: [지식 관리](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/unanswered-improvement.md) · [RAG 미응답 흐름](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md)
+- 미응답과 FAQ 보강: [미응답 질문에서 FAQ 개선까지](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/unanswered-improvement.md)
 - 작업 복구와 운영 관측: [비동기 작업 신뢰성](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/worker-reliability.md) · [관측성](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/operations/observability.md)
-- 상품·회원·매장 자료: [상품 조회](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/products-and-subscriptions.md) · [상품과 가입](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/products-and-subscriptions.md) · [매장과 예약](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/stores-and-reservations.md)
+- 상품·회원·매장 자료: [상품 조회와 가입](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/products-and-subscriptions.md) · [매장과 예약](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/stores-and-reservations.md)
 - 질문에 따른 본인 자료 추가: [자료 수집기](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/chat/context/ChatContextCollector.java)
 - 상품 조건 직접 조회: [서버 처리](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/chat/controller/ChatProductSearchController.java) · [조건 선택 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/components/ChatProductRefine.tsx)

@@ -17,7 +17,7 @@
 |---|---|---|
 | UBot-FE | 고객·상담사·관리자의 화면, 입력, 진행 상태와 결과 카드, 오류 안내 | [Frontend](https://github.com/ureca-UBot/UBot-FE) |
 | UBot-BE | 인증·업무·대화 상태, FAQ 검색과 자료 조회, 모델·도구·안전 검사 연결, 결과 확정 | [Backend 기능 문서](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/README.md) |
-| PostgreSQL·pgvector | 업무·FAQ·벡터·대화·작업의 기준 데이터와 벡터 검색 | [DB 관리](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/db-access.md) |
+| PostgreSQL·pgvector | 업무·FAQ·벡터·대화·작업의 기준 데이터와 벡터 검색 | [DB 직접 조회](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/db-access.md) |
 | Redis | 작업 전달 신호, 빠른 결과 조회와 순위 스냅샷, 보조 상태 | [작업 신뢰성](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/reliability-model.md) |
 | AI 모델 | 문장의 벡터 계산, 제공한 근거의 답변 생성, 경로별 안전 판정 | [모델 서빙](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/llm/README.md) |
 | 외부 위치 서비스 | 장소·좌표와 이동 경로 자료 제공 | [매장과 방문](../features/stores-and-reservations.md) |

@@ -24,7 +24,7 @@ UBot의 답변 생성 모델 계열로 Qwen3-4B Instruct를 사용합니다. 실
 
 ## Production Implementation
 
-[UBot-BE LLM Runtime](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/infra/llm/README.md) · [LLM Module](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/llm-module.md)
+[UBot-BE LLM Runtime](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/llm/README.md) · [LLM Module](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/llm-module.md)
 
 ## Revisit Triggers
 

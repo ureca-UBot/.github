@@ -24,7 +24,7 @@ Reranker는 dense 검색 후보의 순서를 바꿔 품질을 높일 수 있지�
 
 ## Production Implementation
 
-[UBot-BE RAG Pipeline](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-chat.md)
+[UBot-BE RAG Pipeline](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-chat.md)
 
 ## Revisit Triggers
 

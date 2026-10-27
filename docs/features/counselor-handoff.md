@@ -37,6 +37,6 @@ AI 안내 뒤 사람의 도움이 필요하면 로그인한 고객이 상담사�
 ## 상세 구현과 검증
 
 - Backend: [인계·배정·메시지 검사·재상담](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/counselor-handoff.md) · [실행과 API](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/counsel.md)
-- Frontend: [상담 화면과 연동·브라우저 검증](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/COUNSEL_WORK_SUMMARY.md)
+- Frontend: [상담 화면과 연동·브라우저 검증](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/docs/COUNSEL_WORK_SUMMARY.md)
 - 고객 정보: [조회 권한과 자료 범위](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/src/main/java/com/ubot/counsel/session/service/CounselCustomerService.java) · [상담사 고객 정보 패널](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/counsel/components/CounselCustomerPanel.tsx)
 - 관련 기능: [질문·답변 보호와 정책 검토](ai-safety.md)

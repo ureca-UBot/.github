@@ -30,9 +30,9 @@ AWS BE에서는 배포 셸 밖의 systemd 타이머가 30초마다 Worker 프로
 
 Redis 조회 실패와 DB 조회 실패도 구분합니다. 모델 연결이 잠시 끊어지면 정해진 기한 안에서 재시도하고, 끝내 복구하지 못하면 실패 상태를 확정합니다. 재처리 과정에서 모델 계산이 다시 실행될 수 있으므로 작업 유실과 중복 답변 저장을 함께 확인합니다.
 
-[실제 LLM 장애 실험](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/evidence/fault-recovery-20261023.md)은 처리 중인 요청에 장애를 주고 복구·최종 결과를 확인한 기록입니다. 측정한 환경의 결과이며 운영 환경의 복구 시간 보장값은 아닙니다.
+[로컬 장애 복구 400건 실험](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md)은 Worker·Redis·PostgreSQL·vLLM을 각각 100건 처리 중에 중단하고, 시험 도구가 다시 기동한 뒤 작업 회수와 최종 답변 저장을 확인한 기록입니다. 같은 실행의 요약은 [BE 장애 재검증 결과](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/evidence/fault-recovery-20261023.md)에도 있습니다. 측정한 환경의 결과이며 운영 환경의 복구 시간 보장값은 아닙니다.
 
-[ServerTest의 로컬 400건 실험](https://github.com/ureca-UBot/UBot-ServerTest/blob/07217660fa2aafcd671600905c62e3a2a8f0226a/fault-recovery/README.md)은 시험 도구가 의존 서비스와 Worker를 다시 기동해 작업 회수를 확인했습니다. 외부 타이머의 복구 동작은 [배포 강제 종료 회귀 검사](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/tools/deploy/tests/aws-be-recovery-test.sh)에서 별도로 다룹니다.
+외부 타이머의 복구 동작은 [배포 강제 종료 회귀 검사](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/tools/deploy/tests/aws-be-recovery-test.sh)에서 별도로 다룹니다.
 
 ## 실제 서비스 경로와 알림을 검증했습니다
 
@@ -51,5 +51,5 @@ Redis 조회 실패와 DB 조회 실패도 구분합니다. 모델 연결이 잠
 ## 상세 구현과 검증
 
 - Backend: [운영 기능과 검증](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/service-operations.md) · [배포](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/deploy.md) · [장애별 런북](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/runbooks/README.md) · [AWS PoC Terraform](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/aws-poc.md)
-- Frontend: [운영 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/admin/operation/pages/OperationDashboardPage.tsx) · [FE 배포](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/AWS_DEPLOY.md)
+- Frontend: [운영 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/admin/operation/pages/OperationDashboardPage.tsx) · [FE 배포](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/docs/AWS_DEPLOY.md)
 - 선택 근거: [작업 접수·처리 분리](../architecture/decisions/ADR-005-async-chat-processing.md) · [모델·서빙 실험](../proof/evidence-register.md)

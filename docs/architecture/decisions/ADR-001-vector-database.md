@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-09
-- Related Repositories: UBot-VertorDBTest, UBot-BE
+- Related Repositories: UBot-VectorDBTest, UBot-BE
 
 ## Context
 
@@ -14,7 +14,7 @@ UBot의 Production FAQ 벡터 저장소로 PostgreSQL과 pgvector를 사용합�
 
 ## Evidence
 
-[Vector DB benchmark](https://github.com/ureca-UBot/UBot-VertorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md)는 여러 저장소를 같은 합성 데이터와 자원 범위에서 비교했습니다. 비슷한 Recall에서 Qdrant와 일부 OpenSearch 구성이 더 빨랐으므로 pgvector를 속도 우승자로 선택한 것은 아닙니다.
+[Vector DB benchmark](https://github.com/ureca-UBot/UBot-VectorDBTest/blob/9fcbff349648067fc4c96d56d82857f1bcccfdfd/docs/07-results/decision.md)는 여러 저장소를 같은 합성 데이터와 자원 범위에서 비교했습니다. 비슷한 Recall에서 Qdrant와 일부 OpenSearch 구성이 더 빨랐으므로 pgvector를 속도 우승자로 선택한 것은 아닙니다.
 
 ## Rationale
 
@@ -30,7 +30,7 @@ UBot의 Production FAQ 벡터 저장소로 PostgreSQL과 pgvector를 사용합�
 
 ## Production Implementation
 
-[UBot-BE Embedding and Search](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/faq-management.md)
+[UBot-BE Embedding and Search](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/faq-management.md)
 
 ## Revisit Triggers
 

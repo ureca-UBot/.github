@@ -29,5 +29,5 @@
 ## 상세 구현과 검증
 
 - Backend: [인증·승계·FAQ 사본·대화 조회](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/accounts-and-conversations.md)
-- Frontend: [대화 상태와 FAQ 선택](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/context/ChatProvider.tsx) · [FAQ 저장 연동](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/user/ai/api/faqSelectionApi.ts) · [상담 통합 이력](https://github.com/ureca-UBot/UBot-FE/blob/develop/src/counsel/components/ConversationTimeline.tsx)
+- Frontend: [대화 상태와 FAQ 선택](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/context/ChatProvider.tsx) · [FAQ 저장 연동](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/user/ai/api/faqSelectionApi.ts) · [상담 통합 이력](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/src/counsel/components/ConversationTimeline.tsx)
 - 이어지는 기능: [상담 인계와 재상담](counselor-handoff.md)

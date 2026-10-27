@@ -13,7 +13,14 @@
 - 기술 결정의 본문과 색인은 [docs/architecture/decisions/](../architecture/decisions/README.md) 한 곳에서 관리합니다.
 - 다른 주제도 [기능별 목차](../README.md)가 연결하는 본문 한 곳을 수정합니다. 소개·색인에는 요약과 링크를 두고 같은 상세 설명을 복사하지 않습니다.
 - AWS 구성은 BE의 [Terraform 스택 구분](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/infra/terraform/stacks.md)과 해당 스택의 코드·입력값을 기준으로 확인합니다. `gpu-test`의 범위를 `aws-poc` 전체에 적용하지 않습니다.
-- 참고 양식은 필요한 문서를 작성할 때 사용합니다. 양식마다 별도 문서를 만들거나 기존 문서를 일괄 재작성할 필요는 없습니다.
+- 참고 양식은 [docs-templates/](../../docs-templates/) 한 곳에 둡니다. 필요한 문서를 작성할 때 사용하며, 양식마다 별도 문서를 만들거나 기존 문서를 일괄 재작성할 필요는 없습니다. 내용을 채우지 않은 양식을 `docs/` 아래에 문서처럼 두지 않습니다.
+
+## 다른 저장소를 링크할 때
+
+- 동작·수치·결정의 근거로 거는 파일 링크는 확인한 커밋에 고정합니다. 브랜치 링크는 코드가 바뀌면 문서 설명과 어긋납니다.
+- 저장소 첫 화면, README, 문서 목차, "현재 스키마"처럼 최신 상태를 보여 줘야 하는 링크만 기본 브랜치를 사용합니다.
+- 고정 커밋은 기본 브랜치에 병합된 커밋을 사용합니다. 작업 브랜치에만 있는 커밋은 브랜치를 지우면 사라질 수 있습니다.
+- 고정 커밋을 바꿀 때는 같은 저장소의 링크를 한 커밋으로 함께 옮겨, 문서마다 다른 시점을 가리키지 않게 합니다.
 
 ## 실험 결과를 인용할 때
 
@@ -23,4 +30,11 @@
 
 ## 참고 양식
 
-[ADR](../../docs-templates/ADR_TEMPLATE.md) · [Benchmark](../../docs-templates/BENCHMARK_TEMPLATE.md) · [Runbook](../../docs-templates/RUNBOOK_TEMPLATE.md) · [Troubleshooting](../../docs-templates/TROUBLESHOOTING_TEMPLATE.md)
+| 쓰려는 문서 | 양식 |
+|---|---|
+| 기술 결정과 검토 제안 | [ADR](../../docs-templates/ADR_TEMPLATE.md) · [RFC](../../docs-templates/RFC_TEMPLATE.md) |
+| 실험·성능 비교 | [Benchmark](../../docs-templates/BENCHMARK_TEMPLATE.md) |
+| API와 저장소 간 계약 | [API Endpoint](../../docs-templates/API_ENDPOINT_TEMPLATE.md) · [Contract](../../docs-templates/CONTRACT_TEMPLATE.md) |
+| 작업 안내 | [How-to](../../docs-templates/HOW_TO_TEMPLATE.md) |
+| 운영과 장애 | [Runbook](../../docs-templates/RUNBOOK_TEMPLATE.md) · [Troubleshooting](../../docs-templates/TROUBLESHOOTING_TEMPLATE.md) · [Postmortem](../../docs-templates/POSTMORTEM_TEMPLATE.md) · [Known Issue](../../docs-templates/KNOWN_ISSUE_TEMPLATE.md) |
+| 배포와 버전 | [Release Notes](../../docs-templates/RELEASE_NOTES_TEMPLATE.md) · [Migration](../../docs-templates/MIGRATION_TEMPLATE.md) |

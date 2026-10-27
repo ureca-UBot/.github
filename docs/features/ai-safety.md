@@ -33,6 +33,6 @@
 
 ## 상세 구현과 검증
 
-- Backend: [입력·출력 검사와 정책 승인](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/features/ai-safety.md) · [관리자 검토 절차](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/how-to/guard-review.md)
-- Frontend: [정책 후보·검사·승인 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/GUARD_REVIEW_WORK_SUMMARY.md) · [상담 안전 화면](https://github.com/ureca-UBot/UBot-FE/blob/develop/docs/COUNSEL_WORK_SUMMARY.md)
-- 검증: [출력 가드 분석](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/output-guard-analysis.md) · [출력 AI 판정 비교](https://github.com/ureca-UBot/UBot-BE/blob/98ba921c0e8271a8aa068a5bda56e85fe50c1ce7/docs/pr291-output-llm-guard-comparison.md)
+- Backend: [입력·출력 검사와 정책 승인](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/features/ai-safety.md) · [관리자 검토 절차](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/how-to/guard-review.md)
+- Frontend: [정책 후보·검사·승인 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/docs/GUARD_REVIEW_WORK_SUMMARY.md) · [상담 안전 화면](https://github.com/ureca-UBot/UBot-FE/blob/0083c488ed48f4a21d78139f20f03609cc024bdf/docs/COUNSEL_WORK_SUMMARY.md)
+- 검증: [출력 가드 분석](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/output-guard-analysis.md) · [출력 AI 판정 비교](https://github.com/ureca-UBot/UBot-BE/blob/f782ec7c72cc2af0631570e3b3e0d0a260072a25/docs/pr291-output-llm-guard-comparison.md)

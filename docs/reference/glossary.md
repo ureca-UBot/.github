@@ -1,4 +1,4 @@
-# Glossary
+# 용어집
 
 UBot 문서에서 Repository를 가로질러 사용하는 용어를 정리합니다. 코드의 enum·field 이름은 해당 Repository 문서를 따릅니다.
 

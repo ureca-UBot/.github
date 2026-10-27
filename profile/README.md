@@ -113,7 +113,7 @@ Frontend는 React·TypeScript, Backend는 Java·Spring으로 구현했습니다.
 | [UBot-BE](https://github.com/ureca-UBot/UBot-BE) | 업무 규칙·데이터·검색·답변·상담 처리, 배포와 운영 구성 |
 | [UBot-LLMTest](https://github.com/ureca-UBot/UBot-LLMTest) | 생성 모델 품질·프롬프트·양자화·GPU 서빙 평가 |
 | [UBot-EmbeddingTest](https://github.com/ureca-UBot/UBot-EmbeddingTest) | 임베딩·검색·리랭커와 서빙 비교 |
-| [UBot-VertorDBTest](https://github.com/ureca-UBot/UBot-VertorDBTest) | 벡터 저장소·인덱스 비교와 선택 근거 |
+| [UBot-VectorDBTest](https://github.com/ureca-UBot/UBot-VectorDBTest) | 벡터 저장소·인덱스 비교와 선택 근거 |
 | [UBot-ServerTest](https://github.com/ureca-UBot/UBot-ServerTest) | 채팅 부하·장애 복구 도구와 결과, Discord 알림, 통신지도·미응답 화면 검증 |
 
 [기능별 설명과 FE·BE 연결](../docs/README.md) · [제품 시나리오](../docs/overview/product.md) · [직접 실행하기](../docs/getting-started/quickstart.md)
